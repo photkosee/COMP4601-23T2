@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="ERROR: [HLS 200-478] vivado returned an error child process exited abnormally&#xD;&#xA;command 'ap_source' returned error code&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/COMP4601/ch4/matrix_vector_proj/solution7/export.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/COMP4601/ch4/matrix_vector_proj/solution7/export.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="matrix_vector_proj" solutionName="solution7" date="2023-06-21T14:45:18.926+1000"/>
+        <logs message="ERROR: [Common 17-69] Command failed: Run 'synth_1' has not been launched. Unable to open" projectName="matrix_vector_proj" solutionName="solution7" date="2023-06-21T14:45:18.268+1000"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('V_In_load_2', matrix_vector_base.c:11) on array 'V_In' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'V_In'." projectName="matrix_vector_proj" solutionName="solution12" date="2023-06-21T14:59:05.928+1000" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-105] Ignore complete array partition directive on 'V_In' (matrix_vector_base.c:4) in dimension 1: conflict with memory core assignment directive.&#xD;&#xA;." projectName="matrix_vector_proj" solutionName="solution12" date="2023-06-21T14:59:05.663+1000" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('V_In_0_load_2', matrix_vector_base.c:11) on array 'V_In_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'V_In_0'." projectName="matrix_vector_proj" solutionName="solution8" date="2023-06-21T12:31:20.889+1000" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('V_In_0_load_2', matrix_vector_base.c:11) on array 'V_In_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'V_In_0'." projectName="matrix_vector_proj" solutionName="solution7" date="2023-06-21T12:28:54.679+1000" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('V_In_load_2', matrix_vector_base.c:11) on array 'V_In' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'V_In'." projectName="matrix_vector_proj" solutionName="pipeline_data_loop" date="2023-06-21T12:10:31.340+1000" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="WARNING: [Vivado 12-8222] Failed run(s) : 'bd_0_hls_inst_0_synth_1'&#xD;&#xA;wait_on_run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:15 . Memory (MB): peak = 1016.504 ; gain = 0.000" projectName="matrix_vector_proj" solutionName="solution7" date="2023-06-21T14:45:18.237+1000" type="Warning"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

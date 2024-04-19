@@ -1,0 +1,9 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "matrix_vector",
+          "label": "dot_product_loop",
+          "functionLabel": "",
+          "pragma": {"name": "UNROLL"}
+        }]
+    }]}

@@ -1,0 +1,1437 @@
+INFO-FLOW: Workspace C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2 opened at Thu Jul 13 17:33:26 +1000 2023
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.lib 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.lib 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.lib 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.lib 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.lib 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.lib 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.lib 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.15 sec.
+Command     ap_source done; 0.151 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xqzu5ev-ffrb900-1-i 
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data single -quiet 
+Command       ap_part_info done; 0.654 sec.
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data info 
+Execute       add_library xilinx/zynquplus/zynquplus:xqzu5ev:-ffrb900:-1-i 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xqzu5ev-ffrb900-1-i 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data resources 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info 
+Execute         config_chip_info -quiet -resource {SLICE 14640} {LUT 117120} {FF 234240} {DSP48E 1248} {BRAM 288} {URAM 64} 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info 
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xqzu5ev-ffrb900-1-i'
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.817 sec.
+Execute     ap_part_info -data single -name xqzu5ev-ffrb900-1-i 
+Execute     ap_part_info -name xqzu5ev-ffrb900-1-i -data resources 
+Execute     ap_part_info -name xqzu5ev-ffrb900-1-i -data info 
+Execute     ap_part_info -name xqzu5ev-ffrb900-1-i -data info 
+Execute     config_chip_info -quiet -resource {SLICE 14640} {LUT 117120} {FF 234240} {DSP48E 1248} {BRAM 288} {URAM 64} 
+Execute     ap_part_info -name xqzu5ev-ffrb900-1-i -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 1.094 sec.
+Execute   set_part xqzu5ev-ffrb900-1-i 
+Execute     ap_part_info -name xqzu5ev-ffrb900-1-i -data single -quiet 
+Execute     ap_part_info -name xqzu5ev-ffrb900-1-i -data info 
+Execute     add_library xilinx/zynquplus/zynquplus:xqzu5ev:-ffrb900:-1-i 
+Execute       get_default_platform 
+Execute       ap_part_info -data single -name xqzu5ev-ffrb900-1-i 
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data resources 
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data info 
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data info 
+Execute       config_chip_info -quiet -resource {SLICE 14640} {LUT 117120} {FF 234240} {DSP48E 1248} {BRAM 288} {URAM 64} 
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data info 
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute       get_default_platform 
+Execute     ap_part_info -name xqzu5ev-ffrb900-1-i -data info 
+Execute     get_default_platform 
+Command   set_part done; 0.159 sec.
+Execute   create_clock -period 10 -name default 
+Execute   source ./fft_stages_loop.proj/solution2/directives.tcl 
+Execute     set_directive_pipeline bit_reverse/bit_reverse_loop 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute     set_directive_dependence -variable OUT_I -type inter -dependent false bit_reverse/bit_reverse_loop 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'DEPENDENCE' variable=OUT_I inter=positionBoolean0type false=positionBoolean0dependent 
+Execute     set_directive_dependence -variable OUT_R -type inter -dependent false bit_reverse/bit_reverse_loop 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'DEPENDENCE' variable=OUT_I inter=positionBoolean0type false=positionBoolean0dependent 
+INFO-FLOW: Setting directive 'DEPENDENCE' variable=OUT_R inter=positionBoolean0type false=positionBoolean0dependent 
+Execute   csynth_design 
+Execute     get_config_compile -dump_cfg 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'fft_stages_loop.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling fft_stages_loop.cpp as C++
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data info 
+Execute       is_encrypted fft_stages_loop.cpp 
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2020.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "fft_stages_loop.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.pp.0.cpp" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2020.1/msys -hls -fno-exceptions -D__llvm__ -E fft_stages_loop.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.pp.0.cpp
+Command       clang done; 1.305 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.49 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2020.1/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.pp.0.cpp"  -o "C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/useless.bc"  
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2020.1/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.pp.0.cpp -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/useless.bc
+Command       clang done; 1.633 sec.
+INFO-FLOW: Done: GCC PP time: 4.4 seconds per iteration
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'DEPENDENCE' variable=OUT_I inter=positionBoolean0type false=positionBoolean0dependent 
+INFO-FLOW: Setting directive 'DEPENDENCE' variable=OUT_R inter=positionBoolean0type false=positionBoolean0dependent 
+Execute       source C:/Xilinx/Vivado/2020.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source C:/Xilinx/Vivado/2020.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source C:/Xilinx/Vivado/2020.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'DEPENDENCE' variable=OUT_I inter=positionBoolean0type false=positionBoolean0dependent 
+INFO-FLOW: Setting directive 'DEPENDENCE' variable=OUT_R inter=positionBoolean0type false=positionBoolean0dependent 
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.pp.0.cpp std=gnu++98 -directive=C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/.systemc_flag -quiet -fix-errors C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.073 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.pp.0.cpp std=gnu++98 -directive=C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/all.directive.json -quiet -fix-errors C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.74 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/xilinx-dataflow-lawyer.fft_stages_loop.pp.0.cpp.diag.yml C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/xilinx-dataflow-lawyer.fft_stages_loop.pp.0.cpp.out.log 2> C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/xilinx-dataflow-lawyer.fft_stages_loop.pp.0.cpp.err.log 
+Command       ap_eval done; 1.018 sec.
+Execute       source C:/Xilinx/Vivado/2020.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute         source C:/Xilinx/Vivado/2020.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: fft_stages_loop.cpp:76:2
+Execute       send_msg_by_id WARNING @200-471@%s%s 1 fft_stages_loop.cpp 
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file fft_stages_loop.cpp
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/tidy-3.1.fft_stages_loop.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/tidy-3.1.fft_stages_loop.pp.0.cpp.out.log 2> C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/tidy-3.1.fft_stages_loop.pp.0.cpp.err.log 
+Command         ap_eval done; 2.185 sec.
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/xilinx-legacy-rewriter.fft_stages_loop.pp.0.cpp.out.log 2> C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/xilinx-legacy-rewriter.fft_stages_loop.pp.0.cpp.err.log 
+Command         ap_eval done; 0.669 sec.
+Command       tidy_31 done; 2.895 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 5.7 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 2.015 sec.
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2020.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.bc" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2020.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.bc
+Command       clang done; 1.617 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stages_loop.g.bc -hls-opt -except-internalize fft_streaming -LC:/Xilinx/Vivado/2020.1/win64/lib -lhlsm -lhlsmc++ -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/a.g 
+Command       llvm-ld done; 2.79 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:20 . Memory (MB): peak = 889.266 ; gain = 795.984
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:20 . Memory (MB): peak = 889.266 ; gain = 795.984
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/a.pp.bc -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado/2020.1/win64/lib -lfloatconversion -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.711 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -stream-depth-lower -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top fft_streaming -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/a.g.0.bc -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 0.321 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:21 . Memory (MB): peak = 889.266 ; gain = 795.984
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/a.g.1.bc -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'reverse_bits' into 'bit_reverse' (fft_stages_loop.cpp:25) automatically.
+Command         transform done; 0.135 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/a.g.2.prechk.bc -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:21 . Memory (MB): peak = 889.266 ; gain = 795.984
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/a.g.1.bc to C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/a.o.1.bc -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'reverse_bits' (fft_stages_loop.cpp:5).
+INFO: [HLS 200-489] Unrolling loop 'reverse_bits_loop' (fft_stages_loop.cpp:9) in function 'reverse_bits' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'stage_loop' (fft_stages_loop.cpp:77) in function 'fft_streaming' completely with a factor of 9.
+INFO: [XFORM 203-101] Partitioning array 'Stage_R.V' (fft_stages_loop.cpp:71) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'Stage_I.V' (fft_stages_loop.cpp:71) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'reverse_bits' into 'bit_reverse25' (fft_stages_loop.cpp:25) automatically.
+WARNING: [XFORM 203-561] Updating loop upper bound from 1024 to 1 for loop 'dft_loop' in function 'fft_stage35'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1 for loop 'dft_loop' in function 'fft_stage35'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 1024 to 2 for loop 'dft_loop' in function 'fft_stage.134'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 2 for loop 'dft_loop' in function 'fft_stage.134'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 1024 to 4 for loop 'dft_loop' in function 'fft_stage.133'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 4 for loop 'dft_loop' in function 'fft_stage.133'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 1024 to 8 for loop 'dft_loop' in function 'fft_stage.132'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 8 for loop 'dft_loop' in function 'fft_stage.132'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 1024 to 16 for loop 'dft_loop' in function 'fft_stage.131'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 16 for loop 'dft_loop' in function 'fft_stage.131'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 1024 to 32 for loop 'dft_loop' in function 'fft_stage.130'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 32 for loop 'dft_loop' in function 'fft_stage.130'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 1024 to 64 for loop 'dft_loop' in function 'fft_stage.129'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 64 for loop 'dft_loop' in function 'fft_stage.129'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 1024 to 128 for loop 'dft_loop' in function 'fft_stage.128'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 128 for loop 'dft_loop' in function 'fft_stage.128'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 1024 to 256 for loop 'dft_loop' in function 'fft_stage.127'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 256 for loop 'dft_loop' in function 'fft_stage.127'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 1024 to 512 for loop 'dft_loop' in function 'fft_stage.126'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 512 for loop 'dft_loop' in function 'fft_stage.126'.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage_R[0].V' should be updated in process function 'bit_reverse25', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage_I[0].V' should be updated in process function 'bit_reverse25', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage_R[1].V' should be updated in process function 'fft_stage.126', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage_I[1].V' should be updated in process function 'fft_stage.126', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage_R[2].V' should be updated in process function 'fft_stage.127', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage_I[2].V' should be updated in process function 'fft_stage.127', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage_R[3].V' should be updated in process function 'fft_stage.128', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage_I[3].V' should be updated in process function 'fft_stage.128', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage_R[4].V' should be updated in process function 'fft_stage.129', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage_I[4].V' should be updated in process function 'fft_stage.129', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage_R[5].V' should be updated in process function 'fft_stage.130', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage_I[5].V' should be updated in process function 'fft_stage.130', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage_R[6].V' should be updated in process function 'fft_stage.131', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage_I[6].V' should be updated in process function 'fft_stage.131', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage_R[7].V' should be updated in process function 'fft_stage.132', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage_I[7].V' should be updated in process function 'fft_stage.132', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage_R[8].V' should be updated in process function 'fft_stage.133', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage_I[8].V' should be updated in process function 'fft_stage.133', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage_R[9].V' should be updated in process function 'fft_stage.134', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage_I[9].V' should be updated in process function 'fft_stage.134', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'OUT_R.V' should be updated in process function 'fft_stage35', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'OUT_I.V' should be updated in process function 'fft_stage35', otherwise it may not be synthesized correctly.
+INFO: [XFORM 203-712] Applying dataflow to function 'fft_streaming', detected/extracted 11 process function(s): 
+	 'bit_reverse25'
+	 'fft_stage.126'
+	 'fft_stage.127'
+	 'fft_stage.128'
+	 'fft_stage.129'
+	 'fft_stage.130'
+	 'fft_stage.131'
+	 'fft_stage.132'
+	 'fft_stage.133'
+	 'fft_stage.134'
+	 'fft_stage35'.
+Command         transform done; 1.205 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/a.o.1.tmp.bc -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/a.o.2.bc -f -phase presyn 
+WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'butterfly_loop' in function 'fft_stage35'.
+Command         transform done; 0.406 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:23 . Memory (MB): peak = 889.266 ; gain = 795.984
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/a.o.2.bc -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'butterfly_loop' (fft_stages_loop.cpp:47:36) in function 'fft_stage.134'.
+INFO: [XFORM 203-541] Flattening a loop nest 'butterfly_loop' (fft_stages_loop.cpp:47:36) in function 'fft_stage.133'.
+INFO: [XFORM 203-541] Flattening a loop nest 'butterfly_loop' (fft_stages_loop.cpp:47:36) in function 'fft_stage.132'.
+INFO: [XFORM 203-541] Flattening a loop nest 'butterfly_loop' (fft_stages_loop.cpp:47:36) in function 'fft_stage.131'.
+INFO: [XFORM 203-541] Flattening a loop nest 'butterfly_loop' (fft_stages_loop.cpp:47:36) in function 'fft_stage.130'.
+INFO: [XFORM 203-541] Flattening a loop nest 'butterfly_loop' (fft_stages_loop.cpp:47:36) in function 'fft_stage.129'.
+INFO: [XFORM 203-541] Flattening a loop nest 'butterfly_loop' (fft_stages_loop.cpp:47:36) in function 'fft_stage.128'.
+INFO: [XFORM 203-541] Flattening a loop nest 'butterfly_loop' (fft_stages_loop.cpp:47:36) in function 'fft_stage.127'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'OUT_I.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'OUT_R.V'.
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R[9].V' (fft_stages_loop.cpp:60:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I[9].V' (fft_stages_loop.cpp:61:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R[9].V' (fft_stages_loop.cpp:62:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I[9].V' (fft_stages_loop.cpp:63:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'OUT_R.V' (fft_stages_loop.cpp:29:4)
+INFO: [HLS 200-472] Inferring partial write operation for 'OUT_R.V' (fft_stages_loop.cpp:30:4)
+INFO: [HLS 200-472] Inferring partial write operation for 'OUT_I.V' (fft_stages_loop.cpp:34:4)
+INFO: [HLS 200-472] Inferring partial write operation for 'OUT_I.V' (fft_stages_loop.cpp:35:4)
+Command         transform done; 0.978 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:24 . Memory (MB): peak = 889.266 ; gain = 795.984
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 3.972 sec.
+Command     elaborate done; 21.937 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'fft_streaming' ...
+Execute       ap_set_top_model fft_streaming 
+WARNING: [SYN 201-103] Legalizing function name 'fft_stage.126' to 'fft_stage_126'.
+WARNING: [SYN 201-103] Legalizing function name 'fft_stage.127' to 'fft_stage_127'.
+WARNING: [SYN 201-103] Legalizing function name 'fft_stage.128' to 'fft_stage_128'.
+WARNING: [SYN 201-103] Legalizing function name 'fft_stage.129' to 'fft_stage_129'.
+WARNING: [SYN 201-103] Legalizing function name 'fft_stage.130' to 'fft_stage_130'.
+WARNING: [SYN 201-103] Legalizing function name 'fft_stage.131' to 'fft_stage_131'.
+WARNING: [SYN 201-103] Legalizing function name 'fft_stage.132' to 'fft_stage_132'.
+WARNING: [SYN 201-103] Legalizing function name 'fft_stage.133' to 'fft_stage_133'.
+WARNING: [SYN 201-103] Legalizing function name 'fft_stage.134' to 'fft_stage_134'.
+Command       ap_set_top_model done; 0.142 sec.
+Execute       get_model_list fft_streaming -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model fft_streaming 
+Execute       preproc_iomode -model fft_stage35 
+Execute       preproc_iomode -model fft_stage.134 
+Execute       preproc_iomode -model fft_stage.133 
+Execute       preproc_iomode -model fft_stage.132 
+Execute       preproc_iomode -model fft_stage.131 
+Execute       preproc_iomode -model fft_stage.130 
+Execute       preproc_iomode -model fft_stage.129 
+Execute       preproc_iomode -model fft_stage.128 
+Execute       preproc_iomode -model fft_stage.127 
+Execute       preproc_iomode -model fft_stage.126 
+Execute       preproc_iomode -model bit_reverse25 
+Execute       get_model_list fft_streaming -filter all-wo-channel 
+INFO-FLOW: Model list for configure: bit_reverse25 fft_stage.126 fft_stage.127 fft_stage.128 fft_stage.129 fft_stage.130 fft_stage.131 fft_stage.132 fft_stage.133 fft_stage.134 fft_stage35 fft_streaming
+INFO-FLOW: Configuring Module : bit_reverse25 ...
+Execute       set_default_model bit_reverse25 
+Execute       apply_spec_resource_limit bit_reverse25 
+INFO-FLOW: Configuring Module : fft_stage.126 ...
+Execute       set_default_model fft_stage.126 
+Execute       apply_spec_resource_limit fft_stage.126 
+INFO-FLOW: Configuring Module : fft_stage.127 ...
+Execute       set_default_model fft_stage.127 
+Execute       apply_spec_resource_limit fft_stage.127 
+INFO-FLOW: Configuring Module : fft_stage.128 ...
+Execute       set_default_model fft_stage.128 
+Execute       apply_spec_resource_limit fft_stage.128 
+INFO-FLOW: Configuring Module : fft_stage.129 ...
+Execute       set_default_model fft_stage.129 
+Execute       apply_spec_resource_limit fft_stage.129 
+INFO-FLOW: Configuring Module : fft_stage.130 ...
+Execute       set_default_model fft_stage.130 
+Execute       apply_spec_resource_limit fft_stage.130 
+INFO-FLOW: Configuring Module : fft_stage.131 ...
+Execute       set_default_model fft_stage.131 
+Execute       apply_spec_resource_limit fft_stage.131 
+INFO-FLOW: Configuring Module : fft_stage.132 ...
+Execute       set_default_model fft_stage.132 
+Execute       apply_spec_resource_limit fft_stage.132 
+INFO-FLOW: Configuring Module : fft_stage.133 ...
+Execute       set_default_model fft_stage.133 
+Execute       apply_spec_resource_limit fft_stage.133 
+INFO-FLOW: Configuring Module : fft_stage.134 ...
+Execute       set_default_model fft_stage.134 
+Execute       apply_spec_resource_limit fft_stage.134 
+INFO-FLOW: Configuring Module : fft_stage35 ...
+Execute       set_default_model fft_stage35 
+Execute       apply_spec_resource_limit fft_stage35 
+INFO-FLOW: Configuring Module : fft_streaming ...
+Execute       set_default_model fft_streaming 
+Execute       apply_spec_resource_limit fft_streaming 
+INFO-FLOW: Model list for preprocess: bit_reverse25 fft_stage.126 fft_stage.127 fft_stage.128 fft_stage.129 fft_stage.130 fft_stage.131 fft_stage.132 fft_stage.133 fft_stage.134 fft_stage35 fft_streaming
+INFO-FLOW: Preprocessing Module: bit_reverse25 ...
+Execute       set_default_model bit_reverse25 
+Execute       cdfg_preprocess -model bit_reverse25 
+Execute       rtl_gen_preprocess bit_reverse25 
+INFO-FLOW: Preprocessing Module: fft_stage.126 ...
+Execute       set_default_model fft_stage.126 
+Execute       cdfg_preprocess -model fft_stage.126 
+Execute       rtl_gen_preprocess fft_stage.126 
+INFO-FLOW: Preprocessing Module: fft_stage.127 ...
+Execute       set_default_model fft_stage.127 
+Execute       cdfg_preprocess -model fft_stage.127 
+Execute       rtl_gen_preprocess fft_stage.127 
+INFO-FLOW: Preprocessing Module: fft_stage.128 ...
+Execute       set_default_model fft_stage.128 
+Execute       cdfg_preprocess -model fft_stage.128 
+Execute       rtl_gen_preprocess fft_stage.128 
+INFO-FLOW: Preprocessing Module: fft_stage.129 ...
+Execute       set_default_model fft_stage.129 
+Execute       cdfg_preprocess -model fft_stage.129 
+Execute       rtl_gen_preprocess fft_stage.129 
+INFO-FLOW: Preprocessing Module: fft_stage.130 ...
+Execute       set_default_model fft_stage.130 
+Execute       cdfg_preprocess -model fft_stage.130 
+Execute       rtl_gen_preprocess fft_stage.130 
+INFO-FLOW: Preprocessing Module: fft_stage.131 ...
+Execute       set_default_model fft_stage.131 
+Execute       cdfg_preprocess -model fft_stage.131 
+Execute       rtl_gen_preprocess fft_stage.131 
+INFO-FLOW: Preprocessing Module: fft_stage.132 ...
+Execute       set_default_model fft_stage.132 
+Execute       cdfg_preprocess -model fft_stage.132 
+Execute       rtl_gen_preprocess fft_stage.132 
+INFO-FLOW: Preprocessing Module: fft_stage.133 ...
+Execute       set_default_model fft_stage.133 
+Execute       cdfg_preprocess -model fft_stage.133 
+Execute       rtl_gen_preprocess fft_stage.133 
+INFO-FLOW: Preprocessing Module: fft_stage.134 ...
+Execute       set_default_model fft_stage.134 
+Execute       cdfg_preprocess -model fft_stage.134 
+Execute       rtl_gen_preprocess fft_stage.134 
+INFO-FLOW: Preprocessing Module: fft_stage35 ...
+Execute       set_default_model fft_stage35 
+Execute       cdfg_preprocess -model fft_stage35 
+Execute       rtl_gen_preprocess fft_stage35 
+INFO-FLOW: Preprocessing Module: fft_streaming ...
+Execute       set_default_model fft_streaming 
+Execute       cdfg_preprocess -model fft_streaming 
+Execute       rtl_gen_preprocess fft_streaming 
+INFO-FLOW: Model list for synthesis: bit_reverse25 fft_stage.126 fft_stage.127 fft_stage.128 fft_stage.129 fft_stage.130 fft_stage.131 fft_stage.132 fft_stage.133 fft_stage.134 fft_stage35 fft_streaming
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bit_reverse25' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model bit_reverse25 
+Execute       schedule -model bit_reverse25 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'bit_reverse_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 24.333 seconds; current allocated memory: 226.075 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/bit_reverse25.verbose.sched.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/bit_reverse25.sched.adb -f 
+INFO-FLOW: Finish scheduling bit_reverse25.
+Execute       set_default_model bit_reverse25 
+Execute       bind -model bit_reverse25 
+BIND OPTION: model=bit_reverse25
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.126 seconds; current allocated memory: 226.215 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/bit_reverse25.verbose.bind.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/bit_reverse25.bind.adb -f 
+INFO-FLOW: Finish binding bit_reverse25.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage_126' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_stage.126 
+Execute       schedule -model fft_stage.126 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'dft_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.163 seconds; current allocated memory: 226.340 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_126.verbose.sched.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_126.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_stage.126.
+Execute       set_default_model fft_stage.126 
+Execute       bind -model fft_stage.126 
+BIND OPTION: model=fft_stage.126
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.106 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 226.478 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_126.verbose.bind.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_126.bind.adb -f 
+INFO-FLOW: Finish binding fft_stage.126.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage_127' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_stage.127 
+Execute       schedule -model fft_stage.127 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'butterfly_loop_dft_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.145 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.281 seconds; current allocated memory: 226.720 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_127.verbose.sched.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_127.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_stage.127.
+Execute       set_default_model fft_stage.127 
+Execute       bind -model fft_stage.127 
+BIND OPTION: model=fft_stage.127
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.108 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.249 seconds; current allocated memory: 226.956 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_127.verbose.bind.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_127.bind.adb -f 
+INFO-FLOW: Finish binding fft_stage.127.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage_128' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_stage.128 
+Execute       schedule -model fft_stage.128 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'butterfly_loop_dft_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.254 seconds; current allocated memory: 227.160 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_128.verbose.sched.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_128.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_stage.128.
+Execute       set_default_model fft_stage.128 
+Execute       bind -model fft_stage.128 
+BIND OPTION: model=fft_stage.128
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.146 seconds; current allocated memory: 227.397 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_128.verbose.bind.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_128.bind.adb -f 
+INFO-FLOW: Finish binding fft_stage.128.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage_129' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_stage.129 
+Execute       schedule -model fft_stage.129 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'butterfly_loop_dft_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.217 seconds; current allocated memory: 227.606 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_129.verbose.sched.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_129.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_stage.129.
+Execute       set_default_model fft_stage.129 
+Execute       bind -model fft_stage.129 
+BIND OPTION: model=fft_stage.129
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.143 seconds; current allocated memory: 227.843 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_129.verbose.bind.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_129.bind.adb -f 
+INFO-FLOW: Finish binding fft_stage.129.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage_130' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_stage.130 
+Execute       schedule -model fft_stage.130 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'butterfly_loop_dft_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 228.073 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_130.verbose.sched.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_130.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_stage.130.
+Execute       set_default_model fft_stage.130 
+Execute       bind -model fft_stage.130 
+BIND OPTION: model=fft_stage.130
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.144 seconds; current allocated memory: 228.309 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_130.verbose.bind.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_130.bind.adb -f 
+INFO-FLOW: Finish binding fft_stage.130.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage_131' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_stage.131 
+Execute       schedule -model fft_stage.131 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'butterfly_loop_dft_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.216 seconds; current allocated memory: 228.503 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_131.verbose.sched.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_131.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_stage.131.
+Execute       set_default_model fft_stage.131 
+Execute       bind -model fft_stage.131 
+BIND OPTION: model=fft_stage.131
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.169 seconds; current allocated memory: 228.739 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_131.verbose.bind.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_131.bind.adb -f 
+INFO-FLOW: Finish binding fft_stage.131.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage_132' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_stage.132 
+Execute       schedule -model fft_stage.132 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'butterfly_loop_dft_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.217 seconds; current allocated memory: 228.912 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_132.verbose.sched.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_132.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_stage.132.
+Execute       set_default_model fft_stage.132 
+Execute       bind -model fft_stage.132 
+BIND OPTION: model=fft_stage.132
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.152 seconds; current allocated memory: 229.149 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_132.verbose.bind.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_132.bind.adb -f 
+INFO-FLOW: Finish binding fft_stage.132.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage_133' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_stage.133 
+Execute       schedule -model fft_stage.133 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'butterfly_loop_dft_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.222 seconds; current allocated memory: 229.358 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_133.verbose.sched.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_133.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_stage.133.
+Execute       set_default_model fft_stage.133 
+Execute       bind -model fft_stage.133 
+BIND OPTION: model=fft_stage.133
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.146 seconds; current allocated memory: 229.595 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_133.verbose.bind.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_133.bind.adb -f 
+INFO-FLOW: Finish binding fft_stage.133.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage_134' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_stage.134 
+Execute       schedule -model fft_stage.134 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'butterfly_loop_dft_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.224 seconds; current allocated memory: 229.750 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_134.verbose.sched.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_134.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_stage.134.
+Execute       set_default_model fft_stage.134 
+Execute       bind -model fft_stage.134 
+BIND OPTION: model=fft_stage.134
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.141 seconds; current allocated memory: 229.984 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_134.verbose.bind.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_134.bind.adb -f 
+INFO-FLOW: Finish binding fft_stage.134.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage35' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_stage35 
+Execute       schedule -model fft_stage35 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'butterfly_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 230.157 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage35.verbose.sched.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage35.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_stage35.
+Execute       set_default_model fft_stage35 
+Execute       bind -model fft_stage35 
+BIND OPTION: model=fft_stage35
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.149 seconds; current allocated memory: 230.345 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage35.verbose.bind.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage35.bind.adb -f 
+INFO-FLOW: Finish binding fft_stage35.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_streaming' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_streaming 
+Execute       schedule -model fft_streaming 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.158 seconds; current allocated memory: 230.501 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.verbose.sched.rpt 
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_streaming.
+Execute       set_default_model fft_streaming 
+Execute       bind -model fft_streaming 
+BIND OPTION: model=fft_streaming
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.465 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.519 seconds; current allocated memory: 230.917 MB.
+Execute       syn_report -verbosereport -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.verbose.bind.rpt 
+Command       syn_report done; 0.185 sec.
+Execute       db_write -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.bind.adb -f 
+INFO-FLOW: Finish binding fft_streaming.
+Execute       get_model_list fft_streaming -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess bit_reverse25 
+Execute       rtl_gen_preprocess fft_stage.126 
+Execute       rtl_gen_preprocess fft_stage.127 
+Execute       rtl_gen_preprocess fft_stage.128 
+Execute       rtl_gen_preprocess fft_stage.129 
+Execute       rtl_gen_preprocess fft_stage.130 
+Execute       rtl_gen_preprocess fft_stage.131 
+Execute       rtl_gen_preprocess fft_stage.132 
+Execute       rtl_gen_preprocess fft_stage.133 
+Execute       rtl_gen_preprocess fft_stage.134 
+Execute       rtl_gen_preprocess fft_stage35 
+Execute       rtl_gen_preprocess fft_streaming 
+INFO-FLOW: Model list for RTL generation: bit_reverse25 fft_stage.126 fft_stage.127 fft_stage.128 fft_stage.129 fft_stage.130 fft_stage.131 fft_stage.132 fft_stage.133 fft_stage.134 fft_stage35 fft_streaming
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bit_reverse25' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model bit_reverse25 -vendor xilinx -mg_file C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/bit_reverse25.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bit_reverse25'.
+INFO: [HLS 200-111]  Elapsed time: 0.307 seconds; current allocated memory: 231.391 MB.
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl bit_reverse25 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/systemc/bit_reverse25 -synmodules bit_reverse25 fft_stage.126 fft_stage.127 fft_stage.128 fft_stage.129 fft_stage.130 fft_stage.131 fft_stage.132 fft_stage.133 fft_stage.134 fft_stage35 fft_streaming 
+Execute       gen_rtl bit_reverse25 -style xilinx -f -lang vhdl -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/vhdl/bit_reverse25 
+Execute       gen_rtl bit_reverse25 -style xilinx -f -lang vlog -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/verilog/bit_reverse25 
+Execute       syn_report -csynth -model bit_reverse25 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/bit_reverse25_csynth.rpt 
+Execute       syn_report -rtlxml -model bit_reverse25 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/bit_reverse25_csynth.xml 
+Execute       syn_report -verbosereport -model bit_reverse25 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/bit_reverse25.verbose.rpt 
+Execute       db_write -model bit_reverse25 -f -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/bit_reverse25.adb 
+Execute       gen_tb_info bit_reverse25 -p C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/bit_reverse25 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage_126' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model fft_stage.126 -vendor xilinx -mg_file C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_126.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage_126'.
+INFO: [HLS 200-111]  Elapsed time: 0.229 seconds; current allocated memory: 232.158 MB.
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_stage.126 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/systemc/fft_stage_126 -synmodules bit_reverse25 fft_stage.126 fft_stage.127 fft_stage.128 fft_stage.129 fft_stage.130 fft_stage.131 fft_stage.132 fft_stage.133 fft_stage.134 fft_stage35 fft_streaming 
+Execute       gen_rtl fft_stage.126 -style xilinx -f -lang vhdl -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/vhdl/fft_stage_126 
+Execute       gen_rtl fft_stage.126 -style xilinx -f -lang vlog -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/verilog/fft_stage_126 
+Execute       syn_report -csynth -model fft_stage.126 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_stage_126_csynth.rpt 
+Execute       syn_report -rtlxml -model fft_stage.126 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_stage_126_csynth.xml 
+Execute       syn_report -verbosereport -model fft_stage.126 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_126.verbose.rpt 
+Execute       db_write -model fft_stage.126 -f -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_126.adb 
+Execute       gen_tb_info fft_stage.126 -p C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_126 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage_127' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model fft_stage.127 -vendor xilinx -mg_file C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_127.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'fft_stage_127_W_real_V' to 'fft_stage_127_W_rbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_stage_127_W_imag_V' to 'fft_stage_127_W_icud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_mul_mul_13s_22s_33_1_1' to 'fft_streaming_muldEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_mac_mulsub_12s_22s_33s_33_1_1' to 'fft_streaming_maceOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_mac_muladd_13s_22s_33s_33_1_1' to 'fft_streaming_macfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_mul_mul_12s_22s_33_1_1' to 'fft_streaming_mulg8j' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_maceOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_macfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_muldEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_mulg8j': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage_127'.
+Command       create_rtl_model done; 0.188 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.401 seconds; current allocated memory: 233.208 MB.
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_stage.127 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/systemc/fft_stage_127 -synmodules bit_reverse25 fft_stage.126 fft_stage.127 fft_stage.128 fft_stage.129 fft_stage.130 fft_stage.131 fft_stage.132 fft_stage.133 fft_stage.134 fft_stage35 fft_streaming 
+Execute       gen_rtl fft_stage.127 -style xilinx -f -lang vhdl -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/vhdl/fft_stage_127 
+Execute       gen_rtl fft_stage.127 -style xilinx -f -lang vlog -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/verilog/fft_stage_127 
+Execute       syn_report -csynth -model fft_stage.127 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_stage_127_csynth.rpt 
+Execute       syn_report -rtlxml -model fft_stage.127 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_stage_127_csynth.xml 
+Execute       syn_report -verbosereport -model fft_stage.127 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_127.verbose.rpt 
+Execute       db_write -model fft_stage.127 -f -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_127.adb 
+Execute       gen_tb_info fft_stage.127 -p C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_127 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage_128' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model fft_stage.128 -vendor xilinx -mg_file C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_128.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'fft_stage_128_W_real_V55' to 'fft_stage_128_W_rhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_stage_128_W_imag_V47' to 'fft_stage_128_W_iibs' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_maceOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_macfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_muldEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_mulg8j': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage_128'.
+Command       create_rtl_model done; 0.122 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.429 seconds; current allocated memory: 234.569 MB.
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_stage.128 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/systemc/fft_stage_128 -synmodules bit_reverse25 fft_stage.126 fft_stage.127 fft_stage.128 fft_stage.129 fft_stage.130 fft_stage.131 fft_stage.132 fft_stage.133 fft_stage.134 fft_stage35 fft_streaming 
+Execute       gen_rtl fft_stage.128 -style xilinx -f -lang vhdl -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/vhdl/fft_stage_128 
+Execute       gen_rtl fft_stage.128 -style xilinx -f -lang vlog -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/verilog/fft_stage_128 
+Execute       syn_report -csynth -model fft_stage.128 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_stage_128_csynth.rpt 
+Execute       syn_report -rtlxml -model fft_stage.128 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_stage_128_csynth.xml 
+Execute       syn_report -verbosereport -model fft_stage.128 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_128.verbose.rpt 
+Execute       db_write -model fft_stage.128 -f -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_128.adb 
+Execute       gen_tb_info fft_stage.128 -p C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_128 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage_129' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model fft_stage.129 -vendor xilinx -mg_file C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_129.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'fft_stage_129_W_real_V56' to 'fft_stage_129_W_rjbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_stage_129_W_imag_V48' to 'fft_stage_129_W_ikbM' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_maceOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_macfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_muldEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_mulg8j': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage_129'.
+Command       create_rtl_model done; 0.142 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.45 seconds; current allocated memory: 235.970 MB.
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_stage.129 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/systemc/fft_stage_129 -synmodules bit_reverse25 fft_stage.126 fft_stage.127 fft_stage.128 fft_stage.129 fft_stage.130 fft_stage.131 fft_stage.132 fft_stage.133 fft_stage.134 fft_stage35 fft_streaming 
+Execute       gen_rtl fft_stage.129 -style xilinx -f -lang vhdl -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/vhdl/fft_stage_129 
+Execute       gen_rtl fft_stage.129 -style xilinx -f -lang vlog -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/verilog/fft_stage_129 
+Execute       syn_report -csynth -model fft_stage.129 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_stage_129_csynth.rpt 
+Execute       syn_report -rtlxml -model fft_stage.129 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_stage_129_csynth.xml 
+Execute       syn_report -verbosereport -model fft_stage.129 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_129.verbose.rpt 
+Execute       db_write -model fft_stage.129 -f -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_129.adb 
+Execute       gen_tb_info fft_stage.129 -p C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_129 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage_130' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model fft_stage.130 -vendor xilinx -mg_file C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_130.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'fft_stage_130_W_real_V57' to 'fft_stage_130_W_rlbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_stage_130_W_imag_V49' to 'fft_stage_130_W_imb6' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_maceOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_macfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_muldEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_mulg8j': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage_130'.
+Command       create_rtl_model done; 0.123 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.427 seconds; current allocated memory: 237.288 MB.
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_stage.130 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/systemc/fft_stage_130 -synmodules bit_reverse25 fft_stage.126 fft_stage.127 fft_stage.128 fft_stage.129 fft_stage.130 fft_stage.131 fft_stage.132 fft_stage.133 fft_stage.134 fft_stage35 fft_streaming 
+Execute       gen_rtl fft_stage.130 -style xilinx -f -lang vhdl -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/vhdl/fft_stage_130 
+Execute       gen_rtl fft_stage.130 -style xilinx -f -lang vlog -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/verilog/fft_stage_130 
+Execute       syn_report -csynth -model fft_stage.130 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_stage_130_csynth.rpt 
+Execute       syn_report -rtlxml -model fft_stage.130 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_stage_130_csynth.xml 
+Execute       syn_report -verbosereport -model fft_stage.130 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_130.verbose.rpt 
+Execute       db_write -model fft_stage.130 -f -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_130.adb 
+Execute       gen_tb_info fft_stage.130 -p C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_130 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage_131' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model fft_stage.131 -vendor xilinx -mg_file C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_131.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'fft_stage_131_W_real_V58' to 'fft_stage_131_W_rncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_stage_131_W_imag_V50' to 'fft_stage_131_W_iocq' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_maceOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_macfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_muldEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_mulg8j': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage_131'.
+Command       create_rtl_model done; 0.148 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.467 seconds; current allocated memory: 238.688 MB.
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_stage.131 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/systemc/fft_stage_131 -synmodules bit_reverse25 fft_stage.126 fft_stage.127 fft_stage.128 fft_stage.129 fft_stage.130 fft_stage.131 fft_stage.132 fft_stage.133 fft_stage.134 fft_stage35 fft_streaming 
+Execute       gen_rtl fft_stage.131 -style xilinx -f -lang vhdl -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/vhdl/fft_stage_131 
+Execute       gen_rtl fft_stage.131 -style xilinx -f -lang vlog -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/verilog/fft_stage_131 
+Execute       syn_report -csynth -model fft_stage.131 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_stage_131_csynth.rpt 
+Execute       syn_report -rtlxml -model fft_stage.131 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_stage_131_csynth.xml 
+Execute       syn_report -verbosereport -model fft_stage.131 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_131.verbose.rpt 
+Command       syn_report done; 0.113 sec.
+Execute       db_write -model fft_stage.131 -f -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_131.adb 
+Command       db_write done; 0.104 sec.
+Execute       gen_tb_info fft_stage.131 -p C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_131 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage_132' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model fft_stage.132 -vendor xilinx -mg_file C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_132.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'fft_stage_132_W_real_V59' to 'fft_stage_132_W_rpcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_stage_132_W_imag_V51' to 'fft_stage_132_W_iqcK' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_maceOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_macfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_muldEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_mulg8j': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage_132'.
+Command       create_rtl_model done; 0.181 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.716 seconds; current allocated memory: 240.072 MB.
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_stage.132 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/systemc/fft_stage_132 -synmodules bit_reverse25 fft_stage.126 fft_stage.127 fft_stage.128 fft_stage.129 fft_stage.130 fft_stage.131 fft_stage.132 fft_stage.133 fft_stage.134 fft_stage35 fft_streaming 
+Execute       gen_rtl fft_stage.132 -style xilinx -f -lang vhdl -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/vhdl/fft_stage_132 
+Execute       gen_rtl fft_stage.132 -style xilinx -f -lang vlog -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/verilog/fft_stage_132 
+Execute       syn_report -csynth -model fft_stage.132 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_stage_132_csynth.rpt 
+Execute       syn_report -rtlxml -model fft_stage.132 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_stage_132_csynth.xml 
+Execute       syn_report -verbosereport -model fft_stage.132 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_132.verbose.rpt 
+Execute       db_write -model fft_stage.132 -f -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_132.adb 
+Execute       gen_tb_info fft_stage.132 -p C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_132 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage_133' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model fft_stage.133 -vendor xilinx -mg_file C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_133.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'fft_stage_133_W_real_V60' to 'fft_stage_133_W_rrcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_stage_133_W_imag_V52' to 'fft_stage_133_W_isc4' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_maceOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_macfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_muldEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_mulg8j': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage_133'.
+Command       create_rtl_model done; 0.135 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.483 seconds; current allocated memory: 241.405 MB.
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_stage.133 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/systemc/fft_stage_133 -synmodules bit_reverse25 fft_stage.126 fft_stage.127 fft_stage.128 fft_stage.129 fft_stage.130 fft_stage.131 fft_stage.132 fft_stage.133 fft_stage.134 fft_stage35 fft_streaming 
+Execute       gen_rtl fft_stage.133 -style xilinx -f -lang vhdl -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/vhdl/fft_stage_133 
+Execute       gen_rtl fft_stage.133 -style xilinx -f -lang vlog -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/verilog/fft_stage_133 
+Execute       syn_report -csynth -model fft_stage.133 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_stage_133_csynth.rpt 
+Execute       syn_report -rtlxml -model fft_stage.133 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_stage_133_csynth.xml 
+Execute       syn_report -verbosereport -model fft_stage.133 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_133.verbose.rpt 
+Execute       db_write -model fft_stage.133 -f -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_133.adb 
+Execute       gen_tb_info fft_stage.133 -p C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_133 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage_134' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model fft_stage.134 -vendor xilinx -mg_file C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_134.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'fft_stage_134_W_real_V61' to 'fft_stage_134_W_rtde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_stage_134_W_imag_V53' to 'fft_stage_134_W_iudo' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_maceOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_macfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_muldEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_mulg8j': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage_134'.
+Command       create_rtl_model done; 0.127 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 242.798 MB.
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_stage.134 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/systemc/fft_stage_134 -synmodules bit_reverse25 fft_stage.126 fft_stage.127 fft_stage.128 fft_stage.129 fft_stage.130 fft_stage.131 fft_stage.132 fft_stage.133 fft_stage.134 fft_stage35 fft_streaming 
+Execute       gen_rtl fft_stage.134 -style xilinx -f -lang vhdl -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/vhdl/fft_stage_134 
+Execute       gen_rtl fft_stage.134 -style xilinx -f -lang vlog -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/verilog/fft_stage_134 
+Execute       syn_report -csynth -model fft_stage.134 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_stage_134_csynth.rpt 
+Execute       syn_report -rtlxml -model fft_stage.134 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_stage_134_csynth.xml 
+Execute       syn_report -verbosereport -model fft_stage.134 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_134.verbose.rpt 
+Execute       db_write -model fft_stage.134 -f -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_134.adb 
+Execute       gen_tb_info fft_stage.134 -p C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_134 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage35' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model fft_stage35 -vendor xilinx -mg_file C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage35.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'fft_stage35_W_real_V62' to 'fft_stage35_W_reavdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_stage35_W_imag_V54' to 'fft_stage35_W_imawdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_mul_mul_22s_13s_33_1_1' to 'fft_streaming_mulxdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_mac_mulsub_22s_12s_33s_33_1_1' to 'fft_streaming_macyd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_mac_muladd_22s_13s_33s_33_1_1' to 'fft_streaming_maczec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_mul_mul_22s_12s_33_1_1' to 'fft_streaming_mulAem' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_macyd2': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_maczec': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_mulAem': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_mulxdS': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage35'.
+Command       create_rtl_model done; 0.201 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.522 seconds; current allocated memory: 244.071 MB.
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_stage35 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/systemc/fft_stage35 -synmodules bit_reverse25 fft_stage.126 fft_stage.127 fft_stage.128 fft_stage.129 fft_stage.130 fft_stage.131 fft_stage.132 fft_stage.133 fft_stage.134 fft_stage35 fft_streaming 
+Execute       gen_rtl fft_stage35 -style xilinx -f -lang vhdl -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/vhdl/fft_stage35 
+Execute       gen_rtl fft_stage35 -style xilinx -f -lang vlog -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/verilog/fft_stage35 
+Execute       syn_report -csynth -model fft_stage35 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_stage35_csynth.rpt 
+Execute       syn_report -rtlxml -model fft_stage35 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_stage35_csynth.xml 
+Execute       syn_report -verbosereport -model fft_stage35 -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage35.verbose.rpt 
+Execute       db_write -model fft_stage35 -f -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage35.adb 
+Execute       gen_tb_info fft_stage35 -p C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage35 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_streaming' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model fft_streaming -vendor xilinx -mg_file C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_streaming/X_R_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_streaming/X_I_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_streaming/OUT_R_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_streaming/OUT_I_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fft_streaming' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage_R_0_V' to 'fft_streaming_StaBew' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage_R_1_V' to 'fft_streaming_StaCeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage_R_2_V' to 'fft_streaming_StaDeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage_R_3_V' to 'fft_streaming_StaEe0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage_R_4_V' to 'fft_streaming_StaFfa' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage_R_5_V' to 'fft_streaming_StaGfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage_R_6_V' to 'fft_streaming_StaHfu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage_R_7_V' to 'fft_streaming_StaIfE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage_R_8_V' to 'fft_streaming_StaJfO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage_R_9_V' to 'fft_streaming_StaKfY' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage_I_0_V' to 'fft_streaming_StaLf8' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage_I_1_V' to 'fft_streaming_StaMgi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage_I_2_V' to 'fft_streaming_StaNgs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage_I_3_V' to 'fft_streaming_StaOgC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage_I_4_V' to 'fft_streaming_StaPgM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage_I_5_V' to 'fft_streaming_StaQgW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage_I_6_V' to 'fft_streaming_StaRg6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage_I_7_V' to 'fft_streaming_StaShg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage_I_8_V' to 'fft_streaming_StaThq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage_I_9_V' to 'fft_streaming_StaUhA' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_streaming'.
+Command       create_rtl_model done; 0.676 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.976 seconds; current allocated memory: 248.035 MB.
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_streaming -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/systemc/fft_streaming -synmodules bit_reverse25 fft_stage.126 fft_stage.127 fft_stage.128 fft_stage.129 fft_stage.130 fft_stage.131 fft_stage.132 fft_stage.133 fft_stage.134 fft_stage35 fft_streaming 
+Execute       gen_rtl fft_streaming -istop -style xilinx -f -lang vhdl -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/vhdl/fft_streaming 
+Execute       gen_rtl fft_streaming -istop -style xilinx -f -lang vlog -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/verilog/fft_streaming 
+Execute       syn_report -csynth -model fft_streaming -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_streaming_csynth.rpt 
+Execute       syn_report -rtlxml -model fft_streaming -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/syn/report/fft_streaming_csynth.xml 
+Execute       syn_report -verbosereport -model fft_streaming -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.verbose.rpt 
+Command       syn_report done; 0.212 sec.
+Execute       db_write -model fft_streaming -f -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.adb 
+Execute       gen_tb_info fft_streaming -p C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming 
+Execute       export_constraint_db -f -tool general -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.constraint.tcl 
+Execute       syn_report -designview -model fft_streaming -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.design.xml 
+Command       syn_report done; 0.227 sec.
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model fft_streaming -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model fft_streaming -o C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks fft_streaming 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain fft_streaming 
+INFO-FLOW: Model list for RTL component generation: bit_reverse25 fft_stage.126 fft_stage.127 fft_stage.128 fft_stage.129 fft_stage.130 fft_stage.131 fft_stage.132 fft_stage.133 fft_stage.134 fft_stage35 fft_streaming
+INFO-FLOW: Handling components in module [bit_reverse25] ... 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/bit_reverse25.compgen.tcl 
+INFO-FLOW: Handling components in module [fft_stage_126] ... 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_126.compgen.tcl 
+INFO-FLOW: Handling components in module [fft_stage_127] ... 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_127.compgen.tcl 
+INFO-FLOW: Found component fft_streaming_muldEe.
+INFO-FLOW: Append model fft_streaming_muldEe
+INFO-FLOW: Found component fft_streaming_maceOg.
+INFO-FLOW: Append model fft_streaming_maceOg
+INFO-FLOW: Found component fft_streaming_macfYi.
+INFO-FLOW: Append model fft_streaming_macfYi
+INFO-FLOW: Found component fft_streaming_mulg8j.
+INFO-FLOW: Append model fft_streaming_mulg8j
+INFO-FLOW: Found component fft_stage_127_W_rbkb.
+INFO-FLOW: Append model fft_stage_127_W_rbkb
+INFO-FLOW: Found component fft_stage_127_W_icud.
+INFO-FLOW: Append model fft_stage_127_W_icud
+INFO-FLOW: Handling components in module [fft_stage_128] ... 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_128.compgen.tcl 
+INFO-FLOW: Handling components in module [fft_stage_129] ... 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_129.compgen.tcl 
+INFO-FLOW: Handling components in module [fft_stage_130] ... 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_130.compgen.tcl 
+INFO-FLOW: Handling components in module [fft_stage_131] ... 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_131.compgen.tcl 
+INFO-FLOW: Handling components in module [fft_stage_132] ... 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_132.compgen.tcl 
+INFO-FLOW: Handling components in module [fft_stage_133] ... 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_133.compgen.tcl 
+INFO-FLOW: Handling components in module [fft_stage_134] ... 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_134.compgen.tcl 
+INFO-FLOW: Handling components in module [fft_stage35] ... 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage35.compgen.tcl 
+INFO-FLOW: Found component fft_streaming_mulxdS.
+INFO-FLOW: Append model fft_streaming_mulxdS
+INFO-FLOW: Found component fft_streaming_macyd2.
+INFO-FLOW: Append model fft_streaming_macyd2
+INFO-FLOW: Found component fft_streaming_maczec.
+INFO-FLOW: Append model fft_streaming_maczec
+INFO-FLOW: Found component fft_streaming_mulAem.
+INFO-FLOW: Append model fft_streaming_mulAem
+INFO-FLOW: Handling components in module [fft_streaming] ... 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.compgen.tcl 
+INFO-FLOW: Append model bit_reverse25
+INFO-FLOW: Append model fft_stage_126
+INFO-FLOW: Append model fft_stage_127
+INFO-FLOW: Append model fft_stage_128
+INFO-FLOW: Append model fft_stage_129
+INFO-FLOW: Append model fft_stage_130
+INFO-FLOW: Append model fft_stage_131
+INFO-FLOW: Append model fft_stage_132
+INFO-FLOW: Append model fft_stage_133
+INFO-FLOW: Append model fft_stage_134
+INFO-FLOW: Append model fft_stage35
+INFO-FLOW: Append model fft_streaming
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: fft_streaming_muldEe fft_streaming_maceOg fft_streaming_macfYi fft_streaming_mulg8j fft_stage_127_W_rbkb fft_stage_127_W_icud fft_streaming_mulxdS fft_streaming_macyd2 fft_streaming_maczec fft_streaming_mulAem bit_reverse25 fft_stage_126 fft_stage_127 fft_stage_128 fft_stage_129 fft_stage_130 fft_stage_131 fft_stage_132 fft_stage_133 fft_stage_134 fft_stage35 fft_streaming
+INFO-FLOW: To file: write model fft_streaming_muldEe
+INFO-FLOW: To file: write model fft_streaming_maceOg
+INFO-FLOW: To file: write model fft_streaming_macfYi
+INFO-FLOW: To file: write model fft_streaming_mulg8j
+INFO-FLOW: To file: write model fft_stage_127_W_rbkb
+INFO-FLOW: To file: write model fft_stage_127_W_icud
+INFO-FLOW: To file: write model fft_streaming_mulxdS
+INFO-FLOW: To file: write model fft_streaming_macyd2
+INFO-FLOW: To file: write model fft_streaming_maczec
+INFO-FLOW: To file: write model fft_streaming_mulAem
+INFO-FLOW: To file: write model bit_reverse25
+INFO-FLOW: To file: write model fft_stage_126
+INFO-FLOW: To file: write model fft_stage_127
+INFO-FLOW: To file: write model fft_stage_128
+INFO-FLOW: To file: write model fft_stage_129
+INFO-FLOW: To file: write model fft_stage_130
+INFO-FLOW: To file: write model fft_stage_131
+INFO-FLOW: To file: write model fft_stage_132
+INFO-FLOW: To file: write model fft_stage_133
+INFO-FLOW: To file: write model fft_stage_134
+INFO-FLOW: To file: write model fft_stage35
+INFO-FLOW: To file: write model fft_streaming
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       syn_report -model fft_streaming -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 133.47 MHz
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/global.setting.tcl
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/op.gen 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.151 sec.
+Command       ap_source done; 0.151 sec.
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute       ap_family_info -name qzynquplus -data info -quiet 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/global.setting.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/global.setting.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/bit_reverse25.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_126.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_127.compgen.tcl 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'fft_stage_127_W_rbkb_rom' using auto ROMs.
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'fft_stage_127_W_icud_rom' using auto ROMs.
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+Command       ap_source done; 0.365 sec.
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_128.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_129.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_130.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_131.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_132.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_133.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_134.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage35.compgen.tcl 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+Command       ap_source done; 0.17 sec.
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.compgen.tcl 
+Execute         send_msg_by_id INFO @200-740@%s fft_streaming_StaBew_memcore 
+INFO: [HLS 200-740] Implementing PIPO fft_streaming_StaBew_memcore using a separate memory for each block
+INFO: [RTMG 210-278] Implementing memory 'fft_streaming_StaBew_memcore_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/global.setting.tcl
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/op.gen 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.135 sec.
+Command       ap_source done; 0.135 sec.
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=fft_streaming xml_exists=0
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/global.setting.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/bit_reverse25.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_126.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_127.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_128.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_129.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_130.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_131.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_132.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_133.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_134.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage35.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.compgen.tcl 
+Execute         send_msg_by_id INFO @200-740@%s fft_streaming_StaBew_memcore 
+INFO: [HLS 200-740] Implementing PIPO fft_streaming_StaBew_memcore using a separate memory for each block
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/global.setting.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/bit_reverse25.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_126.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_127.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_128.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_129.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_130.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_131.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_132.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_133.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_134.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage35.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.compgen.tcl 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+Execute         source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.tbgen.tcl 
+Execute         source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.tbgen.tcl 
+Execute         source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.tbgen.tcl 
+Execute         source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.tbgen.tcl 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+Command       ap_source done; 0.129 sec.
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute       ap_family_info -name qzynquplus -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/global.setting.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/bit_reverse25.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_126.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_127.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_128.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_129.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_130.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_131.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_132.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_133.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_134.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage35.compgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.compgen.tcl 
+Execute         send_msg_by_id INFO @200-740@%s fft_streaming_StaBew_memcore 
+INFO: [HLS 200-740] Implementing PIPO fft_streaming_StaBew_memcore using a separate memory for each block
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute         ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute         ap_family_info -name qzynquplus -data info -quiet 
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute       ap_family_info -name qzynquplus -data info -quiet 
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute       ap_family_info -name qzynquplus -data info -quiet 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute       ap_family_info -name qzynquplus -data info -quiet 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.constraint.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=10
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=4
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=22 #gSsdmPorts=10
+Execute       source C:/Xilinx/Vivado/2020.1/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/global.setting.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -xo 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.compgen.dataonly.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute       ap_family_info -name qzynquplus -data info -quiet 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.constraint.tcl 
+Execute       sc_get_clocks fft_streaming 
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data names -quiet 
+Execute       ap_part_info -name xqzu5ev-ffrb900-1-i -data info -quiet 
+Execute       ap_family_info -name qzynquplus -data info -quiet 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/bit_reverse25.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_126.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_127.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_128.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_129.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_130.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_131.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_132.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_133.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage_134.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_stage35.tbgen.tcl 
+Execute       source C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/fft_streaming.tbgen.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: C:/COMP4601/ch5-files/fft_stages_loop.proj/solution2/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:13 ; elapsed = 00:00:40 . Memory (MB): peak = 889.266 ; gain = 795.984
+INFO: [VHDL 208-304] Generating VHDL RTL for fft_streaming.
+INFO: [VLOG 209-307] Generating Verilog RTL for fft_streaming.
+Command     autosyn done; 16.019 sec.
+Command   csynth_design done; 37.979 sec.
+Command ap_source done; 39.31 sec.
+Execute cleanup_all 

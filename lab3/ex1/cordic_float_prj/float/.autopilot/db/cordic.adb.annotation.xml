@@ -1,0 +1,25 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="18" filename="cordic.cpp" linenumber="18" name="icmp_ln18" contextFuncName="cordic" moduleName="cordic" rtlName="icmp_ln18_fu_189_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\COMP4601\lab3\ex1"><\/item>
+<item  id="20" filename="cordic.cpp" linenumber="18" name="j" contextFuncName="cordic" moduleName="cordic" rtlName="j_fu_195_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\COMP4601\lab3\ex1"><\/item>
+<item  id="23" filename="cordic.cpp" linenumber="20" name="bitcast_ln20" contextFuncName="cordic" moduleName="cordic" rtlName="bitcast_ln20_fu_206_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab3\ex1"><\/item>
+<item  id="24" filename="cordic.cpp" linenumber="20" name="tmp" contextFuncName="cordic" moduleName="cordic" rtlName="tmp_fu_210_p4" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab3\ex1"><\/item>
+<item  id="25" filename="cordic.cpp" linenumber="20" name="trunc_ln20" contextFuncName="cordic" moduleName="cordic" rtlName="trunc_ln20_fu_220_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab3\ex1"><\/item>
+<item  id="26" filename="cordic.cpp" linenumber="20" name="icmp_ln20" contextFuncName="cordic" moduleName="cordic" rtlName="icmp_ln20_fu_224_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\COMP4601\lab3\ex1"><\/item>
+<item  id="27" filename="cordic.cpp" linenumber="20" name="icmp_ln20_1" contextFuncName="cordic" moduleName="cordic" rtlName="icmp_ln20_1_fu_230_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="20" fileDirectory="C:\COMP4601\lab3\ex1"><\/item>
+<item  id="28" filename="cordic.cpp" linenumber="20" name="or_ln20" contextFuncName="cordic" moduleName="cordic" rtlName="or_ln20_fu_236_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="2" fileDirectory="C:\COMP4601\lab3\ex1"><\/item>
+<item  id="29" filename="cordic.cpp" linenumber="20" name="tmp_3" contextFuncName="cordic" moduleName="cordic" rtlName="cordic_fcmp_32ns_eOg_U6" latency="1" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab3\ex1"><\/item>
+<item  id="30" filename="cordic.cpp" linenumber="20" name="and_ln20" contextFuncName="cordic" moduleName="cordic" rtlName="and_ln20_fu_242_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="2" fileDirectory="C:\COMP4601\lab3\ex1"><\/item>
+<item  id="31" filename="cordic.cpp" linenumber="23" name="select_ln23" contextFuncName="cordic" moduleName="cordic" rtlName="select_ln23_fu_248_p3" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="32" fileDirectory="C:\COMP4601\lab3\ex1"><\/item>
+<item  id="32" filename="cordic.cpp" linenumber="23" name="tmp_1" contextFuncName="cordic" moduleName="cordic" rtlName="cordic_fmul_32ns_dEe_U3" latency="2" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab3\ex1"><\/item>
+<item  id="33" filename="cordic.cpp" linenumber="23" name="cos_shift" contextFuncName="cordic" moduleName="cordic" rtlName="cordic_fmul_32ns_dEe_U3" latency="2" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab3\ex1"><\/item>
+<item  id="34" filename="cordic.cpp" linenumber="24" name="tmp_2" contextFuncName="cordic" moduleName="cordic" rtlName="cordic_fmul_32ns_dEe_U4" latency="2" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab3\ex1"><\/item>
+<item  id="35" filename="cordic.cpp" linenumber="24" name="sin_shift" contextFuncName="cordic" moduleName="cordic" rtlName="cordic_fmul_32ns_dEe_U4" latency="2" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab3\ex1"><\/item>
+<item  id="36" filename="cordic.cpp" linenumber="27" name="current_cos" contextFuncName="cordic" moduleName="cordic" rtlName="cordic_fsub_32ns_bkb_U1" latency="3" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab3\ex1"><\/item>
+<item  id="37" filename="cordic.cpp" linenumber="28" name="current_sin" contextFuncName="cordic" moduleName="cordic" rtlName="cordic_fadd_32ns_cud_U2" latency="3" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab3\ex1"><\/item>
+<item  id="38" filename="cordic.cpp" linenumber="31" name="zext_ln31" contextFuncName="cordic" moduleName="cordic" rtlName="zext_ln31_fu_201_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab3\ex1"><\/item>
+<item  id="41" filename="cordic.cpp" linenumber="31" name="tmp_5" contextFuncName="cordic" moduleName="cordic" rtlName="cordic_fmul_32ns_dEe_U5" latency="2" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab3\ex1"><\/item>
+<item  id="42" filename="cordic.cpp" linenumber="31" name="theta_assign" contextFuncName="cordic" moduleName="cordic" rtlName="cordic_fsub_32ns_bkb_U1" latency="3" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab3\ex1"><\/item>
+<item  id="43" filename="cordic.cpp" linenumber="33" name="factor" contextFuncName="cordic" moduleName="cordic" rtlName="cordic_fmul_32ns_dEe_U5" latency="2" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab3\ex1"><\/item>
+<\/annotationInfo>
+</annotationInfo>

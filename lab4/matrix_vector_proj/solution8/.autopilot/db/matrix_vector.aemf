@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1687314681383">
+  <ports id="1" name="M_0" type="PortType" originalName="M[0]" coreName="RAM" bitwidth="32" iftype="IfTypeRegister" arraysize="32">
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+  </ports>
+  <ports id="2" name="M_1" type="PortType" originalName="M[1]" coreName="RAM" bitwidth="32" iftype="IfTypeRegister" arraysize="32">
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+  </ports>
+  <ports id="3" name="V_In_0" type="PortType" originalName="V_In[0]" coreName="RAM" bitwidth="32" iftype="IfTypeRegister" arraysize="4">
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+  </ports>
+  <ports id="4" name="V_In_1" type="PortType" originalName="V_In[1]" coreName="RAM" bitwidth="32" iftype="IfTypeRegister" arraysize="4">
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+  </ports>
+  <ports id="5" name="V_Out" type="PortType" originalName="V_Out" coreName="RAM" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="8"/>
+  <edges id="114" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="117" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="118" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="119" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="120" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="123" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="126" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="127" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="128" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="182" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="183" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="186" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="187" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="190" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="191" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="194" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="195" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="198" source_obj="//@regions.0/@basic_blocks.1/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="199" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="202" source_obj="//@regions.0/@basic_blocks.1/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="203" source_obj="//@regions.0/@basic_blocks.1/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="206" source_obj="//@regions.0/@basic_blocks.1/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
+  <edges id="207" source_obj="//@regions.0/@basic_blocks.1/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
+  <edges id="210" source_obj="//@regions.0/@basic_blocks.1/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="211" source_obj="//@regions.0/@basic_blocks.1/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="212" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="213" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="214" source_obj="//@regions.0/@basic_blocks.1/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
+  <edges id="215" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
+  <edges id="216" source_obj="//@regions.0/@basic_blocks.1/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.29"/>
+  <edges id="217" source_obj="//@regions.0/@basic_blocks.1/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.29"/>
+  <edges id="218" source_obj="//@regions.0/@basic_blocks.1/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.30"/>
+  <edges id="219" source_obj="//@regions.0/@basic_blocks.1/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.30"/>
+  <edges id="220" source_obj="//@regions.0/@basic_blocks.1/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="221" source_obj="//@regions.0/@basic_blocks.1/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="222" source_obj="//@regions.0/@basic_blocks.1/@node_objs.30" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.32"/>
+  <edges id="223" source_obj="//@regions.0/@basic_blocks.1/@node_objs.31" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.32"/>
+  <edges id="224" source_obj="//@regions.0/@basic_blocks.1/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.33"/>
+  <edges id="225" source_obj="//@regions.0/@basic_blocks.1/@node_objs.32" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.33"/>
+  <edges id="229" source_obj="//@regions.0/@basic_blocks.1/@node_objs.33" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.34"/>
+  <edges id="231" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.35"/>
+  <edges id="278" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="279" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="280" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="281" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="-1" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="-1" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="-1" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="-1" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="-1" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="-1" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="-1" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="-1" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.34"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <blocks id="21" name="block_21" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_27</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="_ln7" lineNumber="7" fileName="matrix_vector_base.c" fileDirectory=".." contextFuncName="matrix_vector" opcode="br" m_display="0" m_delay="0.75" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrix_vector_base.c" linenumber="7" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+      <controlInputObjs>block_27</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="matrix_vector_base.c">
+      <validLinenumbers>7</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="85" name="block_85" type="BlockType">
+    <controlInputObjs>block_27</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="_ln15" lineNumber="15" fileName="matrix_vector_base.c" fileDirectory=".." contextFuncName="matrix_vector" opcode="ret" nodeLabel="5.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrix_vector_base.c" linenumber="15" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="matrix_vector_base.c">
+      <validLinenumbers>15</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="2" typeName="Pipeline" id="329" pipe_depth="4" RegionName="data_loop">
+    <basic_blocks id="27" name="block_27" type="BlockType">
+      <controlInputObjs>block_21</controlInputObjs>
+      <controlInputObjs>data_loop</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_85</controlOutputObjs>
+      <controlOutputObjs>data_loop</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="i_0" originalName="i" bitwidth="4" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <controlInputObjs>block_21</controlInputObjs>
+        <controlInputObjs>data_loop</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="icmp_ln7" lineNumber="7" fileName="matrix_vector_base.c" fileDirectory=".." rtlName="icmp_ln7_fu_285_p2" contextFuncName="matrix_vector" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.88" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="7" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="i" lineNumber="7" originalName="i" fileName="matrix_vector_base.c" fileDirectory=".." rtlName="i_fu_291_p2" contextFuncName="matrix_vector" bitwidth="4" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.86" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="7" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="_ln7" lineNumber="7" fileName="matrix_vector_base.c" fileDirectory=".." contextFuncName="matrix_vector" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="7" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>data_loop</controlInputObjs>
+        <controlInputObjs>block_85</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="matrix_vector_base.c">
+        <validLinenumbers>7</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="83" name="data_loop" type="BlockType">
+      <controlInputObjs>block_27</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_27</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="or_ln11" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." rtlName="or_ln11_fu_311_p2" contextFuncName="matrix_vector" bitwidth="6" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="or_ln11_1" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." rtlName="or_ln11_1_fu_327_p2" contextFuncName="matrix_vector" bitwidth="6" opcode="or" nodeLabel="2.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="or_ln11_2" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." rtlName="or_ln11_2_fu_342_p2" contextFuncName="matrix_vector" bitwidth="6" opcode="or" nodeLabel="2.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="V_In_0_load" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." contextFuncName="matrix_vector" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>V_In_0</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="M_0_load" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." contextFuncName="matrix_vector" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>M_0</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="mul_ln11" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." rtlName="grp_fu_255_p2" contextFuncName="matrix_vector" bitwidth="32" opcode="mul" nodeLabel="2.0" m_display="0" m_delay="3.88" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="V_In_0_load_1" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." contextFuncName="matrix_vector" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>V_In_0</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="M_0_load_1" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." contextFuncName="matrix_vector" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>M_0</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="mul_ln11_1" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." rtlName="grp_fu_261_p2" contextFuncName="matrix_vector" bitwidth="32" opcode="mul" nodeLabel="2.0" m_display="0" m_delay="3.88" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="V_In_0_load_2" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." contextFuncName="matrix_vector" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="1" m_delay="0.79" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>V_In_0</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="M_0_load_2" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." contextFuncName="matrix_vector" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>M_0</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="mul_ln11_2" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." rtlName="grp_fu_255_p2" contextFuncName="matrix_vector" bitwidth="32" opcode="mul" nodeLabel="3.0" m_display="0" m_delay="3.88" m_topoIndex="52" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="V_In_0_load_3" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." contextFuncName="matrix_vector" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>V_In_0</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="M_0_load_3" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." contextFuncName="matrix_vector" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="43" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>M_0</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="mul_ln11_3" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." rtlName="grp_fu_261_p2" contextFuncName="matrix_vector" bitwidth="32" opcode="mul" nodeLabel="3.0" m_display="0" m_delay="3.88" m_topoIndex="53" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="V_In_1_load" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." contextFuncName="matrix_vector" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>V_In_1</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="M_1_load" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." contextFuncName="matrix_vector" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>M_1</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="mul_ln11_4" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." rtlName="grp_fu_267_p2" contextFuncName="matrix_vector" bitwidth="32" opcode="mul" nodeLabel="2.0" m_display="0" m_delay="3.88" m_topoIndex="44" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="V_In_1_load_1" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." contextFuncName="matrix_vector" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>V_In_1</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="M_1_load_1" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." contextFuncName="matrix_vector" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>M_1</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="mul_ln11_5" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." rtlName="grp_fu_273_p2" contextFuncName="matrix_vector" bitwidth="32" opcode="mul" nodeLabel="2.0" m_display="0" m_delay="3.88" m_topoIndex="45" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="V_In_1_load_2" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." contextFuncName="matrix_vector" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="46" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>V_In_1</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="M_1_load_2" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." contextFuncName="matrix_vector" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="47" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>M_1</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="mul_ln11_6" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." rtlName="grp_fu_267_p2" contextFuncName="matrix_vector" bitwidth="32" opcode="mul" nodeLabel="3.0" m_display="0" m_delay="3.88" m_topoIndex="54" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="V_In_1_load_3" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." contextFuncName="matrix_vector" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="48" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>V_In_1</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="M_1_load_3" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." contextFuncName="matrix_vector" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="49" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>M_1</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="mul_ln11_7" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." rtlName="grp_fu_273_p2" contextFuncName="matrix_vector" bitwidth="32" opcode="mul" nodeLabel="3.0" m_display="0" m_delay="3.88" m_topoIndex="55" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="add_ln11" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." rtlName="add_ln11_fu_357_p2" contextFuncName="matrix_vector" bitwidth="32" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.2" m_topoIndex="50" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="add_ln11_1" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." rtlName="add_ln11_1_fu_363_p2" contextFuncName="matrix_vector" bitwidth="32" opcode="add" nodeLabel="3.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="add_ln11_2" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." rtlName="add_ln11_2_fu_369_p2" contextFuncName="matrix_vector" bitwidth="32" opcode="add" nodeLabel="3.0" m_display="0" m_delay="0.88" m_topoIndex="57" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="add_ln11_3" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." rtlName="grp_fu_279_p2" contextFuncName="matrix_vector" bitwidth="32" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.2" m_topoIndex="51" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="add_ln11_4" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." rtlName="grp_fu_279_p2" contextFuncName="matrix_vector" bitwidth="32" opcode="add" nodeLabel="3.0" m_display="0" m_delay="1.2" m_topoIndex="58" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="add_ln11_5" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." rtlName="add_ln11_5_fu_379_p2" contextFuncName="matrix_vector" bitwidth="32" opcode="add" nodeLabel="4.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="add_ln11_6" lineNumber="11" fileName="matrix_vector_base.c" fileDirectory=".." rtlName="V_Out_d0" contextFuncName="matrix_vector" bitwidth="32" opcode="add" nodeLabel="4.0" m_display="0" m_delay="0.88" m_topoIndex="61" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="11" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="V_Out_addr_write_ln13" lineNumber="13" fileName="matrix_vector_base.c" fileDirectory=".." contextFuncName="matrix_vector" opcode="store" nodeLabel="4.0" m_display="0" m_delay="0.79" m_topoIndex="63" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="13" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="_ln7" lineNumber="7" fileName="matrix_vector_base.c" fileDirectory=".." contextFuncName="matrix_vector" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="matrix_vector_base.c" linenumber="7" fileDirectory="C:\COMP4601\ch4" functionName="matrix_vector"/>
+        <controlInputObjs>block_27</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="matrix_vector_base.c">
+        <validLinenumbers>11</validLinenumbers>
+        <validLinenumbers>13</validLinenumbers>
+        <validLinenumbers>7</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <regnodes realName="V_In_1_addr_1_reg_414">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <regnodes realName="V_In_1_addr_2_reg_419">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln11_4_reg_499">
+    <nodeIds>76</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln11_reg_484">
+    <nodeIds>72</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln7_reg_429">
+    <nodeIds>23</nodeIds>
+  </regnodes>
+  <regnodes realName="V_In_1_addr_3_reg_424">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="M_1_addr_1_reg_459">
+    <nodeIds>45</nodeIds>
+  </regnodes>
+  <regnodes realName="M_0_addr_2_reg_464">
+    <nodeIds>40</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln11_3_reg_489">
+    <nodeIds>75</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_1_reg_438">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln11_2_reg_494">
+    <nodeIds>74</nodeIds>
+  </regnodes>
+  <regnodes realName="M_0_addr_reg_444">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="i_0_reg_243">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_433">
+    <nodeIds>25</nodeIds>
+  </regnodes>
+  <regnodes realName="V_In_0_addr_reg_389">
+    <nodeIds>12</nodeIds>
+  </regnodes>
+  <regnodes realName="M_1_addr_reg_454">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <regnodes realName="V_In_0_addr_3_reg_404">
+    <nodeIds>15</nodeIds>
+  </regnodes>
+  <regnodes realName="M_1_addr_3_reg_479">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <regnodes realName="V_In_1_addr_reg_409">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <regnodes realName="V_In_0_addr_2_reg_399">
+    <nodeIds>14</nodeIds>
+  </regnodes>
+  <regnodes realName="M_0_addr_1_reg_449">
+    <nodeIds>37</nodeIds>
+  </regnodes>
+  <regnodes realName="M_1_addr_2_reg_474">
+    <nodeIds>46</nodeIds>
+  </regnodes>
+  <regnodes realName="M_0_addr_3_reg_469">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="V_In_0_addr_1_reg_394">
+    <nodeIds>13</nodeIds>
+  </regnodes>
+  <expressionNodes realName="or_ln11_fu_311">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_2_fu_317">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_291">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="V_In_0_addr_1_gep_fu_74">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln11_1_fu_363">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln7_fu_285">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="V_In_0_addr_2_gep_fu_82">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_3_fu_332">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="M_1_addr_1_gep_fu_151">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="V_In_0_addr_3_gep_fu_90">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_1_fu_297">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln11_6_fu_383">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="M_0_addr_gep_fu_130">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln11_2_fu_369">
+    <nodeIds>74</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln11_1_fu_305">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="M_1_addr_2_gep_fu_212">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="grp_fu_255">
+    <nodeIds>50</nodeIds>
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="grp_fu_279">
+    <nodeIds>75</nodeIds>
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="V_In_1_addr_3_gep_fu_122">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="grp_fu_273">
+    <nodeIds>65</nodeIds>
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln11_2_fu_342">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="V_In_1_addr_1_gep_fu_106">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="V_Out_addr_gep_fu_230">
+    <nodeIds>79</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln11_5_fu_379">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_4_fu_347">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="V_In_1_addr_gep_fu_98">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln11_fu_374">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="M_0_addr_1_gep_fu_137">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="M_0_addr_3_gep_fu_205">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="V_In_1_addr_2_gep_fu_114">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="V_In_0_addr_gep_fu_66">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_0_phi_fu_247">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="grp_fu_261">
+    <nodeIds>53</nodeIds>
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="M_0_addr_2_gep_fu_198">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="grp_fu_267">
+    <nodeIds>62</nodeIds>
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln11_1_fu_327">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="M_1_addr_3_gep_fu_219">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="M_1_addr_gep_fu_144">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln11_fu_357">
+    <nodeIds>72</nodeIds>
+  </expressionNodes>
+  <memoryPorts dataString="M_0">
+    <nodeIds>49</nodeIds>
+    <nodeIds>55</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="M_0" portID="1">
+    <nodeIds>52</nodeIds>
+    <nodeIds>58</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="M_1">
+    <nodeIds>61</nodeIds>
+    <nodeIds>67</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="M_1" portID="1">
+    <nodeIds>64</nodeIds>
+    <nodeIds>70</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="V_In_0">
+    <nodeIds>48</nodeIds>
+    <nodeIds>54</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="V_In_0" portID="1">
+    <nodeIds>51</nodeIds>
+    <nodeIds>57</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="V_In_1">
+    <nodeIds>60</nodeIds>
+    <nodeIds>66</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="V_In_1" portID="1">
+    <nodeIds>63</nodeIds>
+    <nodeIds>69</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="V_Out">
+    <nodeIds>80</nodeIds>
+  </memoryPorts>
+  <ioPorts name="M_0(p0)">
+    <contents name="load">
+      <nodeIds>49</nodeIds>
+      <nodeIds>55</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="M_0(p1)">
+    <contents name="load">
+      <nodeIds>52</nodeIds>
+      <nodeIds>58</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="M_1(p0)">
+    <contents name="load">
+      <nodeIds>61</nodeIds>
+      <nodeIds>67</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="M_1(p1)">
+    <contents name="load">
+      <nodeIds>64</nodeIds>
+      <nodeIds>70</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="V_In_0(p0)">
+    <contents name="load">
+      <nodeIds>48</nodeIds>
+      <nodeIds>54</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="V_In_0(p1)">
+    <contents name="load">
+      <nodeIds>51</nodeIds>
+      <nodeIds>57</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="V_In_1(p0)">
+    <contents name="load">
+      <nodeIds>60</nodeIds>
+      <nodeIds>66</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="V_In_1(p1)">
+    <contents name="load">
+      <nodeIds>63</nodeIds>
+      <nodeIds>69</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="V_Out(p0)">
+    <contents name="store">
+      <nodeIds>80</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="48" stage="2" latency="2"/>
+      <operations id="49" stage="2" latency="2"/>
+      <operations id="51" stage="2" latency="2"/>
+      <operations id="52" stage="2" latency="2"/>
+      <operations id="60" stage="2" latency="2"/>
+      <operations id="61" stage="2" latency="2"/>
+      <operations id="63" stage="2" latency="2"/>
+      <operations id="64" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="2"/>
+      <operations id="49" stage="1" latency="2"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="2"/>
+      <operations id="52" stage="1" latency="2"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="2" latency="2"/>
+      <operations id="55" stage="2" latency="2"/>
+      <operations id="57" stage="2" latency="2"/>
+      <operations id="58" stage="2" latency="2"/>
+      <operations id="60" stage="1" latency="2"/>
+      <operations id="61" stage="1" latency="2"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="2"/>
+      <operations id="64" stage="1" latency="2"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="2" latency="2"/>
+      <operations id="67" stage="2" latency="2"/>
+      <operations id="69" stage="2" latency="2"/>
+      <operations id="70" stage="2" latency="2"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="54" stage="1" latency="2"/>
+      <operations id="55" stage="1" latency="2"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="2"/>
+      <operations id="58" stage="1" latency="2"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="2"/>
+      <operations id="67" stage="1" latency="2"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="2"/>
+      <operations id="70" stage="1" latency="2"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+    </states>
+    <states id="6">
+      <operations id="84" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="matrix_vector" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="19" mMaxLatency="19">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>21</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="data_loop" mII="2" mDepth="4" mMinTripCount="8" mMaxTripCount="8" mMinLatency="17" mMaxLatency="17" mType="1">
+      <basicBlocks>27</basicBlocks>
+      <basicBlocks>83</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>85</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

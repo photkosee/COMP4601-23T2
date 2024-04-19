@@ -1,0 +1,33 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../matrix_vector_base-top.c in debug mode
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'user' on host 'laptop-hiktno12' (Windows NT_amd64 version 6.2) on Wed Jun 21 11:10:21 +1000 2023
+INFO: [HLS 200-10] In directory 'C:/COMP4601/ch4/matrix_vector_proj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../matrix_vector_base.c in debug mode
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'user' on host 'laptop-hiktno12' (Windows NT_amd64 version 6.2) on Wed Jun 21 11:10:28 +1000 2023
+INFO: [HLS 200-10] In directory 'C:/COMP4601/ch4/matrix_vector_proj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+INPUTS
+Printing DFT Output
+   0	140
+   1	168
+   2	196
+   3	224
+   4	252
+   5	280
+   6	308
+   7	336
+Comparing against output data 
+*******************************************
+PASS: The output matches the golden output!
+*******************************************
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

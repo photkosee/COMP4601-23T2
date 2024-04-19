@@ -1,0 +1,23 @@
+<InterfaceSummary>
+<RtlPorts>
+<name>X_R_V</name>
+<CType>
+<TypeName>ap_fixed 22 11 5 3 0</TypeName>
+<TypeWidth>22</TypeWidth>
+<PhysicalWidth>22</PhysicalWidth>
+</CType>
+<CFractionWidth>11</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>X_I_V</name>
+<CType>
+<TypeName>ap_fixed 22 11 5 3 0</TypeName>
+<TypeWidth>22</TypeWidth>
+<PhysicalWidth>22</PhysicalWidth>
+</CType>
+<CFractionWidth>11</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+</InterfaceSummary>
+

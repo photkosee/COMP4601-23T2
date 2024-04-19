@@ -1,0 +1,19 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="fft" label="dft_loop" functionLabel="">
+            <pragma name="LOOP_TRIPCOUNT">
+                <option name="min" value="512"/>
+                <option name="max" value="512"/>
+                <option name="avg" value="512"/>
+            </pragma>
+        </directive>
+        <directive functionName="fft" label="butterfly_loop" functionLabel="">
+            <pragma name="LOOP_TRIPCOUNT">
+                <option name="min" value="24"/>
+                <option name="max" value="24"/>
+                <option name="avg" value="24"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

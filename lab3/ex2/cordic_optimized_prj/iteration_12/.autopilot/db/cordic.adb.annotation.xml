@@ -1,0 +1,21 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="17" filename="cordic_fixed.cpp" linenumber="17" name="zext_ln17" contextFuncName="cordic" moduleName="cordic" rtlName="zext_ln17_fu_120_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab3\ex2"><\/item>
+<item  id="18" filename="cordic_fixed.cpp" linenumber="17" name="icmp_ln17" contextFuncName="cordic" moduleName="cordic" rtlName="icmp_ln17_fu_124_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="9" fileDirectory="C:\COMP4601\lab3\ex2"><\/item>
+<item  id="20" filename="cordic_fixed.cpp" linenumber="17" name="j" contextFuncName="cordic" moduleName="cordic" rtlName="j_fu_130_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="12" fileDirectory="C:\COMP4601\lab3\ex2"><\/item>
+<item  id="24" filename="cordic_fixed.cpp" linenumber="20" name="r_V" contextFuncName="cordic" moduleName="cordic" rtlName="r_V_fu_136_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="26" fileDirectory="C:\COMP4601\lab3\ex2"><\/item>
+<item  id="25" filename="cordic_fixed.cpp" linenumber="21" name="r_V_1" contextFuncName="cordic" moduleName="cordic" rtlName="r_V_1_fu_142_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="26" fileDirectory="C:\COMP4601\lab3\ex2"><\/item>
+<item  id="26" filename="cordic_fixed.cpp" linenumber="24" name="tmp" contextFuncName="cordic" moduleName="cordic" rtlName="tmp_reg_237" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab3\ex2"><\/item>
+<item  id="27" filename="cordic_fixed.cpp" linenumber="26" name="current_cos_V" contextFuncName="cordic" moduleName="cordic" rtlName="current_cos_V_fu_156_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="19" fileDirectory="C:\COMP4601\lab3\ex2"><\/item>
+<item  id="28" filename="cordic_fixed.cpp" linenumber="27" name="current_sin_V" contextFuncName="cordic" moduleName="cordic" rtlName="current_sin_V_fu_162_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="19" fileDirectory="C:\COMP4601\lab3\ex2"><\/item>
+<item  id="29" filename="cordic_fixed.cpp" linenumber="30" name="zext_ln30" contextFuncName="cordic" moduleName="cordic" rtlName="zext_ln30_fu_168_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab3\ex2"><\/item>
+<item  id="32" filename="cordic_fixed.cpp" linenumber="30" name="zext_ln1265" contextFuncName="cordic" moduleName="cordic" rtlName="zext_ln1265_fu_201_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab3\ex2"><\/item>
+<item  id="33" filename="cordic_fixed.cpp" linenumber="30" name="sub_ln703" contextFuncName="cordic" moduleName="cordic" rtlName="sub_ln703_fu_205_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="19" fileDirectory="C:\COMP4601\lab3\ex2"><\/item>
+<item  id="34" filename="cordic_fixed.cpp" linenumber="33" name="current_cos_V_1" contextFuncName="cordic" moduleName="cordic" rtlName="current_cos_V_1_fu_173_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="19" fileDirectory="C:\COMP4601\lab3\ex2"><\/item>
+<item  id="35" filename="cordic_fixed.cpp" linenumber="34" name="current_sin_V_1" contextFuncName="cordic" moduleName="cordic" rtlName="current_sin_V_1_fu_179_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="19" fileDirectory="C:\COMP4601\lab3\ex2"><\/item>
+<item  id="36" filename="cordic_fixed.cpp" linenumber="37" name="add_ln703" contextFuncName="cordic" moduleName="cordic" rtlName="add_ln703_fu_211_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="19" fileDirectory="C:\COMP4601\lab3\ex2"><\/item>
+<item  id="37" filename="cordic_fixed.cpp" linenumber="24" name="current_sin_V_2" contextFuncName="cordic" moduleName="cordic" rtlName="current_sin_V_2_fu_185_p3" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="12" fileDirectory="C:\COMP4601\lab3\ex2"><\/item>
+<item  id="38" filename="cordic_fixed.cpp" linenumber="24" name="current_cos_V_2" contextFuncName="cordic" moduleName="cordic" rtlName="current_cos_V_2_fu_193_p3" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="12" fileDirectory="C:\COMP4601\lab3\ex2"><\/item>
+<item  id="39" filename="cordic_fixed.cpp" linenumber="24" name="select_ln1496" contextFuncName="cordic" moduleName="cordic" rtlName="select_ln1496_fu_217_p3" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="12" fileDirectory="C:\COMP4601\lab3\ex2"><\/item>
+<\/annotationInfo>
+</annotationInfo>

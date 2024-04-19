@@ -1,0 +1,169 @@
+
+
+================================================================
+== Vivado HLS Report for 'bit_reverse'
+================================================================
+* Date:           Thu Jul 13 06:38:57 2023
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        fft_sw.proj
+* Solution:       solution5
+* Product family: zynquplus
+* Target device:  xqzu5ev-ffrb900-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 2.704 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     2049|     3073| 20.490 us | 30.730 us |  2049|  3073|   none  |
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- bit_reverse_loop  |     2048|     3072|   2 ~ 3  |          -|          -|  1024|    no    |
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 4 
+3 --> 4 
+4 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.75>
+ST_1 : Operation 5 [1/1] (0.75ns)   --->   "br label %1" [fft_sw.cpp:21]   --->   Operation 5 'br' <Predicate = true> <Delay = 0.75>
+
+State 2 <SV = 1> <Delay = 1.35>
+ST_2 : Operation 6 [1/1] (0.00ns)   --->   "%input_assign = phi i11 [ 0, %0 ], [ %i, %._crit_edge ]"   --->   Operation 6 'phi' 'input_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 7 [1/1] (0.85ns)   --->   "%icmp_ln21 = icmp eq i11 %input_assign, -1024" [fft_sw.cpp:21]   --->   Operation 7 'icmp' 'icmp_ln21' <Predicate = true> <Delay = 0.85> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 1024, i64 1024, i64 1024)"   --->   Operation 8 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.94ns)   --->   "%i = add i11 %input_assign, 1" [fft_sw.cpp:21]   --->   Operation 9 'add' 'i' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "br i1 %icmp_ln21, label %4, label %2" [fft_sw.cpp:21]   --->   Operation 10 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str2) nounwind" [fft_sw.cpp:21]   --->   Operation 11 'specloopname' <Predicate = (!icmp_ln21)> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%reversed = call i10 @_ssdm_op_PartSelect.i10.i11.i32.i32(i11 %input_assign, i32 9, i32 0)" [fft_sw.cpp:9->fft_sw.cpp:22]   --->   Operation 12 'partselect' 'reversed' <Predicate = (!icmp_ln21)> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%zext_ln9 = zext i10 %reversed to i11" [fft_sw.cpp:9->fft_sw.cpp:22]   --->   Operation 13 'zext' 'zext_ln9' <Predicate = (!icmp_ln21)> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.85ns)   --->   "%icmp_ln23 = icmp ugt i11 %input_assign, %zext_ln9" [fft_sw.cpp:23]   --->   Operation 14 'icmp' 'icmp_ln23' <Predicate = (!icmp_ln21)> <Delay = 0.85> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "br i1 %icmp_ln23, label %._crit_edge, label %3" [fft_sw.cpp:23]   --->   Operation 15 'br' <Predicate = (!icmp_ln21)> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln26 = zext i10 %reversed to i64" [fft_sw.cpp:26]   --->   Operation 16 'zext' 'zext_ln26' <Predicate = (!icmp_ln21 & !icmp_ln23)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%X_R_addr_2 = getelementptr [1024 x float]* %X_R, i64 0, i64 %zext_ln26" [fft_sw.cpp:26]   --->   Operation 17 'getelementptr' 'X_R_addr_2' <Predicate = (!icmp_ln21 & !icmp_ln23)> <Delay = 0.00>
+ST_2 : Operation 18 [2/2] (1.35ns)   --->   "%X_R_load = load float* %X_R_addr_2, align 4" [fft_sw.cpp:26]   --->   Operation 18 'load' 'X_R_load' <Predicate = (!icmp_ln21 & !icmp_ln23)> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%X_I_addr_2 = getelementptr [1024 x float]* %X_I, i64 0, i64 %zext_ln26" [fft_sw.cpp:31]   --->   Operation 19 'getelementptr' 'X_I_addr_2' <Predicate = (!icmp_ln21 & !icmp_ln23)> <Delay = 0.00>
+ST_2 : Operation 20 [2/2] (1.35ns)   --->   "%X_I_load = load float* %X_I_addr_2, align 4" [fft_sw.cpp:31]   --->   Operation 20 'load' 'X_I_load' <Predicate = (!icmp_ln21 & !icmp_ln23)> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "ret void" [fft_sw.cpp:35]   --->   Operation 21 'ret' <Predicate = (icmp_ln21)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.70>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln25 = zext i11 %input_assign to i64" [fft_sw.cpp:25]   --->   Operation 22 'zext' 'zext_ln25' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%X_R_addr = getelementptr [1024 x float]* %X_R, i64 0, i64 %zext_ln25" [fft_sw.cpp:25]   --->   Operation 23 'getelementptr' 'X_R_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [2/2] (1.35ns)   --->   "%temp = load float* %X_R_addr, align 4" [fft_sw.cpp:25]   --->   Operation 24 'load' 'temp' <Predicate = true> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 25 [1/2] (1.35ns)   --->   "%X_R_load = load float* %X_R_addr_2, align 4" [fft_sw.cpp:26]   --->   Operation 25 'load' 'X_R_load' <Predicate = true> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 26 [1/1] (1.35ns)   --->   "store float %X_R_load, float* %X_R_addr, align 4" [fft_sw.cpp:26]   --->   Operation 26 'store' <Predicate = true> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%X_I_addr = getelementptr [1024 x float]* %X_I, i64 0, i64 %zext_ln25" [fft_sw.cpp:30]   --->   Operation 27 'getelementptr' 'X_I_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [2/2] (1.35ns)   --->   "%temp_1 = load float* %X_I_addr, align 4" [fft_sw.cpp:30]   --->   Operation 28 'load' 'temp_1' <Predicate = true> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 29 [1/2] (1.35ns)   --->   "%X_I_load = load float* %X_I_addr_2, align 4" [fft_sw.cpp:31]   --->   Operation 29 'load' 'X_I_load' <Predicate = true> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 30 [1/1] (1.35ns)   --->   "store float %X_I_load, float* %X_I_addr, align 4" [fft_sw.cpp:31]   --->   Operation 30 'store' <Predicate = true> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+
+State 4 <SV = 3> <Delay = 2.70>
+ST_4 : Operation 31 [1/2] (1.35ns)   --->   "%temp = load float* %X_R_addr, align 4" [fft_sw.cpp:25]   --->   Operation 31 'load' 'temp' <Predicate = (!icmp_ln23)> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 32 [1/1] (1.35ns)   --->   "store float %temp, float* %X_R_addr_2, align 4" [fft_sw.cpp:27]   --->   Operation 32 'store' <Predicate = (!icmp_ln23)> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 33 [1/2] (1.35ns)   --->   "%temp_1 = load float* %X_I_addr, align 4" [fft_sw.cpp:30]   --->   Operation 33 'load' 'temp_1' <Predicate = (!icmp_ln23)> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 34 [1/1] (1.35ns)   --->   "store float %temp_1, float* %X_I_addr_2, align 4" [fft_sw.cpp:32]   --->   Operation 34 'store' <Predicate = (!icmp_ln23)> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 35 [1/1] (0.00ns)   --->   "br label %._crit_edge" [fft_sw.cpp:33]   --->   Operation 35 'br' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_4 : Operation 36 [1/1] (0.00ns)   --->   "br label %1" [fft_sw.cpp:21]   --->   Operation 36 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0.755ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', fft_sw.cpp:21) [5]  (0.755 ns)
+
+ <State 2>: 1.35ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', fft_sw.cpp:21) [5]  (0 ns)
+	'getelementptr' operation ('X_R_addr_2', fft_sw.cpp:26) [21]  (0 ns)
+	'load' operation ('X_R_load', fft_sw.cpp:26) on array 'X_R' [22]  (1.35 ns)
+
+ <State 3>: 2.7ns
+The critical path consists of the following:
+	'load' operation ('X_R_load', fft_sw.cpp:26) on array 'X_R' [22]  (1.35 ns)
+	'store' operation ('store_ln26', fft_sw.cpp:26) of variable 'X_R_load', fft_sw.cpp:26 on array 'X_R' [23]  (1.35 ns)
+
+ <State 4>: 2.7ns
+The critical path consists of the following:
+	'load' operation ('temp', fft_sw.cpp:25) on array 'X_R' [19]  (1.35 ns)
+	'store' operation ('store_ln27', fft_sw.cpp:27) of variable 'temp', fft_sw.cpp:25 on array 'X_R' [24]  (1.35 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

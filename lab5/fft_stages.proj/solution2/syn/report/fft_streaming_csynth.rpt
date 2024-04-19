@@ -1,0 +1,316 @@
+
+
+================================================================
+== Vivado HLS Report for 'fft_streaming'
+================================================================
+* Date:           Thu Jul 13 07:37:51 2023
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        fft_stages.proj
+* Solution:       solution2
+* Product family: zynquplus
+* Target device:  xqzu5ev-ffrb900-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 8.635 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+----------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline |
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type   |
+    +---------+---------+----------+----------+--------+--------+----------+
+    |   559604|   568812| 5.596 ms | 5.688 ms |  279042|  283138| dataflow |
+    +---------+---------+----------+----------+--------+--------+----------+
+
+    + Detail: 
+        * Instance: 
+        +----------------+-------------+---------+---------+-----------+-----------+--------+--------+---------+
+        |                |             |  Latency (cycles) |   Latency (absolute)  |     Interval    | Pipeline|
+        |    Instance    |    Module   |   min   |   max   |    min    |    max    |   min  |   max  |   Type  |
+        +----------------+-------------+---------+---------+-----------+-----------+--------+--------+---------+
+        |fft_stage90_U0  |fft_stage90  |   279041|   283137|  2.790 ms |  2.831 ms |  279041|  283137|   none  |
+        |fft_stage89_U0  |fft_stage89  |   139521|   141569|  1.395 ms |  1.416 ms |  139521|  141569|   none  |
+        |fft_stage88_U0  |fft_stage88  |    69761|    70785|  0.698 ms |  0.708 ms |   69761|   70785|   none  |
+        |fft_stage87_U0  |fft_stage87  |    34881|    35393|  0.349 ms |  0.354 ms |   34881|   35393|   none  |
+        |fft_stage86_U0  |fft_stage86  |    17441|    17697|  0.174 ms |  0.177 ms |   17441|   17697|   none  |
+        |fft_stage85_U0  |fft_stage85  |     8721|     8849| 87.210 us | 88.490 us |    8721|    8849|   none  |
+        |fft_stage84_U0  |fft_stage84  |     4361|     4425| 43.610 us | 44.250 us |    4361|    4425|   none  |
+        |fft_stage83_U0  |fft_stage83  |     2181|     2213| 21.810 us | 22.130 us |    2181|    2213|   none  |
+        |fft_stage82_U0  |fft_stage82  |     1091|     1107| 10.910 us | 11.070 us |    1091|    1107|   none  |
+        |fft_stage81_U0  |fft_stage81  |      546|      554|  5.460 us |  5.540 us |     546|     554|   none  |
+        |bit_reverse_U0  |bit_reverse  |     2049|     3073| 20.490 us | 30.730 us |    2049|    3073|   none  |
+        +----------------+-------------+---------+---------+-----------+-----------+--------+--------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       0|     122|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |      160|    600|   45972|  140517|    0|
+|Memory           |       40|      -|       0|       0|    0|
+|Multiplexer      |        -|      -|       -|     180|    -|
+|Register         |        -|      -|      20|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |      200|    600|   45992|  140819|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |      288|   1248|  234240|  117120|   64|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |       69|     48|      19|     120|    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------+-------------+---------+-------+------+-------+-----+
+    |    Instance    |    Module   | BRAM_18K| DSP48E|  FF  |  LUT  | URAM|
+    +----------------+-------------+---------+-------+------+-------+-----+
+    |bit_reverse_U0  |bit_reverse  |        0|      0|    38|    151|    0|
+    |fft_stage81_U0  |fft_stage81  |       16|     60|  4399|  13924|    0|
+    |fft_stage82_U0  |fft_stage82  |       16|     60|  4607|  14042|    0|
+    |fft_stage83_U0  |fft_stage83  |       16|     60|  4609|  14044|    0|
+    |fft_stage84_U0  |fft_stage84  |       16|     60|  4611|  14047|    0|
+    |fft_stage85_U0  |fft_stage85  |       16|     60|  4613|  14050|    0|
+    |fft_stage86_U0  |fft_stage86  |       16|     60|  4615|  14050|    0|
+    |fft_stage87_U0  |fft_stage87  |       16|     60|  4617|  14050|    0|
+    |fft_stage88_U0  |fft_stage88  |       16|     60|  4619|  14052|    0|
+    |fft_stage89_U0  |fft_stage89  |       16|     60|  4621|  14053|    0|
+    |fft_stage90_U0  |fft_stage90  |       16|     60|  4623|  14054|    0|
+    +----------------+-------------+---------+-------+------+-------+-----+
+    |Total           |             |      160|    600| 45972| 140517|    0|
+    +----------------+-------------+---------+-------+------+-------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    +---------------+----------------------+---------+---+----+-----+------+-----+------+-------------+
+    |     Memory    |        Module        | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +---------------+----------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Stage1_R_V_U   |fft_streaming_StalbW  |        2|  0|   0|    0|  1024|   22|     2|        45056|
+    |Stage1_I_V_U   |fft_streaming_StalbW  |        2|  0|   0|    0|  1024|   22|     2|        45056|
+    |Stage2_R_V_U   |fft_streaming_Stancg  |        2|  0|   0|    0|  1024|   22|     2|        45056|
+    |Stage2_I_V_U   |fft_streaming_Stancg  |        2|  0|   0|    0|  1024|   22|     2|        45056|
+    |Stage3_R_V_U   |fft_streaming_Stancg  |        2|  0|   0|    0|  1024|   22|     2|        45056|
+    |Stage3_I_V_U   |fft_streaming_Stancg  |        2|  0|   0|    0|  1024|   22|     2|        45056|
+    |Stage4_R_V_U   |fft_streaming_Stancg  |        2|  0|   0|    0|  1024|   22|     2|        45056|
+    |Stage4_I_V_U   |fft_streaming_Stancg  |        2|  0|   0|    0|  1024|   22|     2|        45056|
+    |Stage5_R_V_U   |fft_streaming_Stancg  |        2|  0|   0|    0|  1024|   22|     2|        45056|
+    |Stage5_I_V_U   |fft_streaming_Stancg  |        2|  0|   0|    0|  1024|   22|     2|        45056|
+    |Stage6_R_V_U   |fft_streaming_Stancg  |        2|  0|   0|    0|  1024|   22|     2|        45056|
+    |Stage6_I_V_U   |fft_streaming_Stancg  |        2|  0|   0|    0|  1024|   22|     2|        45056|
+    |Stage7_R_V_U   |fft_streaming_Stancg  |        2|  0|   0|    0|  1024|   22|     2|        45056|
+    |Stage7_I_V_U   |fft_streaming_Stancg  |        2|  0|   0|    0|  1024|   22|     2|        45056|
+    |Stage8_R_V_U   |fft_streaming_Stancg  |        2|  0|   0|    0|  1024|   22|     2|        45056|
+    |Stage8_I_V_U   |fft_streaming_Stancg  |        2|  0|   0|    0|  1024|   22|     2|        45056|
+    |Stage9_R_V_U   |fft_streaming_Stancg  |        2|  0|   0|    0|  1024|   22|     2|        45056|
+    |Stage9_I_V_U   |fft_streaming_Stancg  |        2|  0|   0|    0|  1024|   22|     2|        45056|
+    |Stage10_R_V_U  |fft_streaming_Stancg  |        2|  0|   0|    0|  1024|   22|     2|        45056|
+    |Stage10_I_V_U  |fft_streaming_Stancg  |        2|  0|   0|    0|  1024|   22|     2|        45056|
+    +---------------+----------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total          |                      |       40|  0|   0|    0| 20480|  440|    40|       901120|
+    +---------------+----------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name           | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |ap_channel_done_Stage10_I_V        |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_Stage10_R_V        |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_Stage1_I_V         |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_Stage1_R_V         |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_Stage2_I_V         |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_Stage2_R_V         |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_Stage3_I_V         |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_Stage3_R_V         |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_Stage4_I_V         |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_Stage4_R_V         |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_Stage5_I_V         |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_Stage5_R_V         |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_Stage6_I_V         |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_Stage6_R_V         |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_Stage7_I_V         |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_Stage7_R_V         |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_Stage8_I_V         |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_Stage8_R_V         |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_Stage9_I_V         |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_Stage9_R_V         |    and   |      0|  0|   2|           1|           1|
+    |ap_idle                            |    and   |      0|  0|   2|           1|           1|
+    |bit_reverse_U0_ap_continue         |    and   |      0|  0|   2|           1|           1|
+    |fft_stage81_U0_ap_continue         |    and   |      0|  0|   2|           1|           1|
+    |fft_stage81_U0_ap_start            |    and   |      0|  0|   2|           1|           1|
+    |fft_stage82_U0_ap_continue         |    and   |      0|  0|   2|           1|           1|
+    |fft_stage82_U0_ap_start            |    and   |      0|  0|   2|           1|           1|
+    |fft_stage83_U0_ap_continue         |    and   |      0|  0|   2|           1|           1|
+    |fft_stage83_U0_ap_start            |    and   |      0|  0|   2|           1|           1|
+    |fft_stage84_U0_ap_continue         |    and   |      0|  0|   2|           1|           1|
+    |fft_stage84_U0_ap_start            |    and   |      0|  0|   2|           1|           1|
+    |fft_stage85_U0_ap_continue         |    and   |      0|  0|   2|           1|           1|
+    |fft_stage85_U0_ap_start            |    and   |      0|  0|   2|           1|           1|
+    |fft_stage86_U0_ap_continue         |    and   |      0|  0|   2|           1|           1|
+    |fft_stage86_U0_ap_start            |    and   |      0|  0|   2|           1|           1|
+    |fft_stage87_U0_ap_continue         |    and   |      0|  0|   2|           1|           1|
+    |fft_stage87_U0_ap_start            |    and   |      0|  0|   2|           1|           1|
+    |fft_stage88_U0_ap_continue         |    and   |      0|  0|   2|           1|           1|
+    |fft_stage88_U0_ap_start            |    and   |      0|  0|   2|           1|           1|
+    |fft_stage89_U0_ap_continue         |    and   |      0|  0|   2|           1|           1|
+    |fft_stage89_U0_ap_start            |    and   |      0|  0|   2|           1|           1|
+    |fft_stage90_U0_ap_start            |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_Stage10_I_V  |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_Stage10_R_V  |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_Stage1_I_V   |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_Stage1_R_V   |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_Stage2_I_V   |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_Stage2_R_V   |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_Stage3_I_V   |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_Stage3_R_V   |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_Stage4_I_V   |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_Stage4_R_V   |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_Stage5_I_V   |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_Stage5_R_V   |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_Stage6_I_V   |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_Stage6_R_V   |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_Stage7_I_V   |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_Stage7_R_V   |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_Stage8_I_V   |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_Stage8_R_V   |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_Stage9_I_V   |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_Stage9_R_V   |    or    |      0|  0|   2|           1|           1|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                              |          |      0|  0| 122|          61|          61|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------+----+-----------+-----+-----------+
+    |                  Name                 | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_Stage10_I_V  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_Stage10_R_V  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_Stage1_I_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_Stage1_R_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_Stage2_I_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_Stage2_R_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_Stage3_I_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_Stage3_R_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_Stage4_I_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_Stage4_R_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_Stage5_I_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_Stage5_R_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_Stage6_I_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_Stage6_R_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_Stage7_I_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_Stage7_R_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_Stage8_I_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_Stage8_R_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_Stage9_I_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_Stage9_R_V   |   9|          2|    1|          2|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |Total                                  | 180|         40|   20|         40|
+    +---------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------+---+----+-----+-----------+
+    |                  Name                 | FF| LUT| Bits| Const Bits|
+    +---------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_channel_write_Stage10_I_V  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_Stage10_R_V  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_Stage1_I_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_Stage1_R_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_Stage2_I_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_Stage2_R_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_Stage3_I_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_Stage3_R_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_Stage4_I_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_Stage4_R_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_Stage5_I_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_Stage5_R_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_Stage6_I_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_Stage6_R_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_Stage7_I_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_Stage7_R_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_Stage8_I_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_Stage8_R_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_Stage9_I_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_Stage9_R_V   |  1|   0|    1|          0|
+    +---------------------------------------+---+----+-----+-----------+
+    |Total                                  | 20|   0|   20|          0|
+    +---------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+---------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  | Source Object |    C Type    |
++------------------+-----+-----+------------+---------------+--------------+
+|ap_clk            |  in |    1| ap_ctrl_hs | fft_streaming | return value |
+|ap_rst            |  in |    1| ap_ctrl_hs | fft_streaming | return value |
+|ap_start          |  in |    1| ap_ctrl_hs | fft_streaming | return value |
+|ap_done           | out |    1| ap_ctrl_hs | fft_streaming | return value |
+|ap_ready          | out |    1| ap_ctrl_hs | fft_streaming | return value |
+|ap_idle           | out |    1| ap_ctrl_hs | fft_streaming | return value |
+|X_R_V_address0    | out |   10|  ap_memory |     X_R_V     |     array    |
+|X_R_V_ce0         | out |    1|  ap_memory |     X_R_V     |     array    |
+|X_R_V_d0          | out |   22|  ap_memory |     X_R_V     |     array    |
+|X_R_V_q0          |  in |   22|  ap_memory |     X_R_V     |     array    |
+|X_R_V_we0         | out |    1|  ap_memory |     X_R_V     |     array    |
+|X_R_V_address1    | out |   10|  ap_memory |     X_R_V     |     array    |
+|X_R_V_ce1         | out |    1|  ap_memory |     X_R_V     |     array    |
+|X_R_V_d1          | out |   22|  ap_memory |     X_R_V     |     array    |
+|X_R_V_q1          |  in |   22|  ap_memory |     X_R_V     |     array    |
+|X_R_V_we1         | out |    1|  ap_memory |     X_R_V     |     array    |
+|X_I_V_address0    | out |   10|  ap_memory |     X_I_V     |     array    |
+|X_I_V_ce0         | out |    1|  ap_memory |     X_I_V     |     array    |
+|X_I_V_d0          | out |   22|  ap_memory |     X_I_V     |     array    |
+|X_I_V_q0          |  in |   22|  ap_memory |     X_I_V     |     array    |
+|X_I_V_we0         | out |    1|  ap_memory |     X_I_V     |     array    |
+|X_I_V_address1    | out |   10|  ap_memory |     X_I_V     |     array    |
+|X_I_V_ce1         | out |    1|  ap_memory |     X_I_V     |     array    |
+|X_I_V_d1          | out |   22|  ap_memory |     X_I_V     |     array    |
+|X_I_V_q1          |  in |   22|  ap_memory |     X_I_V     |     array    |
+|X_I_V_we1         | out |    1|  ap_memory |     X_I_V     |     array    |
+|OUT_R_V_address0  | out |   10|  ap_memory |    OUT_R_V    |     array    |
+|OUT_R_V_ce0       | out |    1|  ap_memory |    OUT_R_V    |     array    |
+|OUT_R_V_d0        | out |   22|  ap_memory |    OUT_R_V    |     array    |
+|OUT_R_V_q0        |  in |   22|  ap_memory |    OUT_R_V    |     array    |
+|OUT_R_V_we0       | out |    1|  ap_memory |    OUT_R_V    |     array    |
+|OUT_R_V_address1  | out |   10|  ap_memory |    OUT_R_V    |     array    |
+|OUT_R_V_ce1       | out |    1|  ap_memory |    OUT_R_V    |     array    |
+|OUT_R_V_d1        | out |   22|  ap_memory |    OUT_R_V    |     array    |
+|OUT_R_V_q1        |  in |   22|  ap_memory |    OUT_R_V    |     array    |
+|OUT_R_V_we1       | out |    1|  ap_memory |    OUT_R_V    |     array    |
+|OUT_I_V_address0  | out |   10|  ap_memory |    OUT_I_V    |     array    |
+|OUT_I_V_ce0       | out |    1|  ap_memory |    OUT_I_V    |     array    |
+|OUT_I_V_d0        | out |   22|  ap_memory |    OUT_I_V    |     array    |
+|OUT_I_V_q0        |  in |   22|  ap_memory |    OUT_I_V    |     array    |
+|OUT_I_V_we0       | out |    1|  ap_memory |    OUT_I_V    |     array    |
+|OUT_I_V_address1  | out |   10|  ap_memory |    OUT_I_V    |     array    |
+|OUT_I_V_ce1       | out |    1|  ap_memory |    OUT_I_V    |     array    |
+|OUT_I_V_d1        | out |   22|  ap_memory |    OUT_I_V    |     array    |
+|OUT_I_V_q1        |  in |   22|  ap_memory |    OUT_I_V    |     array    |
+|OUT_I_V_we1       | out |    1|  ap_memory |    OUT_I_V    |     array    |
++------------------+-----+-----+------------+---------------+--------------+
+

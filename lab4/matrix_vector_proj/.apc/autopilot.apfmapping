@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="matrix_vector_base.c" path="C:\COMP4601\ch4\matrix_vector_base.c"/>
+  </source>
+  <testbench>
+    <originFiles name="out.matrix_vector.gold.dat" path="C:\COMP4601\ch4\out.matrix_vector.gold.dat"/>
+    <originFiles name="matrix_vector_base-top.c" path="C:\COMP4601\ch4\matrix_vector_base-top.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

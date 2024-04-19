@@ -1,0 +1,10 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="36" filename="fir11_sec2_8.cpp" linenumber="24" name="sext_ln24" contextFuncName="fir" moduleName="fir" rtlName="sext_ln24_fu_158_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab02"><\/item>
+<item  id="37" filename="fir11_sec2_8.cpp" linenumber="24" name="tmp" contextFuncName="fir" moduleName="fir" rtlName="tmp_fu_162_p3" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab02"><\/item>
+<item  id="42" filename="fir11_sec2_8.cpp" linenumber="25" name="zext_ln25" contextFuncName="fir" moduleName="fir" rtlName="zext_ln25_fu_170_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab02"><\/item>
+<item  id="48" filename="fir11_sec2_8.cpp" linenumber="25" name="mul_ln25" contextFuncName="fir" moduleName="fir" rtlName="mul_ln25_fu_186_p2" latency="0" BRAM="-1" DSP="2" FF="0" LUT="20" fileDirectory="C:\COMP4601\lab02"><\/item>
+<item  id="49" filename="fir11_sec2_8.cpp" linenumber="25" name="acc" contextFuncName="fir" moduleName="fir" rtlName="acc_fu_192_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\COMP4601\lab02"><\/item>
+<item  id="50" filename="fir11_sec2_8.cpp" linenumber="24" name="i" contextFuncName="fir" moduleName="fir" rtlName="i_fu_176_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\COMP4601\lab02"><\/item>
+<\/annotationInfo>
+</annotationInfo>

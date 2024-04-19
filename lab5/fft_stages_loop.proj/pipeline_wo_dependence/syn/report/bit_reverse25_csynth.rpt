@@ -1,0 +1,171 @@
+
+
+================================================================
+== Vivado HLS Report for 'bit_reverse25'
+================================================================
+* Date:           Thu Jul 13 17:42:49 2023
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        fft_stages_loop.proj
+* Solution:       solution3
+* Product family: zynquplus
+* Target device:  xqzu5ev-ffrb900-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 2.704 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     2050|     2050| 20.500 us | 20.500 us |  2050|  2050|   none  |
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- bit_reverse_loop  |     2048|     2048|         3|          2|          1|  1024|    yes   |
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       0|      48|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |        -|      -|       -|       -|    -|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|     123|    -|
+|Register         |        -|      -|      96|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |        0|      0|      96|     171|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |      288|   1248|  234240|  117120|   64|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0   |    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+-------+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |i_fu_153_p2          |     +    |      0|  0|  18|          11|           1|
+    |icmp_ln24_fu_147_p2  |   icmp   |      0|  0|  13|          11|          12|
+    |icmp_ln26_fu_173_p2  |   icmp   |      0|  0|  13|          11|          11|
+    |ap_block_state1      |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0        |    xor   |      0|  0|   2|           1|           2|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |Total                |          |      0|  0|  48|          35|          27|
+    +---------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------+----+-----------+-----+-----------+
+    |                  Name                 | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |OUT_I_V_address0                       |  15|          3|   10|         30|
+    |OUT_I_V_d0                             |  15|          3|   22|         66|
+    |OUT_R_V_address0                       |  15|          3|   10|         30|
+    |OUT_R_V_d0                             |  15|          3|   22|         66|
+    |ap_NS_fsm                              |  27|          5|    1|          5|
+    |ap_done                                |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                |   9|          2|    1|          2|
+    |ap_phi_mux_input_assign_phi_fu_140_p4  |   9|          2|   11|         22|
+    |input_assign_reg_136                   |   9|          2|   11|         22|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |Total                                  | 123|         25|   89|        245|
+    +---------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   4|   0|    4|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |i_reg_195                |  11|   0|   11|          0|
+    |icmp_ln24_reg_191        |   1|   0|    1|          0|
+    |icmp_ln26_reg_200        |   1|   0|    1|          0|
+    |input_assign_reg_136     |  11|   0|   11|          0|
+    |temp_V_1_reg_241         |  22|   0|   22|          0|
+    |temp_V_reg_236           |  22|   0|   22|          0|
+    |zext_ln28_reg_204        |  11|   0|   64|         53|
+    |zext_ln29_reg_215        |  10|   0|   64|         54|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  96|   0|  203|        107|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+---------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  | Source Object |    C Type    |
++------------------+-----+-----+------------+---------------+--------------+
+|ap_clk            |  in |    1| ap_ctrl_hs | bit_reverse25 | return value |
+|ap_rst            |  in |    1| ap_ctrl_hs | bit_reverse25 | return value |
+|ap_start          |  in |    1| ap_ctrl_hs | bit_reverse25 | return value |
+|ap_done           | out |    1| ap_ctrl_hs | bit_reverse25 | return value |
+|ap_continue       |  in |    1| ap_ctrl_hs | bit_reverse25 | return value |
+|ap_idle           | out |    1| ap_ctrl_hs | bit_reverse25 | return value |
+|ap_ready          | out |    1| ap_ctrl_hs | bit_reverse25 | return value |
+|X_R_V_address0    | out |   10|  ap_memory |     X_R_V     |     array    |
+|X_R_V_ce0         | out |    1|  ap_memory |     X_R_V     |     array    |
+|X_R_V_q0          |  in |   22|  ap_memory |     X_R_V     |     array    |
+|X_R_V_address1    | out |   10|  ap_memory |     X_R_V     |     array    |
+|X_R_V_ce1         | out |    1|  ap_memory |     X_R_V     |     array    |
+|X_R_V_q1          |  in |   22|  ap_memory |     X_R_V     |     array    |
+|X_I_V_address0    | out |   10|  ap_memory |     X_I_V     |     array    |
+|X_I_V_ce0         | out |    1|  ap_memory |     X_I_V     |     array    |
+|X_I_V_q0          |  in |   22|  ap_memory |     X_I_V     |     array    |
+|X_I_V_address1    | out |   10|  ap_memory |     X_I_V     |     array    |
+|X_I_V_ce1         | out |    1|  ap_memory |     X_I_V     |     array    |
+|X_I_V_q1          |  in |   22|  ap_memory |     X_I_V     |     array    |
+|OUT_R_V_address0  | out |   10|  ap_memory |    OUT_R_V    |     array    |
+|OUT_R_V_ce0       | out |    1|  ap_memory |    OUT_R_V    |     array    |
+|OUT_R_V_we0       | out |    1|  ap_memory |    OUT_R_V    |     array    |
+|OUT_R_V_d0        | out |   22|  ap_memory |    OUT_R_V    |     array    |
+|OUT_I_V_address0  | out |   10|  ap_memory |    OUT_I_V    |     array    |
+|OUT_I_V_ce0       | out |    1|  ap_memory |    OUT_I_V    |     array    |
+|OUT_I_V_we0       | out |    1|  ap_memory |    OUT_I_V    |     array    |
+|OUT_I_V_d0        | out |   22|  ap_memory |    OUT_I_V    |     array    |
++------------------+-----+-----+------------+---------------+--------------+
+

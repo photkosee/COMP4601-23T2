@@ -1,0 +1,336 @@
+
+
+================================================================
+== Vivado HLS Report for 'cordic'
+================================================================
+* Date:           Wed Jun 14 07:42:15 2023
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        cordic_optimized_prj
+* Solution:       unroll_8
+* Product family: zynquplus
+* Target device:  xqzu5ev-ffrb900-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 8.315 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       17|       17| 0.170 us | 0.170 us |   17|   17|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+        |            |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- for_loop  |       16|       16|         4|          -|          -|     4|    no    |
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.75>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i12 %theta_V), !map !80"   --->   Operation 6 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i12* %s_V), !map !86"   --->   Operation 7 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i12* %c_V), !map !90"   --->   Operation 8 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @cordic_str) nounwind"   --->   Operation 9 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%theta_V_read = call i12 @_ssdm_op_Read.ap_auto.i12(i12 %theta_V)" [cordic_fixed.cpp:8]   --->   Operation 10 'read' 'theta_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.75ns)   --->   "br label %0" [cordic_fixed.cpp:17]   --->   Operation 11 'br' <Predicate = true> <Delay = 0.75>
+
+State 2 <SV = 1> <Delay = 2.53>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%theta_V_buf_0_0 = phi i12 [ %theta_V_read, %ap_fixed_base.exit ], [ %select_ln1496_23, %_ZNK13ap_fixed_baseILi12ELi2ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EErsEi.exit.0_ifconv ]" [cordic_fixed.cpp:8]   --->   Operation 12 'phi' 'theta_V_buf_0_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%p_Val2_2_0 = phi i12 [ 0, %ap_fixed_base.exit ], [ %select_ln1496_21, %_ZNK13ap_fixed_baseILi12ELi2ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EErsEi.exit.0_ifconv ]" [cordic_fixed.cpp:24]   --->   Operation 13 'phi' 'p_Val2_2_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%p_Val2_0 = phi i12 [ 621, %ap_fixed_base.exit ], [ %select_ln1496_22, %_ZNK13ap_fixed_baseILi12ELi2ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EErsEi.exit.0_ifconv ]" [cordic_fixed.cpp:24]   --->   Operation 14 'phi' 'p_Val2_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%sh_assign_0 = phi i6 [ 0, %ap_fixed_base.exit ], [ %add_ln17, %_ZNK13ap_fixed_baseILi12ELi2ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EErsEi.exit.0_ifconv ]" [cordic_fixed.cpp:17]   --->   Operation 15 'phi' 'sh_assign_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%sh_assign_0_cast8 = zext i6 %sh_assign_0 to i12" [cordic_fixed.cpp:17]   --->   Operation 16 'zext' 'sh_assign_0_cast8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 17 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.87ns)   --->   "%icmp_ln17 = icmp eq i6 %sh_assign_0, -32" [cordic_fixed.cpp:17]   --->   Operation 18 'icmp' 'icmp_ln17' <Predicate = true> <Delay = 0.87> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "br i1 %icmp_ln17, label %1, label %_ZNK13ap_fixed_baseILi12ELi2ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EErsEi.exit.0_ifconv" [cordic_fixed.cpp:17]   --->   Operation 19 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (1.14ns)   --->   "%ashr_ln1333 = ashr i12 %p_Val2_0, %sh_assign_0_cast8" [cordic_fixed.cpp:20]   --->   Operation 20 'ashr' 'ashr_ln1333' <Predicate = (!icmp_ln17)> <Delay = 1.14> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (1.14ns)   --->   "%ashr_ln1333_1 = ashr i12 %p_Val2_2_0, %sh_assign_0_cast8" [cordic_fixed.cpp:21]   --->   Operation 21 'ashr' 'ashr_ln1333_1' <Predicate = (!icmp_ln17)> <Delay = 1.14> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%tmp = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %theta_V_buf_0_0, i32 11)" [cordic_fixed.cpp:24]   --->   Operation 22 'bitselect' 'tmp' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.96ns)   --->   "%sub_ln703 = sub i12 %p_Val2_0, %ashr_ln1333_1" [cordic_fixed.cpp:26]   --->   Operation 23 'sub' 'sub_ln703' <Predicate = (!icmp_ln17)> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 24 [1/1] (0.96ns)   --->   "%add_ln703 = add i12 %p_Val2_2_0, %ashr_ln1333" [cordic_fixed.cpp:27]   --->   Operation 24 'add' 'add_ln703' <Predicate = (!icmp_ln17)> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%zext_ln30 = zext i6 %sh_assign_0 to i64" [cordic_fixed.cpp:30]   --->   Operation 25 'zext' 'zext_ln30' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%cordic_phase_V_addr = getelementptr [64 x i10]* @cordic_phase_V, i64 0, i64 %zext_ln30" [cordic_fixed.cpp:30]   --->   Operation 26 'getelementptr' 'cordic_phase_V_addr' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 27 [2/2] (1.35ns)   --->   "%cordic_phase_V_load = load i10* %cordic_phase_V_addr, align 16" [cordic_fixed.cpp:30]   --->   Operation 27 'load' 'cordic_phase_V_load' <Predicate = (!icmp_ln17)> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 64> <ROM>
+ST_2 : Operation 28 [1/1] (0.96ns)   --->   "%add_ln703_8 = add i12 %p_Val2_0, %ashr_ln1333_1" [cordic_fixed.cpp:33]   --->   Operation 28 'add' 'add_ln703_8' <Predicate = (!icmp_ln17)> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.96ns)   --->   "%sub_ln703_9 = sub i12 %p_Val2_2_0, %ashr_ln1333" [cordic_fixed.cpp:34]   --->   Operation 29 'sub' 'sub_ln703_9' <Predicate = (!icmp_ln17)> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (0.43ns)   --->   "%select_ln1496 = select i1 %tmp, i12 %sub_ln703_9, i12 %add_ln703" [cordic_fixed.cpp:24]   --->   Operation 30 'select' 'select_ln1496' <Predicate = (!icmp_ln17)> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (0.43ns)   --->   "%select_ln1496_1 = select i1 %tmp, i12 %add_ln703_8, i12 %sub_ln703" [cordic_fixed.cpp:24]   --->   Operation 31 'select' 'select_ln1496_1' <Predicate = (!icmp_ln17)> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%empty_2 = trunc i6 %sh_assign_0 to i5" [cordic_fixed.cpp:17]   --->   Operation 32 'trunc' 'empty_2' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%or_ln17 = or i5 %empty_2, 1" [cordic_fixed.cpp:17]   --->   Operation 33 'or' 'or_ln17' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%zext_ln30_1 = zext i5 %or_ln17 to i64" [cordic_fixed.cpp:30]   --->   Operation 34 'zext' 'zext_ln30_1' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%cordic_phase_V_addr_1 = getelementptr [64 x i10]* @cordic_phase_V, i64 0, i64 %zext_ln30_1" [cordic_fixed.cpp:30]   --->   Operation 35 'getelementptr' 'cordic_phase_V_addr_1' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 36 [2/2] (1.35ns)   --->   "%cordic_phase_V_load_1 = load i10* %cordic_phase_V_addr_1, align 2" [cordic_fixed.cpp:30]   --->   Operation 36 'load' 'cordic_phase_V_load_1' <Predicate = (!icmp_ln17)> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 64> <ROM>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%or_ln17_1 = or i5 %empty_2, 2" [cordic_fixed.cpp:17]   --->   Operation 37 'or' 'or_ln17_1' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%zext_ln30_2 = zext i5 %or_ln17_1 to i64" [cordic_fixed.cpp:30]   --->   Operation 38 'zext' 'zext_ln30_2' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%cordic_phase_V_addr_2 = getelementptr [64 x i10]* @cordic_phase_V, i64 0, i64 %zext_ln30_2" [cordic_fixed.cpp:30]   --->   Operation 39 'getelementptr' 'cordic_phase_V_addr_2' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 40 [2/2] (1.35ns)   --->   "%cordic_phase_V_load_2 = load i10* %cordic_phase_V_addr_2, align 4" [cordic_fixed.cpp:30]   --->   Operation 40 'load' 'cordic_phase_V_load_2' <Predicate = (!icmp_ln17)> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 64> <ROM>
+ST_2 : Operation 41 [1/1] (0.88ns)   --->   "%add_ln17 = add i6 8, %sh_assign_0" [cordic_fixed.cpp:17]   --->   Operation 41 'add' 'add_ln17' <Predicate = (!icmp_ln17)> <Delay = 0.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i12P(i12* %s_V, i12 %p_Val2_2_0)" [cordic_fixed.cpp:42]   --->   Operation 42 'write' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i12P(i12* %c_V, i12 %p_Val2_0)" [cordic_fixed.cpp:42]   --->   Operation 43 'write' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "ret void" [cordic_fixed.cpp:43]   --->   Operation 44 'ret' <Predicate = (icmp_ln17)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 8.25>
+ST_3 : Operation 45 [1/2] (1.35ns)   --->   "%cordic_phase_V_load = load i10* %cordic_phase_V_addr, align 16" [cordic_fixed.cpp:30]   --->   Operation 45 'load' 'cordic_phase_V_load' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 64> <ROM>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%zext_ln1265 = zext i10 %cordic_phase_V_load to i12" [cordic_fixed.cpp:30]   --->   Operation 46 'zext' 'zext_ln1265' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.96ns)   --->   "%sub_ln703_8 = sub i12 %theta_V_buf_0_0, %zext_ln1265" [cordic_fixed.cpp:30]   --->   Operation 47 'sub' 'sub_ln703_8' <Predicate = (!tmp)> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 48 [1/1] (0.96ns)   --->   "%add_ln703_9 = add i12 %theta_V_buf_0_0, %zext_ln1265" [cordic_fixed.cpp:37]   --->   Operation 48 'add' 'add_ln703_9' <Predicate = (tmp)> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 49 [1/1] (0.43ns)   --->   "%select_ln1496_2 = select i1 %tmp, i12 %add_ln703_9, i12 %sub_ln703_8" [cordic_fixed.cpp:24]   --->   Operation 49 'select' 'select_ln1496_2' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%zext_ln17 = zext i5 %or_ln17 to i12" [cordic_fixed.cpp:17]   --->   Operation 50 'zext' 'zext_ln17' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (1.14ns)   --->   "%ashr_ln1333_8 = ashr i12 %select_ln1496_1, %zext_ln17" [cordic_fixed.cpp:20]   --->   Operation 51 'ashr' 'ashr_ln1333_8' <Predicate = true> <Delay = 1.14> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 52 [1/1] (1.14ns)   --->   "%ashr_ln1333_9 = ashr i12 %select_ln1496, %zext_ln17" [cordic_fixed.cpp:21]   --->   Operation 52 'ashr' 'ashr_ln1333_9' <Predicate = true> <Delay = 1.14> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%tmp_1 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %select_ln1496_2, i32 11)" [cordic_fixed.cpp:24]   --->   Operation 53 'bitselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (0.96ns)   --->   "%sub_ln703_10 = sub i12 %select_ln1496_1, %ashr_ln1333_9" [cordic_fixed.cpp:26]   --->   Operation 54 'sub' 'sub_ln703_10' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 55 [1/1] (0.96ns)   --->   "%add_ln703_10 = add i12 %select_ln1496, %ashr_ln1333_8" [cordic_fixed.cpp:27]   --->   Operation 55 'add' 'add_ln703_10' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 56 [1/2] (1.35ns)   --->   "%cordic_phase_V_load_1 = load i10* %cordic_phase_V_addr_1, align 2" [cordic_fixed.cpp:30]   --->   Operation 56 'load' 'cordic_phase_V_load_1' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 64> <ROM>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%zext_ln1265_1 = zext i10 %cordic_phase_V_load_1 to i12" [cordic_fixed.cpp:30]   --->   Operation 57 'zext' 'zext_ln1265_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (0.96ns)   --->   "%sub_ln703_1 = sub i12 %select_ln1496_2, %zext_ln1265_1" [cordic_fixed.cpp:30]   --->   Operation 58 'sub' 'sub_ln703_1' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 59 [1/1] (0.96ns)   --->   "%add_ln703_11 = add i12 %select_ln1496_1, %ashr_ln1333_9" [cordic_fixed.cpp:33]   --->   Operation 59 'add' 'add_ln703_11' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 60 [1/1] (0.96ns)   --->   "%sub_ln703_11 = sub i12 %select_ln1496, %ashr_ln1333_8" [cordic_fixed.cpp:34]   --->   Operation 60 'sub' 'sub_ln703_11' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 61 [1/1] (0.96ns)   --->   "%add_ln703_1 = add i12 %select_ln1496_2, %zext_ln1265_1" [cordic_fixed.cpp:37]   --->   Operation 61 'add' 'add_ln703_1' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 62 [1/1] (0.43ns)   --->   "%select_ln1496_3 = select i1 %tmp_1, i12 %sub_ln703_11, i12 %add_ln703_10" [cordic_fixed.cpp:24]   --->   Operation 62 'select' 'select_ln1496_3' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 63 [1/1] (0.43ns)   --->   "%select_ln1496_4 = select i1 %tmp_1, i12 %add_ln703_11, i12 %sub_ln703_10" [cordic_fixed.cpp:24]   --->   Operation 63 'select' 'select_ln1496_4' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 64 [1/1] (0.43ns)   --->   "%select_ln1496_5 = select i1 %tmp_1, i12 %add_ln703_1, i12 %sub_ln703_1" [cordic_fixed.cpp:24]   --->   Operation 64 'select' 'select_ln1496_5' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%zext_ln17_1 = zext i5 %or_ln17_1 to i12" [cordic_fixed.cpp:17]   --->   Operation 65 'zext' 'zext_ln17_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (1.14ns)   --->   "%ashr_ln1333_2 = ashr i12 %select_ln1496_4, %zext_ln17_1" [cordic_fixed.cpp:20]   --->   Operation 66 'ashr' 'ashr_ln1333_2' <Predicate = true> <Delay = 1.14> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 67 [1/1] (1.14ns)   --->   "%ashr_ln1333_10 = ashr i12 %select_ln1496_3, %zext_ln17_1" [cordic_fixed.cpp:21]   --->   Operation 67 'ashr' 'ashr_ln1333_10' <Predicate = true> <Delay = 1.14> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%tmp_2 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %select_ln1496_5, i32 11)" [cordic_fixed.cpp:24]   --->   Operation 68 'bitselect' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (0.96ns)   --->   "%sub_ln703_12 = sub i12 %select_ln1496_4, %ashr_ln1333_10" [cordic_fixed.cpp:26]   --->   Operation 69 'sub' 'sub_ln703_12' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 70 [1/1] (0.96ns)   --->   "%add_ln703_12 = add i12 %select_ln1496_3, %ashr_ln1333_2" [cordic_fixed.cpp:27]   --->   Operation 70 'add' 'add_ln703_12' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 71 [1/2] (1.35ns)   --->   "%cordic_phase_V_load_2 = load i10* %cordic_phase_V_addr_2, align 4" [cordic_fixed.cpp:30]   --->   Operation 71 'load' 'cordic_phase_V_load_2' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 64> <ROM>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%zext_ln1265_2 = zext i10 %cordic_phase_V_load_2 to i12" [cordic_fixed.cpp:30]   --->   Operation 72 'zext' 'zext_ln1265_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 73 [1/1] (0.96ns)   --->   "%sub_ln703_2 = sub i12 %select_ln1496_5, %zext_ln1265_2" [cordic_fixed.cpp:30]   --->   Operation 73 'sub' 'sub_ln703_2' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 74 [1/1] (0.96ns)   --->   "%add_ln703_13 = add i12 %select_ln1496_4, %ashr_ln1333_10" [cordic_fixed.cpp:33]   --->   Operation 74 'add' 'add_ln703_13' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 75 [1/1] (0.96ns)   --->   "%sub_ln703_13 = sub i12 %select_ln1496_3, %ashr_ln1333_2" [cordic_fixed.cpp:34]   --->   Operation 75 'sub' 'sub_ln703_13' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 76 [1/1] (0.96ns)   --->   "%add_ln703_2 = add i12 %select_ln1496_5, %zext_ln1265_2" [cordic_fixed.cpp:37]   --->   Operation 76 'add' 'add_ln703_2' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 77 [1/1] (0.43ns)   --->   "%select_ln1496_6 = select i1 %tmp_2, i12 %sub_ln703_13, i12 %add_ln703_12" [cordic_fixed.cpp:24]   --->   Operation 77 'select' 'select_ln1496_6' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 78 [1/1] (0.43ns)   --->   "%select_ln1496_7 = select i1 %tmp_2, i12 %add_ln703_13, i12 %sub_ln703_12" [cordic_fixed.cpp:24]   --->   Operation 78 'select' 'select_ln1496_7' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 79 [1/1] (0.43ns)   --->   "%select_ln1496_8 = select i1 %tmp_2, i12 %add_ln703_2, i12 %sub_ln703_2" [cordic_fixed.cpp:24]   --->   Operation 79 'select' 'select_ln1496_8' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "%or_ln17_2 = or i5 %empty_2, 3" [cordic_fixed.cpp:17]   --->   Operation 80 'or' 'or_ln17_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 81 [1/1] (0.00ns)   --->   "%zext_ln17_2 = zext i5 %or_ln17_2 to i12" [cordic_fixed.cpp:17]   --->   Operation 81 'zext' 'zext_ln17_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 82 [1/1] (1.14ns)   --->   "%ashr_ln1333_3 = ashr i12 %select_ln1496_7, %zext_ln17_2" [cordic_fixed.cpp:20]   --->   Operation 82 'ashr' 'ashr_ln1333_3' <Predicate = true> <Delay = 1.14> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 83 [1/1] (1.14ns)   --->   "%ashr_ln1333_11 = ashr i12 %select_ln1496_6, %zext_ln17_2" [cordic_fixed.cpp:21]   --->   Operation 83 'ashr' 'ashr_ln1333_11' <Predicate = true> <Delay = 1.14> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 84 [1/1] (0.00ns)   --->   "%tmp_3 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %select_ln1496_8, i32 11)" [cordic_fixed.cpp:24]   --->   Operation 84 'bitselect' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 85 [1/1] (0.96ns)   --->   "%sub_ln703_14 = sub i12 %select_ln1496_7, %ashr_ln1333_11" [cordic_fixed.cpp:26]   --->   Operation 85 'sub' 'sub_ln703_14' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 86 [1/1] (0.96ns)   --->   "%add_ln703_14 = add i12 %select_ln1496_6, %ashr_ln1333_3" [cordic_fixed.cpp:27]   --->   Operation 86 'add' 'add_ln703_14' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 87 [1/1] (0.00ns)   --->   "%zext_ln30_3 = zext i5 %or_ln17_2 to i64" [cordic_fixed.cpp:30]   --->   Operation 87 'zext' 'zext_ln30_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 88 [1/1] (0.00ns)   --->   "%cordic_phase_V_addr_3 = getelementptr [64 x i10]* @cordic_phase_V, i64 0, i64 %zext_ln30_3" [cordic_fixed.cpp:30]   --->   Operation 88 'getelementptr' 'cordic_phase_V_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 89 [2/2] (1.35ns)   --->   "%cordic_phase_V_load_3 = load i10* %cordic_phase_V_addr_3, align 2" [cordic_fixed.cpp:30]   --->   Operation 89 'load' 'cordic_phase_V_load_3' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 64> <ROM>
+ST_3 : Operation 90 [1/1] (0.96ns)   --->   "%add_ln703_15 = add i12 %select_ln1496_7, %ashr_ln1333_11" [cordic_fixed.cpp:33]   --->   Operation 90 'add' 'add_ln703_15' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 91 [1/1] (0.96ns)   --->   "%sub_ln703_15 = sub i12 %select_ln1496_6, %ashr_ln1333_3" [cordic_fixed.cpp:34]   --->   Operation 91 'sub' 'sub_ln703_15' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 92 [1/1] (0.43ns)   --->   "%select_ln1496_9 = select i1 %tmp_3, i12 %sub_ln703_15, i12 %add_ln703_14" [cordic_fixed.cpp:24]   --->   Operation 92 'select' 'select_ln1496_9' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 93 [1/1] (0.43ns)   --->   "%select_ln1496_10 = select i1 %tmp_3, i12 %add_ln703_15, i12 %sub_ln703_14" [cordic_fixed.cpp:24]   --->   Operation 93 'select' 'select_ln1496_10' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 94 [1/1] (0.00ns)   --->   "%or_ln17_3 = or i5 %empty_2, 4" [cordic_fixed.cpp:17]   --->   Operation 94 'or' 'or_ln17_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 95 [1/1] (0.00ns)   --->   "%zext_ln30_4 = zext i5 %or_ln17_3 to i64" [cordic_fixed.cpp:30]   --->   Operation 95 'zext' 'zext_ln30_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 96 [1/1] (0.00ns)   --->   "%cordic_phase_V_addr_4 = getelementptr [64 x i10]* @cordic_phase_V, i64 0, i64 %zext_ln30_4" [cordic_fixed.cpp:30]   --->   Operation 96 'getelementptr' 'cordic_phase_V_addr_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 97 [2/2] (1.35ns)   --->   "%cordic_phase_V_load_4 = load i10* %cordic_phase_V_addr_4, align 8" [cordic_fixed.cpp:30]   --->   Operation 97 'load' 'cordic_phase_V_load_4' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 64> <ROM>
+ST_3 : Operation 98 [1/1] (0.00ns)   --->   "%or_ln17_4 = or i5 %empty_2, 5" [cordic_fixed.cpp:17]   --->   Operation 98 'or' 'or_ln17_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 99 [1/1] (0.00ns)   --->   "%zext_ln30_5 = zext i5 %or_ln17_4 to i64" [cordic_fixed.cpp:30]   --->   Operation 99 'zext' 'zext_ln30_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 100 [1/1] (0.00ns)   --->   "%cordic_phase_V_addr_5 = getelementptr [64 x i10]* @cordic_phase_V, i64 0, i64 %zext_ln30_5" [cordic_fixed.cpp:30]   --->   Operation 100 'getelementptr' 'cordic_phase_V_addr_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 101 [2/2] (1.35ns)   --->   "%cordic_phase_V_load_5 = load i10* %cordic_phase_V_addr_5, align 2" [cordic_fixed.cpp:30]   --->   Operation 101 'load' 'cordic_phase_V_load_5' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 64> <ROM>
+ST_3 : Operation 102 [1/1] (0.00ns)   --->   "%or_ln17_5 = or i5 %empty_2, 6" [cordic_fixed.cpp:17]   --->   Operation 102 'or' 'or_ln17_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 103 [1/1] (0.00ns)   --->   "%zext_ln30_6 = zext i5 %or_ln17_5 to i64" [cordic_fixed.cpp:30]   --->   Operation 103 'zext' 'zext_ln30_6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 104 [1/1] (0.00ns)   --->   "%cordic_phase_V_addr_6 = getelementptr [64 x i10]* @cordic_phase_V, i64 0, i64 %zext_ln30_6" [cordic_fixed.cpp:30]   --->   Operation 104 'getelementptr' 'cordic_phase_V_addr_6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 105 [2/2] (1.35ns)   --->   "%cordic_phase_V_load_6 = load i10* %cordic_phase_V_addr_6, align 4" [cordic_fixed.cpp:30]   --->   Operation 105 'load' 'cordic_phase_V_load_6' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 64> <ROM>
+ST_3 : Operation 106 [1/1] (0.00ns)   --->   "%or_ln17_6 = or i5 %empty_2, 7" [cordic_fixed.cpp:17]   --->   Operation 106 'or' 'or_ln17_6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 107 [1/1] (0.00ns)   --->   "%zext_ln30_7 = zext i5 %or_ln17_6 to i64" [cordic_fixed.cpp:30]   --->   Operation 107 'zext' 'zext_ln30_7' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 108 [1/1] (0.00ns)   --->   "%cordic_phase_V_addr_7 = getelementptr [64 x i10]* @cordic_phase_V, i64 0, i64 %zext_ln30_7" [cordic_fixed.cpp:30]   --->   Operation 108 'getelementptr' 'cordic_phase_V_addr_7' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 109 [2/2] (1.35ns)   --->   "%cordic_phase_V_load_7 = load i10* %cordic_phase_V_addr_7, align 2" [cordic_fixed.cpp:30]   --->   Operation 109 'load' 'cordic_phase_V_load_7' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 64> <ROM>
+
+State 4 <SV = 3> <Delay = 8.31>
+ST_4 : Operation 110 [1/2] (1.35ns)   --->   "%cordic_phase_V_load_3 = load i10* %cordic_phase_V_addr_3, align 2" [cordic_fixed.cpp:30]   --->   Operation 110 'load' 'cordic_phase_V_load_3' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 64> <ROM>
+ST_4 : Operation 111 [1/1] (0.00ns)   --->   "%zext_ln1265_3 = zext i10 %cordic_phase_V_load_3 to i12" [cordic_fixed.cpp:30]   --->   Operation 111 'zext' 'zext_ln1265_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 112 [1/1] (0.96ns)   --->   "%sub_ln703_3 = sub i12 %select_ln1496_8, %zext_ln1265_3" [cordic_fixed.cpp:30]   --->   Operation 112 'sub' 'sub_ln703_3' <Predicate = (!tmp_3)> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 113 [1/1] (0.96ns)   --->   "%add_ln703_3 = add i12 %select_ln1496_8, %zext_ln1265_3" [cordic_fixed.cpp:37]   --->   Operation 113 'add' 'add_ln703_3' <Predicate = (tmp_3)> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 114 [1/1] (0.43ns)   --->   "%select_ln1496_11 = select i1 %tmp_3, i12 %add_ln703_3, i12 %sub_ln703_3" [cordic_fixed.cpp:24]   --->   Operation 114 'select' 'select_ln1496_11' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 115 [1/1] (0.00ns)   --->   "%zext_ln17_3 = zext i5 %or_ln17_3 to i12" [cordic_fixed.cpp:17]   --->   Operation 115 'zext' 'zext_ln17_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 116 [1/1] (1.14ns)   --->   "%ashr_ln1333_4 = ashr i12 %select_ln1496_10, %zext_ln17_3" [cordic_fixed.cpp:20]   --->   Operation 116 'ashr' 'ashr_ln1333_4' <Predicate = true> <Delay = 1.14> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 117 [1/1] (1.14ns)   --->   "%ashr_ln1333_12 = ashr i12 %select_ln1496_9, %zext_ln17_3" [cordic_fixed.cpp:21]   --->   Operation 117 'ashr' 'ashr_ln1333_12' <Predicate = true> <Delay = 1.14> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 118 [1/1] (0.00ns)   --->   "%tmp_4 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %select_ln1496_11, i32 11)" [cordic_fixed.cpp:24]   --->   Operation 118 'bitselect' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 119 [1/1] (0.96ns)   --->   "%sub_ln703_16 = sub i12 %select_ln1496_10, %ashr_ln1333_12" [cordic_fixed.cpp:26]   --->   Operation 119 'sub' 'sub_ln703_16' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 120 [1/1] (0.96ns)   --->   "%add_ln703_16 = add i12 %select_ln1496_9, %ashr_ln1333_4" [cordic_fixed.cpp:27]   --->   Operation 120 'add' 'add_ln703_16' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 121 [1/2] (1.35ns)   --->   "%cordic_phase_V_load_4 = load i10* %cordic_phase_V_addr_4, align 8" [cordic_fixed.cpp:30]   --->   Operation 121 'load' 'cordic_phase_V_load_4' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 64> <ROM>
+ST_4 : Operation 122 [1/1] (0.00ns)   --->   "%zext_ln1265_4 = zext i10 %cordic_phase_V_load_4 to i12" [cordic_fixed.cpp:30]   --->   Operation 122 'zext' 'zext_ln1265_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 123 [1/1] (0.96ns)   --->   "%sub_ln703_4 = sub i12 %select_ln1496_11, %zext_ln1265_4" [cordic_fixed.cpp:30]   --->   Operation 123 'sub' 'sub_ln703_4' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 124 [1/1] (0.96ns)   --->   "%add_ln703_17 = add i12 %select_ln1496_10, %ashr_ln1333_12" [cordic_fixed.cpp:33]   --->   Operation 124 'add' 'add_ln703_17' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 125 [1/1] (0.96ns)   --->   "%sub_ln703_17 = sub i12 %select_ln1496_9, %ashr_ln1333_4" [cordic_fixed.cpp:34]   --->   Operation 125 'sub' 'sub_ln703_17' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 126 [1/1] (0.96ns)   --->   "%add_ln703_4 = add i12 %select_ln1496_11, %zext_ln1265_4" [cordic_fixed.cpp:37]   --->   Operation 126 'add' 'add_ln703_4' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 127 [1/1] (0.43ns)   --->   "%select_ln1496_12 = select i1 %tmp_4, i12 %sub_ln703_17, i12 %add_ln703_16" [cordic_fixed.cpp:24]   --->   Operation 127 'select' 'select_ln1496_12' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 128 [1/1] (0.43ns)   --->   "%select_ln1496_13 = select i1 %tmp_4, i12 %add_ln703_17, i12 %sub_ln703_16" [cordic_fixed.cpp:24]   --->   Operation 128 'select' 'select_ln1496_13' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 129 [1/1] (0.43ns)   --->   "%select_ln1496_14 = select i1 %tmp_4, i12 %add_ln703_4, i12 %sub_ln703_4" [cordic_fixed.cpp:24]   --->   Operation 129 'select' 'select_ln1496_14' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 130 [1/1] (0.00ns)   --->   "%zext_ln17_4 = zext i5 %or_ln17_4 to i12" [cordic_fixed.cpp:17]   --->   Operation 130 'zext' 'zext_ln17_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 131 [1/1] (1.14ns)   --->   "%ashr_ln1333_5 = ashr i12 %select_ln1496_13, %zext_ln17_4" [cordic_fixed.cpp:20]   --->   Operation 131 'ashr' 'ashr_ln1333_5' <Predicate = true> <Delay = 1.14> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 132 [1/1] (1.14ns)   --->   "%ashr_ln1333_13 = ashr i12 %select_ln1496_12, %zext_ln17_4" [cordic_fixed.cpp:21]   --->   Operation 132 'ashr' 'ashr_ln1333_13' <Predicate = true> <Delay = 1.14> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 133 [1/1] (0.00ns)   --->   "%tmp_5 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %select_ln1496_14, i32 11)" [cordic_fixed.cpp:24]   --->   Operation 133 'bitselect' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 134 [1/1] (0.96ns)   --->   "%sub_ln703_18 = sub i12 %select_ln1496_13, %ashr_ln1333_13" [cordic_fixed.cpp:26]   --->   Operation 134 'sub' 'sub_ln703_18' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 135 [1/1] (0.96ns)   --->   "%add_ln703_18 = add i12 %select_ln1496_12, %ashr_ln1333_5" [cordic_fixed.cpp:27]   --->   Operation 135 'add' 'add_ln703_18' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 136 [1/2] (1.35ns)   --->   "%cordic_phase_V_load_5 = load i10* %cordic_phase_V_addr_5, align 2" [cordic_fixed.cpp:30]   --->   Operation 136 'load' 'cordic_phase_V_load_5' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 64> <ROM>
+ST_4 : Operation 137 [1/1] (0.00ns)   --->   "%zext_ln1265_5 = zext i10 %cordic_phase_V_load_5 to i12" [cordic_fixed.cpp:30]   --->   Operation 137 'zext' 'zext_ln1265_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 138 [1/1] (0.96ns)   --->   "%sub_ln703_5 = sub i12 %select_ln1496_14, %zext_ln1265_5" [cordic_fixed.cpp:30]   --->   Operation 138 'sub' 'sub_ln703_5' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 139 [1/1] (0.96ns)   --->   "%add_ln703_19 = add i12 %select_ln1496_13, %ashr_ln1333_13" [cordic_fixed.cpp:33]   --->   Operation 139 'add' 'add_ln703_19' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 140 [1/1] (0.96ns)   --->   "%sub_ln703_19 = sub i12 %select_ln1496_12, %ashr_ln1333_5" [cordic_fixed.cpp:34]   --->   Operation 140 'sub' 'sub_ln703_19' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 141 [1/1] (0.96ns)   --->   "%add_ln703_5 = add i12 %select_ln1496_14, %zext_ln1265_5" [cordic_fixed.cpp:37]   --->   Operation 141 'add' 'add_ln703_5' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 142 [1/1] (0.43ns)   --->   "%select_ln1496_15 = select i1 %tmp_5, i12 %sub_ln703_19, i12 %add_ln703_18" [cordic_fixed.cpp:24]   --->   Operation 142 'select' 'select_ln1496_15' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 143 [1/1] (0.43ns)   --->   "%select_ln1496_16 = select i1 %tmp_5, i12 %add_ln703_19, i12 %sub_ln703_18" [cordic_fixed.cpp:24]   --->   Operation 143 'select' 'select_ln1496_16' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 144 [1/1] (0.43ns)   --->   "%select_ln1496_17 = select i1 %tmp_5, i12 %add_ln703_5, i12 %sub_ln703_5" [cordic_fixed.cpp:24]   --->   Operation 144 'select' 'select_ln1496_17' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 145 [1/1] (0.00ns)   --->   "%zext_ln17_5 = zext i5 %or_ln17_5 to i12" [cordic_fixed.cpp:17]   --->   Operation 145 'zext' 'zext_ln17_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 146 [1/1] (1.14ns)   --->   "%ashr_ln1333_6 = ashr i12 %select_ln1496_16, %zext_ln17_5" [cordic_fixed.cpp:20]   --->   Operation 146 'ashr' 'ashr_ln1333_6' <Predicate = true> <Delay = 1.14> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 147 [1/1] (1.14ns)   --->   "%ashr_ln1333_14 = ashr i12 %select_ln1496_15, %zext_ln17_5" [cordic_fixed.cpp:21]   --->   Operation 147 'ashr' 'ashr_ln1333_14' <Predicate = true> <Delay = 1.14> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 148 [1/1] (0.00ns)   --->   "%tmp_6 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %select_ln1496_17, i32 11)" [cordic_fixed.cpp:24]   --->   Operation 148 'bitselect' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 149 [1/1] (0.96ns)   --->   "%sub_ln703_20 = sub i12 %select_ln1496_16, %ashr_ln1333_14" [cordic_fixed.cpp:26]   --->   Operation 149 'sub' 'sub_ln703_20' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 150 [1/1] (0.96ns)   --->   "%add_ln703_20 = add i12 %select_ln1496_15, %ashr_ln1333_6" [cordic_fixed.cpp:27]   --->   Operation 150 'add' 'add_ln703_20' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 151 [1/2] (1.35ns)   --->   "%cordic_phase_V_load_6 = load i10* %cordic_phase_V_addr_6, align 4" [cordic_fixed.cpp:30]   --->   Operation 151 'load' 'cordic_phase_V_load_6' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 64> <ROM>
+ST_4 : Operation 152 [1/1] (0.00ns)   --->   "%zext_ln1265_6 = zext i10 %cordic_phase_V_load_6 to i12" [cordic_fixed.cpp:30]   --->   Operation 152 'zext' 'zext_ln1265_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 153 [1/1] (0.96ns)   --->   "%sub_ln703_6 = sub i12 %select_ln1496_17, %zext_ln1265_6" [cordic_fixed.cpp:30]   --->   Operation 153 'sub' 'sub_ln703_6' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 154 [1/1] (0.96ns)   --->   "%add_ln703_21 = add i12 %select_ln1496_16, %ashr_ln1333_14" [cordic_fixed.cpp:33]   --->   Operation 154 'add' 'add_ln703_21' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 155 [1/1] (0.96ns)   --->   "%sub_ln703_21 = sub i12 %select_ln1496_15, %ashr_ln1333_6" [cordic_fixed.cpp:34]   --->   Operation 155 'sub' 'sub_ln703_21' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 156 [1/1] (0.96ns)   --->   "%add_ln703_6 = add i12 %select_ln1496_17, %zext_ln1265_6" [cordic_fixed.cpp:37]   --->   Operation 156 'add' 'add_ln703_6' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 157 [1/1] (0.43ns)   --->   "%select_ln1496_18 = select i1 %tmp_6, i12 %sub_ln703_21, i12 %add_ln703_20" [cordic_fixed.cpp:24]   --->   Operation 157 'select' 'select_ln1496_18' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 158 [1/1] (0.43ns)   --->   "%select_ln1496_19 = select i1 %tmp_6, i12 %add_ln703_21, i12 %sub_ln703_20" [cordic_fixed.cpp:24]   --->   Operation 158 'select' 'select_ln1496_19' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 159 [1/1] (0.43ns)   --->   "%select_ln1496_20 = select i1 %tmp_6, i12 %add_ln703_6, i12 %sub_ln703_6" [cordic_fixed.cpp:24]   --->   Operation 159 'select' 'select_ln1496_20' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 160 [1/1] (0.00ns)   --->   "%tmp_7 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %select_ln1496_20, i32 11)" [cordic_fixed.cpp:24]   --->   Operation 160 'bitselect' 'tmp_7' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 161 [1/2] (1.35ns)   --->   "%cordic_phase_V_load_7 = load i10* %cordic_phase_V_addr_7, align 2" [cordic_fixed.cpp:30]   --->   Operation 161 'load' 'cordic_phase_V_load_7' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 64> <ROM>
+ST_4 : Operation 162 [1/1] (0.00ns)   --->   "%zext_ln1265_7 = zext i10 %cordic_phase_V_load_7 to i12" [cordic_fixed.cpp:30]   --->   Operation 162 'zext' 'zext_ln1265_7' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 163 [1/1] (0.96ns)   --->   "%sub_ln703_7 = sub i12 %select_ln1496_20, %zext_ln1265_7" [cordic_fixed.cpp:30]   --->   Operation 163 'sub' 'sub_ln703_7' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 164 [1/1] (0.96ns)   --->   "%add_ln703_7 = add i12 %select_ln1496_20, %zext_ln1265_7" [cordic_fixed.cpp:37]   --->   Operation 164 'add' 'add_ln703_7' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 165 [1/1] (0.43ns)   --->   "%select_ln1496_23 = select i1 %tmp_7, i12 %add_ln703_7, i12 %sub_ln703_7" [cordic_fixed.cpp:24]   --->   Operation 165 'select' 'select_ln1496_23' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 2.53>
+ST_5 : Operation 166 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([9 x i8]* @p_str) nounwind" [cordic_fixed.cpp:17]   --->   Operation 166 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 167 [1/1] (0.00ns)   --->   "%zext_ln17_6 = zext i5 %or_ln17_6 to i12" [cordic_fixed.cpp:17]   --->   Operation 167 'zext' 'zext_ln17_6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 168 [1/1] (1.14ns)   --->   "%ashr_ln1333_7 = ashr i12 %select_ln1496_19, %zext_ln17_6" [cordic_fixed.cpp:20]   --->   Operation 168 'ashr' 'ashr_ln1333_7' <Predicate = true> <Delay = 1.14> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 169 [1/1] (1.14ns)   --->   "%ashr_ln1333_15 = ashr i12 %select_ln1496_18, %zext_ln17_6" [cordic_fixed.cpp:21]   --->   Operation 169 'ashr' 'ashr_ln1333_15' <Predicate = true> <Delay = 1.14> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 170 [1/1] (0.96ns)   --->   "%sub_ln703_22 = sub i12 %select_ln1496_19, %ashr_ln1333_15" [cordic_fixed.cpp:26]   --->   Operation 170 'sub' 'sub_ln703_22' <Predicate = (!tmp_7)> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 171 [1/1] (0.96ns)   --->   "%add_ln703_22 = add i12 %select_ln1496_18, %ashr_ln1333_7" [cordic_fixed.cpp:27]   --->   Operation 171 'add' 'add_ln703_22' <Predicate = (!tmp_7)> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 172 [1/1] (0.96ns)   --->   "%add_ln703_23 = add i12 %select_ln1496_19, %ashr_ln1333_15" [cordic_fixed.cpp:33]   --->   Operation 172 'add' 'add_ln703_23' <Predicate = (tmp_7)> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 173 [1/1] (0.96ns)   --->   "%sub_ln703_23 = sub i12 %select_ln1496_18, %ashr_ln1333_7" [cordic_fixed.cpp:34]   --->   Operation 173 'sub' 'sub_ln703_23' <Predicate = (tmp_7)> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 174 [1/1] (0.43ns)   --->   "%select_ln1496_21 = select i1 %tmp_7, i12 %sub_ln703_23, i12 %add_ln703_22" [cordic_fixed.cpp:24]   --->   Operation 174 'select' 'select_ln1496_21' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 175 [1/1] (0.43ns)   --->   "%select_ln1496_22 = select i1 %tmp_7, i12 %add_ln703_23, i12 %sub_ln703_22" [cordic_fixed.cpp:24]   --->   Operation 175 'select' 'select_ln1496_22' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 176 [1/1] (0.00ns)   --->   "br label %0" [cordic_fixed.cpp:17]   --->   Operation 176 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0.755ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('theta_V_buf_0_0', cordic_fixed.cpp:8) with incoming values : ('ssdm_int<12 + 1024 * 0, true>.V', cordic_fixed.cpp:8) ('select_ln1496_23', cordic_fixed.cpp:24) [13]  (0.755 ns)
+
+ <State 2>: 2.54ns
+The critical path consists of the following:
+	'phi' operation ('p_Val2_2_0', cordic_fixed.cpp:24) with incoming values : ('select_ln1496_21', cordic_fixed.cpp:24) [14]  (0 ns)
+	'ashr' operation ('ashr_ln1333_1', cordic_fixed.cpp:21) [24]  (1.15 ns)
+	'sub' operation ('sub_ln703', cordic_fixed.cpp:26) [26]  (0.962 ns)
+	'select' operation ('select_ln1496_1', cordic_fixed.cpp:24) [37]  (0.431 ns)
+
+ <State 3>: 8.26ns
+The critical path consists of the following:
+	'load' operation ('cordic_phase_V_load', cordic_fixed.cpp:30) on array 'cordic_phase_V' [30]  (1.35 ns)
+	'sub' operation ('sub_ln703_8', cordic_fixed.cpp:30) [32]  (0.962 ns)
+	'select' operation ('select_ln1496_2', cordic_fixed.cpp:24) [38]  (0.431 ns)
+	'select' operation ('select_ln1496_3', cordic_fixed.cpp:24) [55]  (0.431 ns)
+	'ashr' operation ('ashr_ln1333_10', cordic_fixed.cpp:21) [61]  (1.15 ns)
+	'add' operation ('add_ln703_13', cordic_fixed.cpp:33) [70]  (0.962 ns)
+	'select' operation ('select_ln1496_7', cordic_fixed.cpp:24) [74]  (0.431 ns)
+	'ashr' operation ('ashr_ln1333_3', cordic_fixed.cpp:20) [78]  (1.15 ns)
+	'add' operation ('add_ln703_14', cordic_fixed.cpp:27) [82]  (0.962 ns)
+	'select' operation ('select_ln1496_9', cordic_fixed.cpp:24) [91]  (0.431 ns)
+
+ <State 4>: 8.31ns
+The critical path consists of the following:
+	'load' operation ('cordic_phase_V_load_3', cordic_fixed.cpp:30) on array 'cordic_phase_V' [85]  (1.35 ns)
+	'add' operation ('add_ln703_3', cordic_fixed.cpp:37) [90]  (0.962 ns)
+	'select' operation ('select_ln1496_11', cordic_fixed.cpp:24) [93]  (0.431 ns)
+	'add' operation ('add_ln703_4', cordic_fixed.cpp:37) [108]  (0.962 ns)
+	'select' operation ('select_ln1496_14', cordic_fixed.cpp:24) [111]  (0.431 ns)
+	'add' operation ('add_ln703_5', cordic_fixed.cpp:37) [126]  (0.962 ns)
+	'select' operation ('select_ln1496_17', cordic_fixed.cpp:24) [129]  (0.431 ns)
+	'add' operation ('add_ln703_6', cordic_fixed.cpp:37) [144]  (0.962 ns)
+	'select' operation ('select_ln1496_20', cordic_fixed.cpp:24) [147]  (0.431 ns)
+	'sub' operation ('sub_ln703_7', cordic_fixed.cpp:30) [159]  (0.962 ns)
+	'select' operation ('select_ln1496_23', cordic_fixed.cpp:24) [165]  (0.431 ns)
+
+ <State 5>: 2.54ns
+The critical path consists of the following:
+	'ashr' operation ('ashr_ln1333_7', cordic_fixed.cpp:20) [150]  (1.15 ns)
+	'sub' operation ('sub_ln703_23', cordic_fixed.cpp:34) [161]  (0.962 ns)
+	'select' operation ('select_ln1496_21', cordic_fixed.cpp:24) [163]  (0.431 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

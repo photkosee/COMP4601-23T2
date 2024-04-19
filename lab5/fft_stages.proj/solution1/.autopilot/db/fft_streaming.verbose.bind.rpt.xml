@@ -1,0 +1,56 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'fft_streaming'" level="0">
+<item name = "Date">Thu Jul 13 07:17:33 2023
+</item>
+<item name = "Version">2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)</item>
+<item name = "Project">fft_stages.proj</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xqzu5ev-ffrb900-1-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 8.635 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_fft_stage90_fu_138">fft_stage90, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_fft_stage89_fu_160">fft_stage89, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_fft_stage88_fu_180">fft_stage88, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_fft_stage87_fu_200">fft_stage87, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_fft_stage86_fu_220">fft_stage86, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_fft_stage85_fu_240">fft_stage85, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_fft_stage84_fu_260">fft_stage84, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_fft_stage83_fu_280">fft_stage83, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_fft_stage82_fu_300">fft_stage82, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_fft_stage81_fu_320">fft_stage81, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_bit_reverse_fu_340">bit_reverse, 13313, 14337, 0.133 ms, 0.143 ms, 13313, 14337, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

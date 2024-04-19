@@ -1,0 +1,22 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="unroll_MAC"/>
+    </name>
+    <project>
+        <value string="sec2_9"/>
+    </project>
+    <targetInfo>
+        <TargetInfo value="xqzu5ev:-ffrb900:-1-i"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/zynquplus/zynquplus" name="DefaultPlatform"/>
+        <library value="xilinx/zynquplus/zynquplus_fpv7" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock default="false" name="default" period="10ns"/>
+    </clockList>
+    <config>
+        <schedule model="fir"/>
+    </config>
+</AutoPilot:solution>
+

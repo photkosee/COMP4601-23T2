@@ -1,0 +1,17 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="11" filename="matrix_vector_base.c" linenumber="7" name="icmp_ln7" contextFuncName="matrix_vector" moduleName="matrix_vector" rtlName="icmp_ln7_fu_114_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\COMP4601\ch4"><\/item>
+<item  id="13" filename="matrix_vector_base.c" linenumber="7" name="i" contextFuncName="matrix_vector" moduleName="matrix_vector" rtlName="i_fu_120_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="12" fileDirectory="C:\COMP4601\ch4"><\/item>
+<item  id="18" filename="matrix_vector_base.c" linenumber="11" name="zext_ln11" contextFuncName="matrix_vector" moduleName="matrix_vector" rtlName="zext_ln11_fu_126_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\ch4"><\/item>
+<item  id="19" filename="matrix_vector_base.c" linenumber="11" name="tmp_1" contextFuncName="matrix_vector" moduleName="matrix_vector" rtlName="tmp_1_fu_130_p3" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\ch4"><\/item>
+<item  id="20" filename="matrix_vector_base.c" linenumber="10" name="zext_ln10" contextFuncName="matrix_vector" moduleName="matrix_vector" rtlName="zext_ln10_fu_138_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\ch4"><\/item>
+<item  id="25" filename="matrix_vector_base.c" linenumber="10" name="icmp_ln10" contextFuncName="matrix_vector" moduleName="matrix_vector" rtlName="icmp_ln10_fu_142_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\COMP4601\ch4"><\/item>
+<item  id="27" filename="matrix_vector_base.c" linenumber="10" name="j" contextFuncName="matrix_vector" moduleName="matrix_vector" rtlName="j_fu_148_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="12" fileDirectory="C:\COMP4601\ch4"><\/item>
+<item  id="31" filename="matrix_vector_base.c" linenumber="11" name="zext_ln11_1" contextFuncName="matrix_vector" moduleName="matrix_vector" rtlName="zext_ln11_1_fu_154_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\ch4"><\/item>
+<item  id="32" filename="matrix_vector_base.c" linenumber="11" name="zext_ln11_2" contextFuncName="matrix_vector" moduleName="matrix_vector" rtlName="zext_ln11_2_fu_159_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\ch4"><\/item>
+<item  id="33" filename="matrix_vector_base.c" linenumber="11" name="add_ln11" contextFuncName="matrix_vector" moduleName="matrix_vector" rtlName="add_ln11_fu_163_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\COMP4601\ch4"><\/item>
+<item  id="34" filename="matrix_vector_base.c" linenumber="11" name="zext_ln11_3" contextFuncName="matrix_vector" moduleName="matrix_vector" rtlName="zext_ln11_3_fu_168_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\ch4"><\/item>
+<item  id="39" filename="matrix_vector_base.c" linenumber="11" name="mul_ln11" contextFuncName="matrix_vector" moduleName="matrix_vector" rtlName="mul_ln11_fu_173_p2" latency="0" BRAM="-1" DSP="3" FF="0" LUT="20" fileDirectory="C:\COMP4601\ch4"><\/item>
+<item  id="40" filename="matrix_vector_base.c" linenumber="11" name="sum" contextFuncName="matrix_vector" moduleName="matrix_vector" rtlName="sum_fu_179_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\COMP4601\ch4"><\/item>
+<\/annotationInfo>
+</annotationInfo>

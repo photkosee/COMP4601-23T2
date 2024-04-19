@@ -1,0 +1,524 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xqzu5ev-ffrb900-1-i'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fft_stages.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 889.039 ; gain = 795.543
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 889.039 ; gain = 795.543
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 889.039 ; gain = 795.543
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'reverse_bits' into 'bit_reverse' (fft_stages.cpp:23) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'range_redux_payne_hanek_hotbm<61, double, 63, 63>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:470) automatically.
+INFO: [XFORM 203-602] Inlining function 'table_lookup_4oPi_hotbm<52, 61>' into 'range_redux_payne_hanek_hotbm<61, double, 63, 63>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:496) automatically.
+INFO: [XFORM 203-602] Inlining function 'clz<61, 124, 0>' into 'range_redux_payne_hanek_hotbm<61, double, 63, 63>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:524) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::data' into 'fp_struct<double>::to_double' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:512) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_double' into 'fp_struct<double>::to_ieee' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:526) automatically.
+INFO: [XFORM 203-602] Inlining function 'clz' into 'scaled_fixed2ieee<63, 1>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:435) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::set_mantissa' into 'scaled_fixed2ieee<63, 1>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:463) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'scaled_fixed2ieee<63, 1>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:466) automatically.
+INFO: [XFORM 203-602] Inlining function 'hotbm_::value_list<double>::sin_or_cos_approximation<63, 63>' into 'hotbm_::sin_or_cos<double>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'hotbm_::sin_or_cos<double>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:316) automatically.
+INFO: [XFORM 203-602] Inlining function 'hotbm_::cos' into 'cos' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c/sincosdouble.cpp:13) automatically.
+INFO: [XFORM 203-602] Inlining function 'hotbm_::sin' into 'sin' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c/sincosdouble.cpp:8) automatically.
+INFO: [XFORM 203-602] Inlining function 'cos' into 'fft_stage' (fft_stages.cpp:48) automatically.
+INFO: [XFORM 203-602] Inlining function 'sin' into 'fft_stage' (fft_stages.cpp:49) automatically.
+WARNING: [SYNCHK 200-23] r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:425: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:19 . Memory (MB): peak = 889.039 ; gain = 795.543
+INFO: [HLS 200-489] Unrolling loop 'reverse_bits_loop' (fft_stages.cpp:8) in function 'reverse_bits' completely with a factor of 10.
+INFO: [XFORM 203-101] Partitioning array 'swap_table.1'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'swap_table'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'neg_sin_table'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'neg_cos_table'  in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'reverse_bits' into 'bit_reverse' (fft_stages.cpp:23) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'range_redux_payne_hanek_hotbm<61, double, 63, 63>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:470) automatically.
+INFO: [XFORM 203-602] Inlining function 'table_lookup_4oPi_hotbm<52, 61>' into 'range_redux_payne_hanek_hotbm<61, double, 63, 63>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:496) automatically.
+INFO: [XFORM 203-602] Inlining function 'clz<61, 124, 0>' into 'range_redux_payne_hanek_hotbm<61, double, 63, 63>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:524) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::data' into 'fp_struct<double>::to_double' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:512) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_double' into 'fp_struct<double>::to_ieee' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:526) automatically.
+INFO: [XFORM 203-602] Inlining function 'clz' into 'scaled_fixed2ieee<63, 1>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:435) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::set_mantissa' into 'scaled_fixed2ieee<63, 1>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:463) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'scaled_fixed2ieee<63, 1>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:466) automatically.
+INFO: [XFORM 203-602] Inlining function 'range_redux_payne_hanek_hotbm<61, double, 63, 63>' into 'hotbm_::sin_or_cos<double>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:268) automatically.
+INFO: [XFORM 203-602] Inlining function 'hotbm_::value_list<double>::sin_or_cos_approximation<63, 63>' into 'hotbm_::sin_or_cos<double>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'hotbm_::sin_or_cos<double>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:316) automatically.
+INFO: [XFORM 203-602] Inlining function 'hotbm_::cos' into 'cos' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c/sincosdouble.cpp:13) automatically.
+INFO: [XFORM 203-602] Inlining function 'hotbm_::sin' into 'sin' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c/sincosdouble.cpp:8) automatically.
+INFO: [XFORM 203-602] Inlining function 'cos' into 'fft_stage81' (fft_stages.cpp:48) automatically.
+INFO: [XFORM 203-602] Inlining function 'sin' into 'fft_stage81' (fft_stages.cpp:49) automatically.
+INFO: [XFORM 203-602] Inlining function 'cos' into 'fft_stage82' (fft_stages.cpp:48) automatically.
+INFO: [XFORM 203-602] Inlining function 'sin' into 'fft_stage82' (fft_stages.cpp:49) automatically.
+INFO: [XFORM 203-602] Inlining function 'cos' into 'fft_stage83' (fft_stages.cpp:48) automatically.
+INFO: [XFORM 203-602] Inlining function 'sin' into 'fft_stage83' (fft_stages.cpp:49) automatically.
+INFO: [XFORM 203-602] Inlining function 'cos' into 'fft_stage84' (fft_stages.cpp:48) automatically.
+INFO: [XFORM 203-602] Inlining function 'sin' into 'fft_stage84' (fft_stages.cpp:49) automatically.
+INFO: [XFORM 203-602] Inlining function 'cos' into 'fft_stage85' (fft_stages.cpp:48) automatically.
+INFO: [XFORM 203-602] Inlining function 'sin' into 'fft_stage85' (fft_stages.cpp:49) automatically.
+INFO: [XFORM 203-602] Inlining function 'cos' into 'fft_stage86' (fft_stages.cpp:48) automatically.
+INFO: [XFORM 203-602] Inlining function 'sin' into 'fft_stage86' (fft_stages.cpp:49) automatically.
+INFO: [XFORM 203-602] Inlining function 'cos' into 'fft_stage87' (fft_stages.cpp:48) automatically.
+INFO: [XFORM 203-602] Inlining function 'sin' into 'fft_stage87' (fft_stages.cpp:49) automatically.
+INFO: [XFORM 203-602] Inlining function 'cos' into 'fft_stage88' (fft_stages.cpp:48) automatically.
+INFO: [XFORM 203-602] Inlining function 'sin' into 'fft_stage88' (fft_stages.cpp:49) automatically.
+INFO: [XFORM 203-602] Inlining function 'cos' into 'fft_stage89' (fft_stages.cpp:48) automatically.
+INFO: [XFORM 203-602] Inlining function 'sin' into 'fft_stage89' (fft_stages.cpp:49) automatically.
+INFO: [XFORM 203-602] Inlining function 'cos' into 'fft_stage90' (fft_stages.cpp:48) automatically.
+INFO: [XFORM 203-602] Inlining function 'sin' into 'fft_stage90' (fft_stages.cpp:49) automatically.
+WARNING: [XFORM 203-561] Updating loop upper bound from 24 to 512 for loop 'butterfly_loop' (fft_stages.cpp:48:1) in function 'fft_stage90'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 24 to 512 for loop 'butterfly_loop' (fft_stages.cpp:48:1) in function 'fft_stage90'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 24 to 256 for loop 'butterfly_loop' (fft_stages.cpp:48:1) in function 'fft_stage89'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 24 to 256 for loop 'butterfly_loop' (fft_stages.cpp:48:1) in function 'fft_stage89'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 24 to 128 for loop 'butterfly_loop' (fft_stages.cpp:48:1) in function 'fft_stage88'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 24 to 128 for loop 'butterfly_loop' (fft_stages.cpp:48:1) in function 'fft_stage88'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 24 to 64 for loop 'butterfly_loop' (fft_stages.cpp:48:1) in function 'fft_stage87'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 24 to 64 for loop 'butterfly_loop' (fft_stages.cpp:48:1) in function 'fft_stage87'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 24 to 32 for loop 'butterfly_loop' (fft_stages.cpp:48:1) in function 'fft_stage86'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 24 to 32 for loop 'butterfly_loop' (fft_stages.cpp:48:1) in function 'fft_stage86'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 24 to 16 for loop 'butterfly_loop' (fft_stages.cpp:48:1) in function 'fft_stage85'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 24 to 16 for loop 'butterfly_loop' (fft_stages.cpp:48:1) in function 'fft_stage85'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 24 to 8 for loop 'butterfly_loop' (fft_stages.cpp:48:1) in function 'fft_stage84'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 24 to 8 for loop 'butterfly_loop' (fft_stages.cpp:48:1) in function 'fft_stage84'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 24 to 4 for loop 'butterfly_loop' (fft_stages.cpp:48:1) in function 'fft_stage83'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 24 to 4 for loop 'butterfly_loop' (fft_stages.cpp:48:1) in function 'fft_stage83'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 24 to 2 for loop 'butterfly_loop' (fft_stages.cpp:48:1) in function 'fft_stage82'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 24 to 2 for loop 'butterfly_loop' (fft_stages.cpp:48:1) in function 'fft_stage82'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 24 to 1 for loop 'butterfly_loop' (fft_stages.cpp:48:1) in function 'fft_stage81'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 24 to 1 for loop 'butterfly_loop' (fft_stages.cpp:48:1) in function 'fft_stage81'.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage1_R.V' should be updated in process function 'bit_reverse', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage1_I.V' should be updated in process function 'bit_reverse', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage2_R.V' should be updated in process function 'fft_stage81', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage2_I.V' should be updated in process function 'fft_stage81', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage3_R.V' should be updated in process function 'fft_stage82', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage3_I.V' should be updated in process function 'fft_stage82', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage4_R.V' should be updated in process function 'fft_stage83', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage4_I.V' should be updated in process function 'fft_stage83', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage5_R.V' should be updated in process function 'fft_stage84', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage5_I.V' should be updated in process function 'fft_stage84', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage6_R.V' should be updated in process function 'fft_stage85', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage6_I.V' should be updated in process function 'fft_stage85', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage7_R.V' should be updated in process function 'fft_stage86', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage7_I.V' should be updated in process function 'fft_stage86', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage8_R.V' should be updated in process function 'fft_stage87', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage8_I.V' should be updated in process function 'fft_stage87', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage9_R.V' should be updated in process function 'fft_stage88', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage9_I.V' should be updated in process function 'fft_stage88', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage10_R.V' should be updated in process function 'fft_stage89', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'Stage10_I.V' should be updated in process function 'fft_stage89', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'OUT_R.V' should be updated in process function 'fft_stage90', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'OUT_I.V' should be updated in process function 'fft_stage90', otherwise it may not be synthesized correctly.
+INFO: [XFORM 203-712] Applying dataflow to function 'fft_streaming', detected/extracted 11 process function(s): 
+	 'bit_reverse'
+	 'fft_stage81'
+	 'fft_stage82'
+	 'fft_stage83'
+	 'fft_stage84'
+	 'fft_stage85'
+	 'fft_stage86'
+	 'fft_stage87'
+	 'fft_stage88'
+	 'fft_stage89'
+	 'fft_stage90'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:443:20) to (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:467:1) in function 'scaled_fixed2ieee<63, 1>'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:238:18) to (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:316:12) in function 'hotbm_::sin_or_cos<double>'... converting 9 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (fft_stages.cpp:47:36) to (fft_stages.cpp:53:19) in function 'fft_stage90'... converting 37 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (fft_stages.cpp:47:36) to (fft_stages.cpp:53:19) in function 'fft_stage89'... converting 37 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (fft_stages.cpp:47:36) to (fft_stages.cpp:53:19) in function 'fft_stage88'... converting 37 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (fft_stages.cpp:47:36) to (fft_stages.cpp:53:19) in function 'fft_stage87'... converting 37 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (fft_stages.cpp:47:36) to (fft_stages.cpp:53:19) in function 'fft_stage86'... converting 37 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (fft_stages.cpp:47:36) to (fft_stages.cpp:53:19) in function 'fft_stage85'... converting 37 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (fft_stages.cpp:47:36) to (fft_stages.cpp:53:19) in function 'fft_stage84'... converting 37 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (fft_stages.cpp:47:36) to (fft_stages.cpp:53:19) in function 'fft_stage83'... converting 37 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (fft_stages.cpp:47:36) to (fft_stages.cpp:53:19) in function 'fft_stage82'... converting 37 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (fft_stages.cpp:47:36) to (fft_stages.cpp:53:19) in function 'fft_stage81'... converting 37 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'hotbm_::sin_or_cos<double>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:238)...4 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:00:23 . Memory (MB): peak = 889.039 ; gain = 795.543
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'butterfly_loop' (fft_stages.cpp:47:36) in function 'fft_stage90' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'butterfly_loop' (fft_stages.cpp:47:36) in function 'fft_stage89' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'butterfly_loop' (fft_stages.cpp:47:36) in function 'fft_stage88' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'butterfly_loop' (fft_stages.cpp:47:36) in function 'fft_stage87' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'butterfly_loop' (fft_stages.cpp:47:36) in function 'fft_stage86' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'butterfly_loop' (fft_stages.cpp:47:36) in function 'fft_stage85' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'butterfly_loop' (fft_stages.cpp:47:36) in function 'fft_stage84' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'butterfly_loop' (fft_stages.cpp:47:36) in function 'fft_stage83' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'butterfly_loop' (fft_stages.cpp:47:36) in function 'fft_stage82' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'butterfly_loop' (fft_stages.cpp:47:36) in function 'fft_stage81' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-631] Renaming function 'scaled_fixed2ieee<63, 1>' to 'scaled_fixed2ieee' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:110:37)
+WARNING: [XFORM 203-631] Renaming function 'hotbm_::sin_or_cos<double>' to 'sin_or_cos<double>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:238)
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'X_I.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'X_R.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'X_I.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'X_R.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'X_I.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'X_R.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'X_I.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'X_R.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'X_I.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'X_R.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'X_I.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'X_R.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'X_I.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'X_R.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'X_I.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'X_R.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'X_I.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'X_R.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'X_I.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'X_R.V'.
+INFO: [HLS 200-472] Inferring partial write operation for 'out_bits.V' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:426:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'out_bits.V' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:430:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'c' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:435:20)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R.V' (fft_stages.cpp:57:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I.V' (fft_stages.cpp:58:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R.V' (fft_stages.cpp:59:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I.V' (fft_stages.cpp:60:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'OUT_R.V' (fft_stages.cpp:27:4)
+INFO: [HLS 200-472] Inferring partial write operation for 'OUT_R.V' (fft_stages.cpp:28:4)
+INFO: [HLS 200-472] Inferring partial write operation for 'OUT_I.V' (fft_stages.cpp:32:4)
+INFO: [HLS 200-472] Inferring partial write operation for 'OUT_I.V' (fft_stages.cpp:33:4)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:26 . Memory (MB): peak = 889.039 ; gain = 795.543
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fft_streaming' ...
+WARNING: [SYN 201-103] Legalizing function name 'sin_or_cos<double>' to 'sin_or_cos_double_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bit_reverse' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 25.805 seconds; current allocated memory: 462.076 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.137 seconds; current allocated memory: 462.203 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'scaled_fixed2ieee' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 462.471 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.159 seconds; current allocated memory: 462.804 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sin_or_cos_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.288 seconds; current allocated memory: 463.436 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 464.023 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage81' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'dft_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.407 seconds; current allocated memory: 464.684 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.315 seconds; current allocated memory: 465.357 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage82' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'dft_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.608 seconds; current allocated memory: 466.185 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.331 seconds; current allocated memory: 466.894 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage83' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'dft_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.618 seconds; current allocated memory: 467.707 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.317 seconds; current allocated memory: 468.416 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage84' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'dft_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.616 seconds; current allocated memory: 469.230 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 469.923 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage85' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'dft_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.615 seconds; current allocated memory: 470.788 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.321 seconds; current allocated memory: 471.496 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage86' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'dft_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.617 seconds; current allocated memory: 472.294 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.321 seconds; current allocated memory: 473.002 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage87' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'dft_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.617 seconds; current allocated memory: 473.845 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.327 seconds; current allocated memory: 474.554 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage88' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'dft_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.622 seconds; current allocated memory: 475.352 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.329 seconds; current allocated memory: 476.062 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage89' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'dft_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.624 seconds; current allocated memory: 476.941 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.329 seconds; current allocated memory: 477.650 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage90' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'dft_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.626 seconds; current allocated memory: 478.448 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.332 seconds; current allocated memory: 479.156 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_streaming' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.511 seconds; current allocated memory: 479.617 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.746 seconds; current allocated memory: 482.714 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bit_reverse' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bit_reverse'.
+INFO: [HLS 200-111]  Elapsed time: 2.805 seconds; current allocated memory: 485.964 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'scaled_fixed2ieee' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'scaled_fixed2ieee_out_bits_V' to 'scaled_fixed2ieeebkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'scaled_fixed2ieee'.
+INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 487.021 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sin_or_cos_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'sin_or_cos_double_s_ref_4oPi_table_256_V' to 'sin_or_cos_doublecud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sin_or_cos_double_s_fourth_order_double_4' to 'sin_or_cos_doubledEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sin_or_cos_double_s_fourth_order_double_5' to 'sin_or_cos_doubleeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sin_or_cos_double_s_fourth_order_double_6' to 'sin_or_cos_doublefYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sin_or_cos_double_s_fourth_order_double_7' to 'sin_or_cos_doubleg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sin_or_cos_double_s_fourth_order_double_s' to 'sin_or_cos_doublehbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_mul_170ns_53ns_223_2_1' to 'fft_streaming_mulibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_mux_83_1_1_1' to 'fft_streaming_muxjbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_mux_164_1_1_1' to 'fft_streaming_muxkbM' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_mulibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_muxjbC': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fft_streaming_muxkbM': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sin_or_cos_double_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.496 seconds; current allocated memory: 489.503 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage81' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage81'.
+INFO: [HLS 200-111]  Elapsed time: 0.515 seconds; current allocated memory: 492.887 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage82' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage82'.
+INFO: [HLS 200-111]  Elapsed time: 0.922 seconds; current allocated memory: 497.004 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage83' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage83'.
+INFO: [HLS 200-111]  Elapsed time: 0.957 seconds; current allocated memory: 501.241 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage84' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage84'.
+INFO: [HLS 200-111]  Elapsed time: 0.97 seconds; current allocated memory: 505.419 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage85' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage85'.
+INFO: [HLS 200-111]  Elapsed time: 0.99 seconds; current allocated memory: 509.610 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage86' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage86'.
+INFO: [HLS 200-111]  Elapsed time: 1 seconds; current allocated memory: 513.817 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage87' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage87'.
+INFO: [HLS 200-111]  Elapsed time: 1.023 seconds; current allocated memory: 518.017 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage88' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage88'.
+INFO: [HLS 200-111]  Elapsed time: 1.026 seconds; current allocated memory: 522.224 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage89' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage89'.
+INFO: [HLS 200-111]  Elapsed time: 1.043 seconds; current allocated memory: 526.402 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage90' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage90'.
+INFO: [HLS 200-111]  Elapsed time: 1.061 seconds; current allocated memory: 530.594 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_streaming' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_streaming/X_R_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_streaming/X_I_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_streaming/OUT_R_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_streaming/OUT_I_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fft_streaming' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage1_R_V' to 'fft_streaming_StalbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage1_I_V' to 'fft_streaming_Stamb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage2_R_V' to 'fft_streaming_Stancg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage2_I_V' to 'fft_streaming_Staocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage3_R_V' to 'fft_streaming_StapcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage3_I_V' to 'fft_streaming_StaqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage4_R_V' to 'fft_streaming_StarcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage4_I_V' to 'fft_streaming_Stasc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage5_R_V' to 'fft_streaming_Statde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage5_I_V' to 'fft_streaming_Staudo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage6_R_V' to 'fft_streaming_Stavdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage6_I_V' to 'fft_streaming_StawdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage7_R_V' to 'fft_streaming_StaxdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage7_I_V' to 'fft_streaming_Stayd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage8_R_V' to 'fft_streaming_Stazec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage8_I_V' to 'fft_streaming_StaAem' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage9_R_V' to 'fft_streaming_StaBew' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage9_I_V' to 'fft_streaming_StaCeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage10_R_V' to 'fft_streaming_StaDeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fft_streaming_Stage10_I_V' to 'fft_streaming_StaEe0' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_streaming'.
+INFO: [HLS 200-111]  Elapsed time: 1.669 seconds; current allocated memory: 536.799 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 115.81 MHz
+INFO: [RTMG 210-278] Implementing memory 'scaled_fixed2ieeebkb_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'scaled_fixed2ieee_c_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-282] Generating pipelined core: 'fft_streaming_mulibs_MulnS_0'
+INFO: [RTMG 210-279] Implementing memory 'sin_or_cos_doublecud_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'sin_or_cos_doubledEe_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'sin_or_cos_doubleeOg_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'sin_or_cos_doublefYi_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'sin_or_cos_doubleg8j_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'sin_or_cos_doublehbi_rom' using distributed ROMs.
+INFO: [HLS 200-740] Implementing PIPO fft_streaming_StalbW_memcore using a separate memory for each block
+INFO: [RTMG 210-278] Implementing memory 'fft_streaming_StalbW_memcore_ram (RAM)' using block RAMs.
+INFO: [HLS 200-740] Implementing PIPO fft_streaming_Stancg_memcore using a separate memory for each block
+INFO: [RTMG 210-278] Implementing memory 'fft_streaming_Stancg_memcore_ram (RAM)' using block RAMs.
+INFO: [HLS 200-740] Implementing PIPO fft_streaming_StalbW_memcore using a separate memory for each block
+INFO: [HLS 200-740] Implementing PIPO fft_streaming_Stancg_memcore using a separate memory for each block
+INFO: [HLS 200-740] Implementing PIPO fft_streaming_StalbW_memcore using a separate memory for each block
+INFO: [HLS 200-740] Implementing PIPO fft_streaming_Stancg_memcore using a separate memory for each block
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 889.039 ; gain = 795.543
+INFO: [VHDL 208-304] Generating VHDL RTL for fft_streaming.
+INFO: [VLOG 209-307] Generating Verilog RTL for fft_streaming.
+INFO: [HLS 200-112] Total elapsed time: 61.635 seconds; peak allocated memory: 536.799 MB.

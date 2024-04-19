@@ -1,0 +1,9 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "bit_reverse",
+          "label": "bit_reverse_loop",
+          "functionLabel": "",
+          "pragma": {"name": "PIPELINE"}
+        }]
+    }]}

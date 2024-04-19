@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-68] The II Violation in module 'dft' (Loop: dft_label0): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xD;&#xA;   between 'store' operation ('temp_imag_V_addr_write_ln36', dft.cpp:36) of variable 'trunc_ln708_1', dft.cpp:36 on array 'temp_imag.V', dft.cpp:15 and 'load' operation ('__Val2__', dft.cpp:36) on array 'temp_imag.V', dft.cpp:15." projectName="dft_proj" solutionName="solution4" date="2023-07-03T13:08:16.271+1000" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sin_or_cos&lt;double>' to 'sin_or_cos_double_s'." projectName="dft_proj" solutionName="solution4" date="2023-07-03T13:08:15.452+1000" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hotbm_::sin_or_cos&lt;double>' to 'sin_or_cos&lt;double>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:238)" projectName="dft_proj" solutionName="solution4" date="2023-07-03T13:08:14.986+1000" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'dft_label1' (dft.cpp:18:44) in function 'dft' : &#xD;&#xA;&#xD;&#xA;the outer loop is not a perfect loop." projectName="dft_proj" solutionName="solution4" date="2023-07-03T13:08:14.886+1000" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:425: variable-indexed range selection may cause suboptimal QoR." projectName="dft_proj" solutionName="solution4" date="2023-07-03T13:08:12.628+1000" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] The II Violation in module 'dft' (Loop: dft_label0): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xD;&#xA;   between 'store' operation ('temp_imag_V_addr_write_ln35', dft.cpp:35) of variable 'trunc_ln708_1', dft.cpp:35 on array 'temp_imag.V', dft.cpp:15 and 'load' operation ('__Val2__', dft.cpp:35) on array 'temp_imag.V', dft.cpp:15." projectName="dft_proj" solutionName="solution3" date="2023-07-03T05:02:46.122+1000" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sin_or_cos&lt;double>' to 'sin_or_cos_double_s'." projectName="dft_proj" solutionName="solution3" date="2023-07-03T05:02:45.283+1000" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hotbm_::sin_or_cos&lt;double>' to 'sin_or_cos&lt;double>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:238)" projectName="dft_proj" solutionName="solution3" date="2023-07-03T05:02:44.839+1000" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'dft_label1' (dft.cpp:18:44) in function 'dft' : &#xD;&#xA;&#xD;&#xA;the outer loop is not a perfect loop." projectName="dft_proj" solutionName="solution3" date="2023-07-03T05:02:44.755+1000" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:425: variable-indexed range selection may cause suboptimal QoR." projectName="dft_proj" solutionName="solution3" date="2023-07-03T05:02:42.658+1000" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)&#xD;&#xA;   between 'fadd' operation ('tmp_12', dft.cpp:35) and 'fadd' operation ('tmp_12', dft.cpp:35)." projectName="dft_proj" solutionName="solution2" date="2023-07-03T04:57:59.036+1000" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)&#xD;&#xA;   between 'fadd' operation ('tmp_12', dft.cpp:35) and 'fadd' operation ('tmp_12', dft.cpp:35)." projectName="dft_proj" solutionName="solution2" date="2023-07-03T04:57:59.020+1000" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 2)&#xD;&#xA;   between 'fadd' operation ('tmp_12', dft.cpp:35) and 'fadd' operation ('tmp_12', dft.cpp:35)." projectName="dft_proj" solutionName="solution2" date="2023-07-03T04:57:59.005+1000" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 1)&#xD;&#xA;   between 'fadd' operation ('tmp_12', dft.cpp:35) and 'fadd' operation ('tmp_12', dft.cpp:35)." projectName="dft_proj" solutionName="solution2" date="2023-07-03T04:57:58.989+1000" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sin_or_cos&lt;double>' to 'sin_or_cos_double_s'." projectName="dft_proj" solutionName="solution2" date="2023-07-03T04:57:58.252+1000" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hotbm_::sin_or_cos&lt;double>' to 'sin_or_cos&lt;double>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:238)" projectName="dft_proj" solutionName="solution2" date="2023-07-03T04:57:57.900+1000" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'dft_label1' (dft.cpp:18:44) in function 'dft' : &#xD;&#xA;&#xD;&#xA;the outer loop is not a perfect loop." projectName="dft_proj" solutionName="solution2" date="2023-07-03T04:57:57.821+1000" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:425: variable-indexed range selection may cause suboptimal QoR." projectName="dft_proj" solutionName="solution2" date="2023-07-03T04:57:56.212+1000" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,47 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xqzu5ev-ffrb900-1-i'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'cordic_fixed.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 888.883 ; gain = 792.688
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 888.883 ; gain = 792.688
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 888.883 ; gain = 792.688
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 888.883 ; gain = 792.688
+INFO: [HLS 200-489] Unrolling loop 'for_loop' (cordic_fixed.cpp:17) in function 'cordic' completely with a factor of 32.
+WARNING: [XFORM 203-505] Pipeline directive for loop 'for_loop' (cordic_fixed.cpp:17) in function 'cordic' has been removed because the loop is unrolled completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (cordic_fixed.cpp:43:1) in function 'cordic'... converting 94 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 888.883 ; gain = 792.688
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 888.883 ; gain = 792.688
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'cordic' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cordic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 15.699 seconds; current allocated memory: 106.727 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.251 seconds; current allocated memory: 107.986 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cordic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'cordic/theta_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cordic/s_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cordic/c_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'cordic' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cordic'.
+INFO: [HLS 200-111]  Elapsed time: 0.473 seconds; current allocated memory: 110.508 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 116.02 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 888.883 ; gain = 792.688
+INFO: [VHDL 208-304] Generating VHDL RTL for cordic.
+INFO: [VLOG 209-307] Generating Verilog RTL for cordic.
+INFO: [HLS 200-112] Total elapsed time: 18.799 seconds; peak allocated memory: 110.508 MB.

@@ -1,0 +1,64 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-10] Setting target device to 'xqzu5ev-ffrb900-1-i'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'matrix_vector_base.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 889.973 ; gain = 796.441
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 889.973 ; gain = 796.441
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 889.973 ; gain = 796.441
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 889.973 ; gain = 796.441
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'data_loop' (matrix_vector_base.c:7) in function 'matrix_vector' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'dot_product_loop' (matrix_vector_base.c:10) in function 'matrix_vector' completely with a factor of 8.
+INFO: [XFORM 203-101] Partitioning array 'M' (matrix_vector_base.c:4) in dimension 2 with a cyclic factor 2.
+INFO: [XFORM 203-101] Partitioning array 'V_In' (matrix_vector_base.c:4) in dimension 1 with a cyclic factor 2.
+INFO: [XFORM 203-11] Balancing expressions in function 'matrix_vector' (matrix_vector_base.c:4)...7 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 889.973 ; gain = 796.441
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 889.973 ; gain = 796.441
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_vector' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_vector' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'data_loop'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('V_In_0_load_2', matrix_vector_base.c:11) on array 'V_In_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'V_In_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 7.747 seconds; current allocated memory: 90.606 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 90.885 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_vector' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_Out' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_vector' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_vector'.
+INFO: [HLS 200-111]  Elapsed time: 0.158 seconds; current allocated memory: 91.375 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 155.40 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 889.973 ; gain = 796.441
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_vector.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_vector.
+INFO: [HLS 200-112] Total elapsed time: 9.18 seconds; peak allocated memory: 91.375 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-10] Setting target device to 'xqzu5ev-ffrb900-1-i'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [IMPL 213-8] Starting RTL evaluation using Vivado ...
+ERROR: [HLS 200-478] vivado returned an error child process exited abnormally

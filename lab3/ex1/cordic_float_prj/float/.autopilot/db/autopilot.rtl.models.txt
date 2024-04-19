@@ -1,0 +1,6 @@
+cordic_fsub_32ns_bkb
+cordic_fadd_32ns_cud
+cordic_fmul_32ns_dEe
+cordic_fcmp_32ns_eOg
+cordic_cordic_phase
+cordic

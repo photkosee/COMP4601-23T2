@@ -1,0 +1,2176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1689197864467">
+  <ports id="1" name="X_R_V" type="PortType" originalName="X_R.V" coreName="RAM" bitwidth="22" iftype="IfTypeRegister" arraysize="1024">
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+  </ports>
+  <ports id="2" name="X_I_V" type="PortType" originalName="X_I.V" coreName="RAM" bitwidth="22" iftype="IfTypeRegister" arraysize="1024">
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+  </ports>
+  <ports id="3" name="Out_R_V" type="PortType" originalName="Out_R.V" coreName="RAM" bitwidth="22" direction="DirOut" iftype="IfTypeRegister" arraysize="1024"/>
+  <ports id="4" name="Out_I_V" type="PortType" originalName="Out_I.V" coreName="RAM" bitwidth="22" direction="DirOut" iftype="IfTypeRegister" arraysize="1024"/>
+  <edges id="227" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="230" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="231" source_obj="//@blocks.2/@node_objs.93" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="232" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="235" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="236" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.1/@node_objs.1" is_back_edge="1"/>
+  <edges id="237" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.1" is_back_edge="1"/>
+  <edges id="238" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="241" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="244" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="245" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="246" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="248" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="251" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="272" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="276" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="296" source_obj="//@blocks.2/@node_objs.7" sink_obj="//@blocks.2/@node_objs.8"/>
+  <edges id="297" source_obj="//@blocks.2/@node_objs.8" sink_obj="//@blocks.2/@node_objs.9"/>
+  <edges id="300" source_obj="//@blocks.2/@node_objs.5" sink_obj="//@blocks.2/@node_objs.10"/>
+  <edges id="301" source_obj="//@blocks.2/@node_objs.9" sink_obj="//@blocks.2/@node_objs.10"/>
+  <edges id="316" source_obj="//@blocks.2/@node_objs.11" sink_obj="//@blocks.2/@node_objs.13"/>
+  <edges id="317" source_obj="//@blocks.2/@node_objs.13" sink_obj="//@blocks.2/@node_objs.14"/>
+  <edges id="318" source_obj="//@blocks.2/@node_objs.10" sink_obj="//@blocks.2/@node_objs.14"/>
+  <edges id="325" source_obj="//@blocks.2/@node_objs.4" sink_obj="//@blocks.2/@node_objs.15"/>
+  <edges id="329" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.16"/>
+  <edges id="331" source_obj="//@blocks.2/@node_objs.16" sink_obj="//@blocks.2/@node_objs.17"/>
+  <edges id="335" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.18"/>
+  <edges id="339" source_obj="//@blocks.2/@node_objs.15" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="341" source_obj="//@blocks.2/@node_objs.19" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="344" source_obj="//@blocks.2/@node_objs.20" sink_obj="//@blocks.2/@node_objs.21"/>
+  <edges id="365" source_obj="//@blocks.2/@node_objs.23" sink_obj="//@blocks.2/@node_objs.24"/>
+  <edges id="366" source_obj="//@blocks.2/@node_objs.22" sink_obj="//@blocks.2/@node_objs.24"/>
+  <edges id="379" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.26"/>
+  <edges id="385" source_obj="//@blocks.2/@node_objs.26" sink_obj="//@blocks.2/@node_objs.27"/>
+  <edges id="409" source_obj="//@blocks.2/@node_objs.28" sink_obj="//@blocks.2/@node_objs.29"/>
+  <edges id="417" source_obj="//@blocks.2/@node_objs.31" sink_obj="//@blocks.2/@node_objs.32"/>
+  <edges id="422" source_obj="//@blocks.2/@node_objs.31" sink_obj="//@blocks.2/@node_objs.33"/>
+  <edges id="424" source_obj="//@blocks.2/@node_objs.31" sink_obj="//@blocks.2/@node_objs.34"/>
+  <edges id="425" source_obj="//@blocks.2/@node_objs.32" sink_obj="//@blocks.2/@node_objs.35"/>
+  <edges id="426" source_obj="//@blocks.2/@node_objs.33" sink_obj="//@blocks.2/@node_objs.35"/>
+  <edges id="427" source_obj="//@blocks.2/@node_objs.34" sink_obj="//@blocks.2/@node_objs.35"/>
+  <edges id="430" source_obj="//@blocks.2/@node_objs.31" sink_obj="//@blocks.2/@node_objs.36"/>
+  <edges id="433" source_obj="//@blocks.2/@node_objs.35" sink_obj="//@blocks.2/@node_objs.37"/>
+  <edges id="436" source_obj="//@blocks.2/@node_objs.35" sink_obj="//@blocks.2/@node_objs.38"/>
+  <edges id="440" source_obj="//@blocks.2/@node_objs.29" sink_obj="//@blocks.2/@node_objs.39"/>
+  <edges id="451" source_obj="//@blocks.2/@node_objs.30" sink_obj="//@blocks.2/@node_objs.42"/>
+  <edges id="453" source_obj="//@blocks.2/@node_objs.36" sink_obj="//@blocks.2/@node_objs.43"/>
+  <edges id="454" source_obj="//@blocks.2/@node_objs.42" sink_obj="//@blocks.2/@node_objs.43"/>
+  <edges id="455" source_obj="//@blocks.2/@node_objs.30" sink_obj="//@blocks.2/@node_objs.44"/>
+  <edges id="456" source_obj="//@blocks.2/@node_objs.36" sink_obj="//@blocks.2/@node_objs.44"/>
+  <edges id="457" source_obj="//@blocks.2/@node_objs.44" sink_obj="//@blocks.2/@node_objs.45"/>
+  <edges id="459" source_obj="//@blocks.2/@node_objs.32" sink_obj="//@blocks.2/@node_objs.46"/>
+  <edges id="460" source_obj="//@blocks.2/@node_objs.45" sink_obj="//@blocks.2/@node_objs.46"/>
+  <edges id="461" source_obj="//@blocks.2/@node_objs.37" sink_obj="//@blocks.2/@node_objs.47"/>
+  <edges id="463" source_obj="//@blocks.2/@node_objs.46" sink_obj="//@blocks.2/@node_objs.48"/>
+  <edges id="464" source_obj="//@blocks.2/@node_objs.47" sink_obj="//@blocks.2/@node_objs.48"/>
+  <edges id="465" source_obj="//@blocks.2/@node_objs.46" sink_obj="//@blocks.2/@node_objs.49"/>
+  <edges id="466" source_obj="//@blocks.2/@node_objs.37" sink_obj="//@blocks.2/@node_objs.49"/>
+  <edges id="467" source_obj="//@blocks.2/@node_objs.44" sink_obj="//@blocks.2/@node_objs.50"/>
+  <edges id="468" source_obj="//@blocks.2/@node_objs.32" sink_obj="//@blocks.2/@node_objs.50"/>
+  <edges id="469" source_obj="//@blocks.2/@node_objs.50" sink_obj="//@blocks.2/@node_objs.51"/>
+  <edges id="471" source_obj="//@blocks.2/@node_objs.38" sink_obj="//@blocks.2/@node_objs.52"/>
+  <edges id="472" source_obj="//@blocks.2/@node_objs.51" sink_obj="//@blocks.2/@node_objs.52"/>
+  <edges id="473" source_obj="//@blocks.2/@node_objs.52" sink_obj="//@blocks.2/@node_objs.53"/>
+  <edges id="474" source_obj="//@blocks.2/@node_objs.41" sink_obj="//@blocks.2/@node_objs.53"/>
+  <edges id="476" source_obj="//@blocks.2/@node_objs.52" sink_obj="//@blocks.2/@node_objs.54"/>
+  <edges id="477" source_obj="//@blocks.2/@node_objs.49" sink_obj="//@blocks.2/@node_objs.54"/>
+  <edges id="478" source_obj="//@blocks.2/@node_objs.48" sink_obj="//@blocks.2/@node_objs.55"/>
+  <edges id="479" source_obj="//@blocks.2/@node_objs.40" sink_obj="//@blocks.2/@node_objs.55"/>
+  <edges id="481" source_obj="//@blocks.2/@node_objs.48" sink_obj="//@blocks.2/@node_objs.56"/>
+  <edges id="482" source_obj="//@blocks.2/@node_objs.43" sink_obj="//@blocks.2/@node_objs.56"/>
+  <edges id="483" source_obj="//@blocks.2/@node_objs.54" sink_obj="//@blocks.2/@node_objs.57"/>
+  <edges id="484" source_obj="//@blocks.2/@node_objs.53" sink_obj="//@blocks.2/@node_objs.57"/>
+  <edges id="485" source_obj="//@blocks.2/@node_objs.55" sink_obj="//@blocks.2/@node_objs.57"/>
+  <edges id="486" source_obj="//@blocks.2/@node_objs.54" sink_obj="//@blocks.2/@node_objs.58"/>
+  <edges id="487" source_obj="//@blocks.2/@node_objs.56" sink_obj="//@blocks.2/@node_objs.58"/>
+  <edges id="488" source_obj="//@blocks.2/@node_objs.58" sink_obj="//@blocks.2/@node_objs.59"/>
+  <edges id="489" source_obj="//@blocks.2/@node_objs.57" sink_obj="//@blocks.2/@node_objs.59"/>
+  <edges id="492" source_obj="//@blocks.2/@node_objs.26" sink_obj="//@blocks.2/@node_objs.60"/>
+  <edges id="513" source_obj="//@blocks.2/@node_objs.61" sink_obj="//@blocks.2/@node_objs.62"/>
+  <edges id="519" source_obj="//@blocks.2/@node_objs.64" sink_obj="//@blocks.2/@node_objs.65"/>
+  <edges id="522" source_obj="//@blocks.2/@node_objs.64" sink_obj="//@blocks.2/@node_objs.66"/>
+  <edges id="524" source_obj="//@blocks.2/@node_objs.64" sink_obj="//@blocks.2/@node_objs.67"/>
+  <edges id="525" source_obj="//@blocks.2/@node_objs.65" sink_obj="//@blocks.2/@node_objs.68"/>
+  <edges id="526" source_obj="//@blocks.2/@node_objs.66" sink_obj="//@blocks.2/@node_objs.68"/>
+  <edges id="527" source_obj="//@blocks.2/@node_objs.67" sink_obj="//@blocks.2/@node_objs.68"/>
+  <edges id="530" source_obj="//@blocks.2/@node_objs.64" sink_obj="//@blocks.2/@node_objs.69"/>
+  <edges id="533" source_obj="//@blocks.2/@node_objs.68" sink_obj="//@blocks.2/@node_objs.70"/>
+  <edges id="535" source_obj="//@blocks.2/@node_objs.68" sink_obj="//@blocks.2/@node_objs.71"/>
+  <edges id="538" source_obj="//@blocks.2/@node_objs.62" sink_obj="//@blocks.2/@node_objs.72"/>
+  <edges id="549" source_obj="//@blocks.2/@node_objs.63" sink_obj="//@blocks.2/@node_objs.75"/>
+  <edges id="551" source_obj="//@blocks.2/@node_objs.69" sink_obj="//@blocks.2/@node_objs.76"/>
+  <edges id="552" source_obj="//@blocks.2/@node_objs.75" sink_obj="//@blocks.2/@node_objs.76"/>
+  <edges id="553" source_obj="//@blocks.2/@node_objs.63" sink_obj="//@blocks.2/@node_objs.77"/>
+  <edges id="554" source_obj="//@blocks.2/@node_objs.69" sink_obj="//@blocks.2/@node_objs.77"/>
+  <edges id="555" source_obj="//@blocks.2/@node_objs.77" sink_obj="//@blocks.2/@node_objs.78"/>
+  <edges id="557" source_obj="//@blocks.2/@node_objs.65" sink_obj="//@blocks.2/@node_objs.79"/>
+  <edges id="558" source_obj="//@blocks.2/@node_objs.78" sink_obj="//@blocks.2/@node_objs.79"/>
+  <edges id="559" source_obj="//@blocks.2/@node_objs.70" sink_obj="//@blocks.2/@node_objs.80"/>
+  <edges id="561" source_obj="//@blocks.2/@node_objs.79" sink_obj="//@blocks.2/@node_objs.81"/>
+  <edges id="562" source_obj="//@blocks.2/@node_objs.80" sink_obj="//@blocks.2/@node_objs.81"/>
+  <edges id="563" source_obj="//@blocks.2/@node_objs.79" sink_obj="//@blocks.2/@node_objs.82"/>
+  <edges id="564" source_obj="//@blocks.2/@node_objs.70" sink_obj="//@blocks.2/@node_objs.82"/>
+  <edges id="565" source_obj="//@blocks.2/@node_objs.77" sink_obj="//@blocks.2/@node_objs.83"/>
+  <edges id="566" source_obj="//@blocks.2/@node_objs.65" sink_obj="//@blocks.2/@node_objs.83"/>
+  <edges id="567" source_obj="//@blocks.2/@node_objs.83" sink_obj="//@blocks.2/@node_objs.84"/>
+  <edges id="569" source_obj="//@blocks.2/@node_objs.71" sink_obj="//@blocks.2/@node_objs.85"/>
+  <edges id="570" source_obj="//@blocks.2/@node_objs.84" sink_obj="//@blocks.2/@node_objs.85"/>
+  <edges id="571" source_obj="//@blocks.2/@node_objs.85" sink_obj="//@blocks.2/@node_objs.86"/>
+  <edges id="572" source_obj="//@blocks.2/@node_objs.74" sink_obj="//@blocks.2/@node_objs.86"/>
+  <edges id="574" source_obj="//@blocks.2/@node_objs.85" sink_obj="//@blocks.2/@node_objs.87"/>
+  <edges id="575" source_obj="//@blocks.2/@node_objs.82" sink_obj="//@blocks.2/@node_objs.87"/>
+  <edges id="576" source_obj="//@blocks.2/@node_objs.81" sink_obj="//@blocks.2/@node_objs.88"/>
+  <edges id="577" source_obj="//@blocks.2/@node_objs.73" sink_obj="//@blocks.2/@node_objs.88"/>
+  <edges id="579" source_obj="//@blocks.2/@node_objs.81" sink_obj="//@blocks.2/@node_objs.89"/>
+  <edges id="580" source_obj="//@blocks.2/@node_objs.76" sink_obj="//@blocks.2/@node_objs.89"/>
+  <edges id="581" source_obj="//@blocks.2/@node_objs.87" sink_obj="//@blocks.2/@node_objs.90"/>
+  <edges id="582" source_obj="//@blocks.2/@node_objs.86" sink_obj="//@blocks.2/@node_objs.90"/>
+  <edges id="583" source_obj="//@blocks.2/@node_objs.88" sink_obj="//@blocks.2/@node_objs.90"/>
+  <edges id="584" source_obj="//@blocks.2/@node_objs.87" sink_obj="//@blocks.2/@node_objs.91"/>
+  <edges id="585" source_obj="//@blocks.2/@node_objs.89" sink_obj="//@blocks.2/@node_objs.91"/>
+  <edges id="586" source_obj="//@blocks.2/@node_objs.91" sink_obj="//@blocks.2/@node_objs.92"/>
+  <edges id="587" source_obj="//@blocks.2/@node_objs.90" sink_obj="//@blocks.2/@node_objs.92"/>
+  <edges id="591" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.93"/>
+  <edges id="594" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.2/@node_objs.94"/>
+  <edges id="596" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="597" source_obj="//@regions.0/@basic_blocks.1/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="598" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="608" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="609" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="610" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="611" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="630" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="631" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="643" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="644" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="654" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="659" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="665" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="670" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="672" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="677" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="679" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="684" source_obj="//@regions.0/@basic_blocks.1/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="686" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="689" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="690" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="691" sink_obj="//@blocks.2/@node_objs.27"/>
+  <edges id="692" sink_obj="//@blocks.2/@node_objs.27"/>
+  <edges id="693" sink_obj="//@blocks.2/@node_objs.27"/>
+  <edges id="694" sink_obj="//@blocks.2/@node_objs.27"/>
+  <edges id="695" sink_obj="//@blocks.2/@node_objs.27"/>
+  <edges id="696" sink_obj="//@blocks.2/@node_objs.27"/>
+  <edges id="697" sink_obj="//@blocks.2/@node_objs.60"/>
+  <edges id="698" sink_obj="//@blocks.2/@node_objs.60"/>
+  <edges id="699" sink_obj="//@blocks.2/@node_objs.60"/>
+  <edges id="700" sink_obj="//@blocks.2/@node_objs.60"/>
+  <edges id="701" sink_obj="//@blocks.2/@node_objs.60"/>
+  <edges id="702" sink_obj="//@blocks.2/@node_objs.60"/>
+  <edges id="746" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="747" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.4"/>
+  <edges id="748" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="749" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="750" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="751" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.3"/>
+  <edges id="752" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="753" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.8"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.13"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.12"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.4" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.6" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.4" sink_obj="//@blocks.2/@node_objs.11"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.12" sink_obj="//@blocks.2/@node_objs.13"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.14" sink_obj="//@blocks.2/@node_objs.21"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.19"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.17"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.17" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.18" sink_obj="//@blocks.2/@node_objs.19"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.21" sink_obj="//@blocks.2/@node_objs.25"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.21" sink_obj="//@blocks.2/@node_objs.22"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.23"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.24" sink_obj="//@blocks.2/@node_objs.25"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.25" sink_obj="//@blocks.2/@node_objs.26"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.27" sink_obj="//@blocks.2/@node_objs.30"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.27" sink_obj="//@blocks.2/@node_objs.29"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.27" sink_obj="//@blocks.2/@node_objs.31"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.27" sink_obj="//@blocks.2/@node_objs.28"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.27" sink_obj="//@blocks.2/@node_objs.29"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.27" sink_obj="//@blocks.2/@node_objs.40"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.35" sink_obj="//@blocks.2/@node_objs.39"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.35" sink_obj="//@blocks.2/@node_objs.41"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.29" sink_obj="//@blocks.2/@node_objs.41"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.29" sink_obj="//@blocks.2/@node_objs.55"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.39" sink_obj="//@blocks.2/@node_objs.53"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.60" sink_obj="//@blocks.2/@node_objs.63"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.60" sink_obj="//@blocks.2/@node_objs.62"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.60" sink_obj="//@blocks.2/@node_objs.64"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.60" sink_obj="//@blocks.2/@node_objs.61"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.60" sink_obj="//@blocks.2/@node_objs.62"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.60" sink_obj="//@blocks.2/@node_objs.73"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.68" sink_obj="//@blocks.2/@node_objs.72"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.68" sink_obj="//@blocks.2/@node_objs.74"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.62" sink_obj="//@blocks.2/@node_objs.74"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.62" sink_obj="//@blocks.2/@node_objs.88"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.72" sink_obj="//@blocks.2/@node_objs.86"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.59" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.59" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.92" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.92" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <blocks id="18" name="ap_fixed_base.exit852" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_25</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="_ln47" lineNumber="47" fileName="fft_stages.cpp" fileDirectory=".." contextFuncName="fft_stage" opcode="br" m_display="0" m_delay="0.75" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="47" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <controlInputObjs>block_25</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="fft_stages.cpp">
+      <validLinenumbers>47</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="25" name="block_25" type="BlockType">
+    <controlInputObjs>ap_fixed_base.exit852</controlInputObjs>
+    <controlInputObjs>butterfly_loop_end</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_226</controlOutputObjs>
+    <controlOutputObjs>butterfly_loop_begin</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="tmp_V" originalName="a.V" bitwidth="14" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>ap_fixed_base.exit852</controlInputObjs>
+      <controlInputObjs>butterfly_loop_end</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="i" originalName="j" bitwidth="4" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>ap_fixed_base.exit852</controlInputObjs>
+      <controlInputObjs>butterfly_loop_end</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="icmp_ln47" lineNumber="47" fileName="fft_stages.cpp" fileDirectory=".." rtlName="icmp_ln47_fu_328_p2" contextFuncName="fft_stage" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.88" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="47" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="j" lineNumber="47" originalName="j" fileName="fft_stages.cpp" fileDirectory=".." rtlName="j_fu_334_p2" contextFuncName="fft_stage" bitwidth="4" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.86" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="47" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="_ln47" lineNumber="47" fileName="fft_stages.cpp" fileDirectory=".." contextFuncName="fft_stage" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="47" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>butterfly_loop_begin</controlInputObjs>
+      <controlInputObjs>block_226</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="fft_stages.cpp">
+      <validLinenumbers>47</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="175" name="butterfly_loop_begin" type="BlockType">
+    <controlInputObjs>block_25</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_180</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="icmp_ln885" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="icmp_ln885_fu_340_p2" contextFuncName="fft_stage" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.86" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="tmp_V_10" lineNumber="48" originalName="tmp.V" fileName="fft_stages.cpp" fileDirectory=".." rtlName="tmp_V_10_fu_346_p2" contextFuncName="fft_stage" bitwidth="14" opcode="sub" nodeLabel="1.0" m_display="0" m_delay="0.98" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>cttz</dataOutputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+      <dataOutputObjs>lshr</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="l" lineNumber="48" originalName="l" fileName="fft_stages.cpp" fileDirectory=".." rtlName="l_fu_374_p3" contextFuncName="fft_stage" bitwidth="32" opcode="cttz" nodeLabel="1.0" m_display="0" m_delay="1.28" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="sub_ln894" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="sub_ln894_fu_382_p2" contextFuncName="fft_stage" bitwidth="32" opcode="sub" nodeLabel="1.0" m_display="0" m_delay="1.2" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>cttz</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="lsb_index" lineNumber="48" originalName="lsb_index" fileName="fft_stages.cpp" fileDirectory=".." rtlName="lsb_index_fu_392_p2" contextFuncName="fft_stage" bitwidth="32" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.2" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="icmp_ln897" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="icmp_ln897_fu_408_p2" contextFuncName="fft_stage" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.09" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="sub_ln897" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="sub_ln897_fu_418_p2" contextFuncName="fft_stage" bitwidth="5" opcode="sub" nodeLabel="1.0" m_display="0" m_delay="0.87" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>lshr</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="lshr_ln897" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="lshr_ln897_fu_428_p2" contextFuncName="fft_stage" bitwidth="22" opcode="lshr" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="p_Result_110" lineNumber="48" originalName="__Result__" fileName="fft_stages.cpp" fileDirectory=".." rtlName="p_Result_110_fu_434_p2" contextFuncName="fft_stage" bitwidth="22" opcode="and" nodeLabel="1.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>lshr</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="icmp_ln897_1" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="icmp_ln897_1_fu_440_p2" contextFuncName="fft_stage" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.86" m_topoIndex="23" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="a" lineNumber="48" originalName="a" fileName="fft_stages.cpp" fileDirectory=".." rtlName="a_fu_446_p2" contextFuncName="fft_stage" bitwidth="1" opcode="and" nodeLabel="1.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="xor_ln899" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="xor_ln899_fu_460_p2" contextFuncName="fft_stage" bitwidth="1" opcode="xor" nodeLabel="1.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="add_ln899" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="add_ln899_fu_466_p2" contextFuncName="fft_stage" bitwidth="22" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.08" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="and_ln899" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="and_ln899_fu_480_p2" contextFuncName="fft_stage" bitwidth="1" opcode="and" nodeLabel="1.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="or_ln899" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="or_ln899_fu_486_p2" contextFuncName="fft_stage" bitwidth="1" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>and</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="icmp_ln908" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="icmp_ln908_fu_508_p2" contextFuncName="fft_stage" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.11" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="add_ln908" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="add_ln908_fu_514_p2" contextFuncName="fft_stage" bitwidth="32" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.2" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>lshr</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="lshr_ln908" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="lshr_ln908_fu_520_p2" contextFuncName="fft_stage" bitwidth="32" opcode="lshr" nodeLabel="1.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="sub_ln908" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="sub_ln908_fu_530_p2" contextFuncName="fft_stage" bitwidth="32" opcode="sub" nodeLabel="1.0" m_display="0" m_delay="1.2" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="shl_ln908" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="shl_ln908_fu_540_p2" contextFuncName="fft_stage" bitwidth="64" opcode="shl" nodeLabel="1.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="m_32" lineNumber="48" originalName="m" fileName="fft_stages.cpp" fileDirectory=".." rtlName="m_32_fu_546_p3" contextFuncName="fft_stage" bitwidth="64" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>shl</dataInputObjs>
+      <dataInputObjs>lshr</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="m_33" lineNumber="48" originalName="m" fileName="fft_stages.cpp" fileDirectory=".." rtlName="m_33_fu_558_p2" contextFuncName="fft_stage" bitwidth="64" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.47" m_topoIndex="43" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>partset</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="select_ln915" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="select_ln915_fu_595_p3" contextFuncName="fft_stage" bitwidth="11" opcode="select" nodeLabel="2.0" m_display="0" m_delay="0.45" m_topoIndex="50" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="sub_ln915" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="sub_ln915_fu_602_p2" contextFuncName="fft_stage" bitwidth="11" opcode="sub" nodeLabel="2.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>cttz</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="add_ln915" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="add_ln915_fu_607_p2" contextFuncName="fft_stage" bitwidth="11" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.07" m_topoIndex="52" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>partset</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="p_Result_118" lineNumber="48" originalName="__Result__" fileName="fft_stages.cpp" fileDirectory=".." rtlName="p_Result_118_fu_621_p5" contextFuncName="fft_stage" bitwidth="64" opcode="partset" nodeLabel="2.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="select_ln885" lineNumber="48" originalName="x" fileName="fft_stages.cpp" fileDirectory=".." rtlName="select_ln885_fu_637_p3" contextFuncName="fft_stage" bitwidth="64" opcode="select" nodeLabel="2.0" m_display="0" m_delay="0.49" m_topoIndex="56" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>partset</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="v_assign" lineNumber="144" originalName="v" fileName="r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp" fileDirectory="r:/builds/2020.1/continuous/2020_05_27_2902540/src/products" rtlName="grp_sin_or_cos_double_s_fu_290" contextFuncName="cos" bitwidth="64" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="3.5" m_topoIndex="57" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <inlineStackInfo fileName="r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c/sincosdouble.cpp" linenumber="13" fileDirectory="r:\builds\2020.1\continuous\2020_05_27_2902540\src\products" functionName="cos"/>
+      <inlineStackInfo fileName="r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp" linenumber="144" fileDirectory="r:\builds\2020.1\continuous\2020_05_27_2902540\src\products" functionName="cos"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>sin_or_cos_double_s</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="man_V_31" lineNumber="48" originalName="man.V" fileName="fft_stages.cpp" fileDirectory=".." rtlName="man_V_31_fu_695_p2" contextFuncName="fft_stage" bitwidth="54" opcode="sub" nodeLabel="4.0" m_display="0" m_delay="1.31" m_topoIndex="68" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="man_V_32" lineNumber="48" originalName="man.V" fileName="fft_stages.cpp" fileDirectory=".." rtlName="man_V_32_fu_701_p3" contextFuncName="fft_stage" bitwidth="54" opcode="select" nodeLabel="4.0" m_display="0" m_delay="0.41" m_topoIndex="69" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>call</dataInputObjs>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>ashr</dataOutputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="icmp_ln571_1" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="icmp_ln571_1_fu_709_p2" contextFuncName="fft_stage" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="1.46" m_topoIndex="70" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="F2" lineNumber="48" originalName="F2" fileName="fft_stages.cpp" fileDirectory=".." rtlName="F2_fu_715_p2" contextFuncName="fft_stage" bitwidth="12" opcode="sub" nodeLabel="4.0" m_display="0" m_delay="0.96" m_topoIndex="71" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="icmp_ln581_1" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="icmp_ln581_1_fu_721_p2" contextFuncName="fft_stage" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="0.86" m_topoIndex="72" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="add_ln581_1" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="add_ln581_1_fu_727_p2" contextFuncName="fft_stage" bitwidth="12" opcode="add" nodeLabel="4.0" m_display="0" m_delay="0.96" m_topoIndex="73" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="sub_ln581_1" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="sub_ln581_1_fu_733_p2" contextFuncName="fft_stage" bitwidth="12" opcode="sub" nodeLabel="4.0" m_display="0" m_delay="0.96" m_topoIndex="74" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="sh_amt" lineNumber="48" originalName="sh_amt" fileName="fft_stages.cpp" fileDirectory=".." rtlName="sh_amt_fu_739_p3" contextFuncName="fft_stage" bitwidth="12" opcode="select" nodeLabel="4.0" m_display="0" m_delay="0.43" m_topoIndex="75" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>ashr</dataOutputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="icmp_ln582_1" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="icmp_ln582_1_fu_755_p2" contextFuncName="fft_stage" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="0.86" m_topoIndex="78" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="icmp_ln585_1" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="icmp_ln585_1_fu_765_p2" contextFuncName="fft_stage" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="0.86" m_topoIndex="80" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="icmp_ln603_1" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="icmp_ln603_1_fu_771_p2" contextFuncName="fft_stage" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="0.86" m_topoIndex="81" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="ashr_ln586_1" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="ashr_ln586_1_fu_781_p2" contextFuncName="fft_stage" bitwidth="54" opcode="ashr" nodeLabel="4.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="4">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="select_ln588" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="select_ln588_fu_799_p3" contextFuncName="fft_stage" bitwidth="22" opcode="select" nodeLabel="4.0" m_display="0" m_topoIndex="86" m_clusterGroupNumber="5">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="105" name="shl_ln604_1" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="shl_ln604_1_fu_807_p2" contextFuncName="fft_stage" bitwidth="22" opcode="shl" nodeLabel="4.0" m_display="0" m_topoIndex="87" m_clusterGroupNumber="4">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="xor_ln571" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="xor_ln571_fu_813_p2" contextFuncName="fft_stage" bitwidth="1" opcode="xor" nodeLabel="4.0" m_display="0" m_topoIndex="88" m_clusterGroupNumber="6">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="107" name="and_ln582" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="and_ln582_fu_819_p2" contextFuncName="fft_stage" bitwidth="1" opcode="and" nodeLabel="4.0" m_display="0" m_topoIndex="89" m_clusterGroupNumber="6">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="or_ln582" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="or_ln582_fu_825_p2" contextFuncName="fft_stage" bitwidth="1" opcode="or" nodeLabel="4.0" m_display="0" m_delay="0.33" m_topoIndex="90" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="109" name="xor_ln582" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="xor_ln582_fu_831_p2" contextFuncName="fft_stage" bitwidth="1" opcode="xor" nodeLabel="4.0" m_display="0" m_topoIndex="91" m_clusterGroupNumber="7">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="110" name="and_ln581" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="and_ln581_fu_837_p2" contextFuncName="fft_stage" bitwidth="1" opcode="and" nodeLabel="4.0" m_display="0" m_delay="0.33" m_topoIndex="92" m_clusterGroupNumber="7">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="111" name="xor_ln585" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="xor_ln585_fu_843_p2" contextFuncName="fft_stage" bitwidth="1" opcode="xor" nodeLabel="4.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="8">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="112" name="and_ln585" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="and_ln585_fu_849_p2" contextFuncName="fft_stage" bitwidth="1" opcode="and" nodeLabel="4.0" m_display="0" m_delay="0.33" m_topoIndex="94" m_clusterGroupNumber="8">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="113" name="and_ln585_19" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="and_ln585_19_fu_855_p2" contextFuncName="fft_stage" bitwidth="1" opcode="and" nodeLabel="4.0" m_display="0" m_topoIndex="95" m_clusterGroupNumber="9">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="or_ln581" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="or_ln581_fu_861_p2" contextFuncName="fft_stage" bitwidth="1" opcode="or" nodeLabel="4.0" m_display="0" m_topoIndex="96" m_clusterGroupNumber="10">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="115" name="xor_ln581" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="xor_ln581_fu_867_p2" contextFuncName="fft_stage" bitwidth="1" opcode="xor" nodeLabel="4.0" m_display="0" m_topoIndex="97" m_clusterGroupNumber="10">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="116" name="and_ln603" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="and_ln603_fu_873_p2" contextFuncName="fft_stage" bitwidth="1" opcode="and" nodeLabel="4.0" m_display="0" m_delay="0.33" m_topoIndex="98" m_clusterGroupNumber="10">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="117" name="select_ln603" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="select_ln603_fu_879_p3" contextFuncName="fft_stage" bitwidth="22" opcode="select" nodeLabel="4.0" m_display="0" m_delay="1.69" m_topoIndex="99" m_clusterGroupNumber="4">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>shl</dataInputObjs>
+      <dataInputObjs>ashr</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="118" name="or_ln603" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="or_ln603_fu_887_p2" contextFuncName="fft_stage" bitwidth="1" opcode="or" nodeLabel="4.0" m_display="0" m_delay="0.33" m_topoIndex="100" m_clusterGroupNumber="9">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>and</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="119" name="select_ln603_43" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="select_ln603_43_fu_893_p3" contextFuncName="fft_stage" bitwidth="22" opcode="select" nodeLabel="4.0" m_display="0" m_delay="0.43" m_topoIndex="101" m_clusterGroupNumber="5">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="120" name="or_ln603_31" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="or_ln603_31_fu_901_p2" contextFuncName="fft_stage" bitwidth="1" opcode="or" nodeLabel="4.0" m_display="0" m_topoIndex="102" m_clusterGroupNumber="6">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>and</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="121" name="select_ln603_44" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="select_ln603_44_fu_907_p3" contextFuncName="fft_stage" bitwidth="22" opcode="select" nodeLabel="4.0" m_display="0" m_topoIndex="103" m_clusterGroupNumber="11">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="122" name="or_ln603_32" lineNumber="48" fileName="fft_stages.cpp" fileDirectory=".." rtlName="or_ln603_32_fu_915_p2" contextFuncName="fft_stage" bitwidth="1" opcode="or" nodeLabel="4.0" m_display="0" m_delay="0.33" m_topoIndex="104" m_clusterGroupNumber="6">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="123" name="c_V" lineNumber="48" originalName="c.V" fileName="fft_stages.cpp" fileDirectory=".." rtlName="c_V_fu_921_p3" contextFuncName="fft_stage" bitwidth="22" opcode="select" nodeLabel="4.0" m_display="0" m_delay="0.43" m_topoIndex="105" m_clusterGroupNumber="11">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="48" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="124" name="v_assign_7" lineNumber="140" originalName="v" fileName="r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp" fileDirectory="r:/builds/2020.1/continuous/2020_05_27_2902540/src/products" rtlName="grp_sin_or_cos_double_s_fu_309" contextFuncName="sin" bitwidth="64" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="3.5" m_topoIndex="58" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <inlineStackInfo fileName="r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c/sincosdouble.cpp" linenumber="8" fileDirectory="r:\builds\2020.1\continuous\2020_05_27_2902540\src\products" functionName="sin"/>
+      <inlineStackInfo fileName="r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp" linenumber="140" fileDirectory="r:\builds\2020.1\continuous\2020_05_27_2902540\src\products" functionName="sin"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>sin_or_cos_double_s</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="133" name="man_V_34" lineNumber="49" originalName="man.V" fileName="fft_stages.cpp" fileDirectory=".." rtlName="man_V_34_fu_974_p2" contextFuncName="fft_stage" bitwidth="54" opcode="sub" nodeLabel="4.0" m_display="0" m_delay="1.31" m_topoIndex="114" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="134" name="man_V_35" lineNumber="49" originalName="man.V" fileName="fft_stages.cpp" fileDirectory=".." rtlName="man_V_35_fu_980_p3" contextFuncName="fft_stage" bitwidth="54" opcode="select" nodeLabel="4.0" m_display="0" m_delay="0.41" m_topoIndex="115" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>call</dataInputObjs>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>ashr</dataOutputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="135" name="icmp_ln571" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="icmp_ln571_fu_988_p2" contextFuncName="fft_stage" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="1.46" m_topoIndex="116" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="136" name="F2_7" lineNumber="49" originalName="F2" fileName="fft_stages.cpp" fileDirectory=".." rtlName="F2_7_fu_994_p2" contextFuncName="fft_stage" bitwidth="12" opcode="sub" nodeLabel="4.0" m_display="0" m_delay="0.96" m_topoIndex="117" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="137" name="icmp_ln581" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="icmp_ln581_fu_1000_p2" contextFuncName="fft_stage" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="0.86" m_topoIndex="118" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="138" name="add_ln581" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="add_ln581_fu_1006_p2" contextFuncName="fft_stage" bitwidth="12" opcode="add" nodeLabel="4.0" m_display="0" m_delay="0.96" m_topoIndex="119" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="139" name="sub_ln581" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="sub_ln581_fu_1012_p2" contextFuncName="fft_stage" bitwidth="12" opcode="sub" nodeLabel="4.0" m_display="0" m_delay="0.96" m_topoIndex="120" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="140" name="sh_amt_7" lineNumber="49" originalName="sh_amt" fileName="fft_stages.cpp" fileDirectory=".." rtlName="sh_amt_7_fu_1018_p3" contextFuncName="fft_stage" bitwidth="12" opcode="select" nodeLabel="4.0" m_display="0" m_delay="0.43" m_topoIndex="121" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>ashr</dataOutputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="143" name="icmp_ln582" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="icmp_ln582_fu_1034_p2" contextFuncName="fft_stage" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="0.86" m_topoIndex="124" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="145" name="icmp_ln585" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="icmp_ln585_fu_1044_p2" contextFuncName="fft_stage" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="0.86" m_topoIndex="126" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="146" name="icmp_ln603" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="icmp_ln603_fu_1050_p2" contextFuncName="fft_stage" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="0.86" m_topoIndex="127" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="148" name="ashr_ln586" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="ashr_ln586_fu_1060_p2" contextFuncName="fft_stage" bitwidth="54" opcode="ashr" nodeLabel="4.0" m_display="0" m_topoIndex="129" m_clusterGroupNumber="12">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="151" name="select_ln588_7" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="select_ln588_7_fu_1078_p3" contextFuncName="fft_stage" bitwidth="22" opcode="select" nodeLabel="4.0" m_display="0" m_topoIndex="132" m_clusterGroupNumber="13">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="152" name="shl_ln604" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="shl_ln604_fu_1086_p2" contextFuncName="fft_stage" bitwidth="22" opcode="shl" nodeLabel="4.0" m_display="0" m_topoIndex="133" m_clusterGroupNumber="12">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="153" name="xor_ln571_7" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="xor_ln571_7_fu_1092_p2" contextFuncName="fft_stage" bitwidth="1" opcode="xor" nodeLabel="4.0" m_display="0" m_topoIndex="134" m_clusterGroupNumber="14">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="154" name="and_ln582_7" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="and_ln582_7_fu_1098_p2" contextFuncName="fft_stage" bitwidth="1" opcode="and" nodeLabel="4.0" m_display="0" m_topoIndex="135" m_clusterGroupNumber="14">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="155" name="or_ln582_7" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="or_ln582_7_fu_1104_p2" contextFuncName="fft_stage" bitwidth="1" opcode="or" nodeLabel="4.0" m_display="0" m_delay="0.33" m_topoIndex="136" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="156" name="xor_ln582_7" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="xor_ln582_7_fu_1110_p2" contextFuncName="fft_stage" bitwidth="1" opcode="xor" nodeLabel="4.0" m_display="0" m_topoIndex="137" m_clusterGroupNumber="15">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="157" name="and_ln581_7" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="and_ln581_7_fu_1116_p2" contextFuncName="fft_stage" bitwidth="1" opcode="and" nodeLabel="4.0" m_display="0" m_delay="0.33" m_topoIndex="138" m_clusterGroupNumber="15">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="158" name="xor_ln585_7" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="xor_ln585_7_fu_1122_p2" contextFuncName="fft_stage" bitwidth="1" opcode="xor" nodeLabel="4.0" m_display="0" m_topoIndex="139" m_clusterGroupNumber="16">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="159" name="and_ln585_20" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="and_ln585_20_fu_1128_p2" contextFuncName="fft_stage" bitwidth="1" opcode="and" nodeLabel="4.0" m_display="0" m_delay="0.33" m_topoIndex="140" m_clusterGroupNumber="16">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="160" name="and_ln585_21" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="and_ln585_21_fu_1134_p2" contextFuncName="fft_stage" bitwidth="1" opcode="and" nodeLabel="4.0" m_display="0" m_topoIndex="141" m_clusterGroupNumber="17">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="161" name="or_ln581_7" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="or_ln581_7_fu_1140_p2" contextFuncName="fft_stage" bitwidth="1" opcode="or" nodeLabel="4.0" m_display="0" m_topoIndex="142" m_clusterGroupNumber="18">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="162" name="xor_ln581_7" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="xor_ln581_7_fu_1146_p2" contextFuncName="fft_stage" bitwidth="1" opcode="xor" nodeLabel="4.0" m_display="0" m_topoIndex="143" m_clusterGroupNumber="18">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="163" name="and_ln603_7" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="and_ln603_7_fu_1152_p2" contextFuncName="fft_stage" bitwidth="1" opcode="and" nodeLabel="4.0" m_display="0" m_delay="0.33" m_topoIndex="144" m_clusterGroupNumber="18">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="164" name="select_ln603_46" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="select_ln603_46_fu_1158_p3" contextFuncName="fft_stage" bitwidth="22" opcode="select" nodeLabel="4.0" m_display="0" m_delay="1.69" m_topoIndex="145" m_clusterGroupNumber="12">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>shl</dataInputObjs>
+      <dataInputObjs>ashr</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="165" name="or_ln603_33" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="or_ln603_33_fu_1166_p2" contextFuncName="fft_stage" bitwidth="1" opcode="or" nodeLabel="4.0" m_display="0" m_delay="0.33" m_topoIndex="146" m_clusterGroupNumber="17">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>and</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="166" name="select_ln603_47" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="select_ln603_47_fu_1172_p3" contextFuncName="fft_stage" bitwidth="22" opcode="select" nodeLabel="4.0" m_display="0" m_delay="0.43" m_topoIndex="147" m_clusterGroupNumber="13">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="167" name="or_ln603_34" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="or_ln603_34_fu_1180_p2" contextFuncName="fft_stage" bitwidth="1" opcode="or" nodeLabel="4.0" m_display="0" m_topoIndex="148" m_clusterGroupNumber="14">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>and</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="168" name="select_ln603_48" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="select_ln603_48_fu_1186_p3" contextFuncName="fft_stage" bitwidth="22" opcode="select" nodeLabel="4.0" m_display="0" m_topoIndex="149" m_clusterGroupNumber="19">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="169" name="or_ln603_35" lineNumber="49" fileName="fft_stages.cpp" fileDirectory=".." rtlName="or_ln603_35_fu_1194_p2" contextFuncName="fft_stage" bitwidth="1" opcode="or" nodeLabel="4.0" m_display="0" m_delay="0.33" m_topoIndex="150" m_clusterGroupNumber="14">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="170" name="s_V" lineNumber="49" originalName="s.V" fileName="fft_stages.cpp" fileDirectory=".." rtlName="s_V_fu_1200_p3" contextFuncName="fft_stage" bitwidth="22" opcode="select" nodeLabel="4.0" m_display="0" m_delay="0.43" m_topoIndex="151" m_clusterGroupNumber="19">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="49" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="171" name="a_V" lineNumber="50" originalName="a.V" fileName="fft_stages.cpp" fileDirectory=".." rtlName="a_V_fu_586_p2" contextFuncName="fft_stage" bitwidth="14" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.98" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="50" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="174" name="_ln53" lineNumber="53" fileName="fft_stages.cpp" fileDirectory=".." contextFuncName="fft_stage" opcode="br" nodeLabel="4.0" m_display="0" m_delay="0.75" m_topoIndex="154" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="53" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <controlInputObjs>block_180</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp">
+      <validLinenumbers>144</validLinenumbers>
+      <validLinenumbers>140</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c/sincosdouble.cpp">
+      <validLinenumbers>13</validLinenumbers>
+      <validLinenumbers>8</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="fft_stages.cpp">
+      <validLinenumbers>48</validLinenumbers>
+      <validLinenumbers>49</validLinenumbers>
+      <validLinenumbers>50</validLinenumbers>
+      <validLinenumbers>53</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="224" name="butterfly_loop_end" type="BlockType">
+    <controlInputObjs>block_180</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_25</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="223" name="_ln47" lineNumber="47" fileName="fft_stages.cpp" fileDirectory=".." contextFuncName="fft_stage" opcode="br" nodeLabel="7.0" m_display="0" m_topoIndex="194" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="47" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+      <controlInputObjs>block_25</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="fft_stages.cpp">
+      <validLinenumbers>47</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="226" name="block_226" type="BlockType">
+    <controlInputObjs>block_25</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="225" name="_ln63" lineNumber="63" fileName="fft_stages.cpp" fileDirectory=".." contextFuncName="fft_stage" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fft_stages.cpp" linenumber="63" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="fft_stages.cpp">
+      <validLinenumbers>63</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="888" pipe_depth="2" RegionName="dft_loop">
+    <basic_blocks id="180" name="block_180" type="BlockType">
+      <controlInputObjs>butterfly_loop_begin</controlInputObjs>
+      <controlInputObjs>dft_loop</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>dft_loop</controlOutputObjs>
+      <controlOutputObjs>butterfly_loop_end</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="176" name="i_0" originalName="i" bitwidth="32" opcode="phi" nodeLabel="5.0" m_display="0" m_topoIndex="155" m_clusterGroupNumber="-1">
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <controlInputObjs>butterfly_loop_begin</controlInputObjs>
+        <controlInputObjs>dft_loop</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="178" name="icmp_ln53" lineNumber="53" fileName="fft_stages.cpp" fileDirectory=".." rtlName="icmp_ln53_fu_1226_p2" contextFuncName="fft_stage" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="0.95" m_topoIndex="157" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="53" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="179" name="_ln53" lineNumber="53" fileName="fft_stages.cpp" fileDirectory=".." contextFuncName="fft_stage" opcode="br" nodeLabel="5.0" m_display="0" m_topoIndex="158" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="53" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>butterfly_loop_end</controlInputObjs>
+        <controlInputObjs>dft_loop</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="fft_stages.cpp">
+        <validLinenumbers>53</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="221" name="dft_loop" type="BlockType">
+      <controlInputObjs>block_180</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_180</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="185" name="i_lower" lineNumber="54" originalName="i_lower" fileName="fft_stages.cpp" fileDirectory=".." rtlName="i_lower_fu_1232_p2" contextFuncName="fft_stage" bitwidth="32" opcode="add" nodeLabel="5.0" m_display="0" m_delay="1.2" m_topoIndex="159" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="54" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="188" name="X_R_V_load" lineNumber="55" fileName="fft_stages.cpp" fileDirectory=".." contextFuncName="fft_stage" bitwidth="22" opcode="load" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="162" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="55" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>X_R_V</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="191" name="X_I_V_load" lineNumber="55" fileName="fft_stages.cpp" fileDirectory=".." contextFuncName="fft_stage" bitwidth="22" opcode="load" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="164" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="55" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>X_I_V</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="193" name="mul_ln700" lineNumber="55" fileName="fft_stages.cpp" fileDirectory=".." rtlName="mul_ln700_fu_1264_p2" contextFuncName="fft_stage" bitwidth="33" opcode="mul" nodeLabel="6.0" m_display="0" m_delay="3.24" m_topoIndex="173" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="55" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="194" name="mul_ln1193" lineNumber="55" fileName="fft_stages.cpp" fileDirectory=".." rtlName="mul_ln1193_fu_1269_p2" contextFuncName="fft_stage" bitwidth="33" opcode="mul" nodeLabel="6.0" m_display="0" m_delay="3.24" m_topoIndex="174" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="55" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="195" name="ret_V" lineNumber="55" originalName="ret.V" fileName="fft_stages.cpp" fileDirectory=".." rtlName="ret_V_fu_1274_p2" contextFuncName="fft_stage" bitwidth="33" opcode="sub" nodeLabel="6.0" m_display="0" m_delay="1.2" m_topoIndex="175" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="55" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="197" name="mul_ln700_7" lineNumber="56" fileName="fft_stages.cpp" fileDirectory=".." rtlName="mul_ln700_7_fu_1290_p2" contextFuncName="fft_stage" bitwidth="33" opcode="mul" nodeLabel="6.0" m_display="0" m_delay="3.24" m_topoIndex="177" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="56" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="198" name="mul_ln1192" lineNumber="56" fileName="fft_stages.cpp" fileDirectory=".." rtlName="mul_ln1192_fu_1295_p2" contextFuncName="fft_stage" bitwidth="33" opcode="mul" nodeLabel="6.0" m_display="0" m_delay="3.24" m_topoIndex="178" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="56" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="199" name="ret_V_19" lineNumber="56" originalName="ret.V" fileName="fft_stages.cpp" fileDirectory=".." rtlName="ret_V_19_fu_1300_p2" contextFuncName="fft_stage" bitwidth="33" opcode="add" nodeLabel="6.0" m_display="0" m_delay="1.2" m_topoIndex="179" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="56" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="203" name="p_Val2_98" lineNumber="57" originalName="__Val2__" fileName="fft_stages.cpp" fileDirectory=".." contextFuncName="fft_stage" bitwidth="22" opcode="load" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="167" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="57" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>X_R_V</dataInputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="204" name="sub_ln703" lineNumber="57" fileName="fft_stages.cpp" fileDirectory=".." rtlName="Out_R_V_d0" contextFuncName="fft_stage" bitwidth="22" opcode="sub" nodeLabel="6.0" m_display="0" m_delay="1.08" m_topoIndex="181" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="57" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="206" name="Out_R_V_addr11_write_ln57" lineNumber="57" fileName="fft_stages.cpp" fileDirectory=".." contextFuncName="fft_stage" opcode="store" nodeLabel="6.0" m_display="0" m_delay="1.35" m_topoIndex="183" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="57" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="208" name="p_Val2_100" lineNumber="58" originalName="__Val2__" fileName="fft_stages.cpp" fileDirectory=".." contextFuncName="fft_stage" bitwidth="22" opcode="load" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="169" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="58" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>X_I_V</dataInputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="209" name="sub_ln703_1" lineNumber="58" fileName="fft_stages.cpp" fileDirectory=".." rtlName="Out_I_V_d0" contextFuncName="fft_stage" bitwidth="22" opcode="sub" nodeLabel="6.0" m_display="0" m_delay="1.08" m_topoIndex="184" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="58" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="211" name="Out_I_V_addr16_write_ln58" lineNumber="58" fileName="fft_stages.cpp" fileDirectory=".." contextFuncName="fft_stage" opcode="store" nodeLabel="6.0" m_display="0" m_delay="1.35" m_topoIndex="186" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="58" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="212" name="add_ln703" lineNumber="59" fileName="fft_stages.cpp" fileDirectory=".." rtlName="Out_R_V_d1" contextFuncName="fft_stage" bitwidth="22" opcode="add" nodeLabel="6.0" m_display="0" m_delay="1.08" m_topoIndex="187" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="59" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="214" name="Out_R_V_addr_write_ln59" lineNumber="59" fileName="fft_stages.cpp" fileDirectory=".." contextFuncName="fft_stage" opcode="store" nodeLabel="6.0" m_display="0" m_delay="1.35" m_topoIndex="189" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="59" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="215" name="add_ln703_1" lineNumber="60" fileName="fft_stages.cpp" fileDirectory=".." rtlName="Out_I_V_d1" contextFuncName="fft_stage" bitwidth="22" opcode="add" nodeLabel="6.0" m_display="0" m_delay="1.08" m_topoIndex="190" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="60" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="217" name="Out_I_V_addr_write_ln60" lineNumber="60" fileName="fft_stages.cpp" fileDirectory=".." contextFuncName="fft_stage" opcode="store" nodeLabel="6.0" m_display="0" m_delay="1.35" m_topoIndex="192" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="60" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="219" name="i_9" lineNumber="53" originalName="i" fileName="fft_stages.cpp" fileDirectory=".." rtlName="i_9_fu_1250_p2" contextFuncName="fft_stage" bitwidth="32" opcode="add" nodeLabel="5.0" m_display="0" m_delay="1.2" m_topoIndex="170" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="53" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="220" name="_ln53" lineNumber="53" fileName="fft_stages.cpp" fileDirectory=".." contextFuncName="fft_stage" opcode="br" nodeLabel="6.0" m_display="0" m_topoIndex="193" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fft_stages.cpp" linenumber="53" fileDirectory="C:\COMP4601\ch5-files" functionName="fft_stage"/>
+        <controlInputObjs>block_180</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="fft_stages.cpp">
+        <validLinenumbers>54</validLinenumbers>
+        <validLinenumbers>55</validLinenumbers>
+        <validLinenumbers>56</validLinenumbers>
+        <validLinenumbers>57</validLinenumbers>
+        <validLinenumbers>58</validLinenumbers>
+        <validLinenumbers>59</validLinenumbers>
+        <validLinenumbers>60</validLinenumbers>
+        <validLinenumbers>53</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <regnodes realName="a_V_reg_1372">
+    <nodeIds>171</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln893_reg_1367">
+    <nodeIds>70</nodeIds>
+  </regnodes>
+  <regnodes realName="X_I_V_addr_7_reg_1441">
+    <nodeIds>207</nodeIds>
+  </regnodes>
+  <regnodes realName="v_assign_7_reg_1388">
+    <nodeIds>124</nodeIds>
+  </regnodes>
+  <regnodes realName="i_9_reg_1446">
+    <nodeIds>219</nodeIds>
+  </regnodes>
+  <regnodes realName="X_I_V_addr_reg_1425">
+    <nodeIds>190</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_269">
+    <nodeIds>20</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_V_reg_258">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln57_reg_1430">
+    <nodeIds>201</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln53_reg_1410">
+    <nodeIds>178</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln885_reg_1352">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="X_R_V_addr_reg_1420">
+    <nodeIds>187</nodeIds>
+  </regnodes>
+  <regnodes realName="i_0_reg_281">
+    <nodeIds>176</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_54_reg_1362">
+    <nodeIds>68</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln1118_reg_1398">
+    <nodeIds>172</nodeIds>
+  </regnodes>
+  <regnodes realName="m_s_reg_1357">
+    <nodeIds>66</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln55_reg_1414">
+    <nodeIds>186</nodeIds>
+  </regnodes>
+  <regnodes realName="j_reg_1347">
+    <nodeIds>23</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln1118_19_reg_1404">
+    <nodeIds>173</nodeIds>
+  </regnodes>
+  <regnodes realName="X_R_V_addr_7_reg_1436">
+    <nodeIds>202</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln885_reg_1377">
+    <nodeIds>76</nodeIds>
+  </regnodes>
+  <regnodes realName="v_assign_reg_1383">
+    <nodeIds>77</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln891_reg_1393">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <expressionNodes realName="xor_ln899_fu_460">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln_fu_492">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln581_1_fu_733">
+    <nodeIds>92</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_118_fu_621">
+    <nodeIds>74</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lshr_ln908_fu_520">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln582_fu_1034">
+    <nodeIds>143</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="l_fu_374">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Out_I_V_addr16_gep_fu_221">
+    <nodeIds>210</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln703_fu_1330">
+    <nodeIds>212</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln581_20_fu_1026">
+    <nodeIds>141</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln588_fu_799">
+    <nodeIds>104</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sh_amt_fu_739">
+    <nodeIds>93</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln908_fu_540">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln581_fu_1006">
+    <nodeIds>138</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln603_47_fu_1172">
+    <nodeIds>166</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln885_fu_637">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln603_fu_873">
+    <nodeIds>116</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="F2_7_fu_994">
+    <nodeIds>136</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln581_fu_867">
+    <nodeIds>115</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_9_fu_1250">
+    <nodeIds>219</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_V_phi_fu_262">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln461_1_fu_675">
+    <nodeIds>82</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln556_fu_653">
+    <nodeIds>79</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="X_I_V_addr_7_gep_fu_196">
+    <nodeIds>207</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln603_7_fu_1152">
+    <nodeIds>163</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="exp_tmp_V_fu_665">
+    <nodeIds>81</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln585_19_fu_855">
+    <nodeIds>113</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln915_fu_607">
+    <nodeIds>72</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln899_fu_486">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln57_fu_1244">
+    <nodeIds>201</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mul_ln700_fu_1264">
+    <nodeIds>193</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lsb_index_fu_392">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln581_1_fu_721">
+    <nodeIds>90</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln603_33_fu_1166">
+    <nodeIds>165</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln891_fu_646">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_56_fu_791">
+    <nodeIds>103</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_398">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln571_7_fu_1092">
+    <nodeIds>153</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln55_fu_1238">
+    <nodeIds>186</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln585_fu_849">
+    <nodeIds>112</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_V_10_fu_346">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_111_fu_472">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln893_fu_582">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_s_fu_356">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="a_V_fu_586">
+    <nodeIds>171</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln908_1_fu_536">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_120_fu_691">
+    <nodeIds>85</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln894_fu_388">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1118_fu_1208">
+    <nodeIds>172</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln582_7_fu_1104">
+    <nodeIds>155</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="X_R_V_addr_7_gep_fu_184">
+    <nodeIds>202</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln585_1_fu_765">
+    <nodeIds>98</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1118_20_fu_1256">
+    <nodeIds>189</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln703_fu_1316">
+    <nodeIds>204</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln571_1_fu_709">
+    <nodeIds>88</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln581_7_fu_1116">
+    <nodeIds>157</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln581_fu_837">
+    <nodeIds>110</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_2_fu_962">
+    <nodeIds>131</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln565_fu_679">
+    <nodeIds>83</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_phi_fu_273">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_58_fu_1070">
+    <nodeIds>150</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="X_R_V_addr_gep_fu_158">
+    <nodeIds>187</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln603_1_fu_771">
+    <nodeIds>99</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln603_44_fu_907">
+    <nodeIds>121</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln581_fu_1000">
+    <nodeIds>137</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="m_fu_500">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln461_fu_954">
+    <nodeIds>129</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln581_7_fu_1146">
+    <nodeIds>162</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln586_1_fu_777">
+    <nodeIds>100</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lshr_ln897_fu_428">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="m_36_fu_592">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln581_1_fu_727">
+    <nodeIds>91</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln581_19_fu_751">
+    <nodeIds>95</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln586_7_fu_1066">
+    <nodeIds>149</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_0_phi_fu_284">
+    <nodeIds>176</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln908_fu_514">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln899_fu_480">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln897_1_fu_440">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln565_7_fu_958">
+    <nodeIds>130</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln582_fu_831">
+    <nodeIds>109</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln585_21_fu_1134">
+    <nodeIds>160</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="a_fu_446">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln47_fu_328">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_53_fu_452">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln703_1_fu_1337">
+    <nodeIds>215</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Out_R_V_addr11_gep_fu_208">
+    <nodeIds>205</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ireg_V_7_fu_929">
+    <nodeIds>125</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_fu_334">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_54_fu_574">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln897_fu_424">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln907_7_fu_504">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mul_ln1192_fu_1295">
+    <nodeIds>198</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln603_fu_879">
+    <nodeIds>117</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln582_7_fu_1110">
+    <nodeIds>156</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln586_fu_787">
+    <nodeIds>102</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln908_fu_530">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="X_I_V_addr_gep_fu_171">
+    <nodeIds>190</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_59_fu_1216">
+    <nodeIds>177</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln585_fu_843">
+    <nodeIds>111</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln603_31_fu_901">
+    <nodeIds>120</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_119_fu_657">
+    <nodeIds>80</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln908_fu_526">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln582_7_fu_1098">
+    <nodeIds>154</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln703_1_fu_1323">
+    <nodeIds>209</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Out_I_V_addr_gep_fu_246">
+    <nodeIds>216</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="c_V_fu_921">
+    <nodeIds>123</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="man_V_32_fu_701">
+    <nodeIds>87</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="s_V_fu_1200">
+    <nodeIds>170</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln908_fu_508">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln585_20_fu_1128">
+    <nodeIds>159</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln581_fu_747">
+    <nodeIds>94</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1118_19_fu_1212">
+    <nodeIds>173</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ashr_ln586_fu_1060">
+    <nodeIds>148</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mul_ln700_7_fu_1290">
+    <nodeIds>197</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln885_fu_340">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln603_35_fu_1194">
+    <nodeIds>169</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_1_fu_683">
+    <nodeIds>84</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="m_33_fu_558">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln897_fu_414">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln897_fu_408">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln604_1_fu_807">
+    <nodeIds>105</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln911_fu_554">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln581_7_fu_1140">
+    <nodeIds>161</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ret_V_fu_1274">
+    <nodeIds>195</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln603_32_fu_915">
+    <nodeIds>122</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln581_fu_1012">
+    <nodeIds>139</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln889_fu_352">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln894_fu_382">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="exp_tmp_V_7_fu_944">
+    <nodeIds>128</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_lower_fu_1232">
+    <nodeIds>185</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln583_7_fu_1040">
+    <nodeIds>144</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ashr_ln586_1_fu_781">
+    <nodeIds>101</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln53_fu_1226">
+    <nodeIds>178</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln571_fu_988">
+    <nodeIds>135</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln897_fu_418">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln915_fu_595">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln585_7_fu_1122">
+    <nodeIds>158</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln582_fu_825">
+    <nodeIds>108</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_117_fu_366">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln604_fu_1086">
+    <nodeIds>152</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="man_V_34_fu_974">
+    <nodeIds>133</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln581_fu_861">
+    <nodeIds>114</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="m_32_fu_546">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="m_s_fu_564">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="man_V_31_fu_695">
+    <nodeIds>86</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln588_7_fu_1078">
+    <nodeIds>151</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="F2_fu_715">
+    <nodeIds>89</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln603_fu_1050">
+    <nodeIds>146</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp_R_V_fu_1280">
+    <nodeIds>196</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_122_fu_970">
+    <nodeIds>132</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln899_fu_466">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln583_fu_761">
+    <nodeIds>97</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln603_34_fu_1180">
+    <nodeIds>167</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_110_fu_434">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sh_amt_7_fu_1018">
+    <nodeIds>140</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln586_fu_1056">
+    <nodeIds>147</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_121_fu_936">
+    <nodeIds>127</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ireg_V_fu_650">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Out_R_V_addr_gep_fu_234">
+    <nodeIds>213</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln585_fu_1044">
+    <nodeIds>145</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ret_V_19_fu_1300">
+    <nodeIds>199</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp_I_V_fu_1306">
+    <nodeIds>200</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln603_46_fu_1158">
+    <nodeIds>164</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln582_fu_819">
+    <nodeIds>107</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln603_fu_887">
+    <nodeIds>118</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="man_V_35_fu_980">
+    <nodeIds>134</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln582_1_fu_755">
+    <nodeIds>96</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln729_fu_633">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln915_fu_602">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_9_fu_613">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mul_ln1193_fu_1269">
+    <nodeIds>194</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln603_48_fu_1186">
+    <nodeIds>168</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln571_fu_813">
+    <nodeIds>106</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln603_43_fu_893">
+    <nodeIds>119</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln581_21_fu_1030">
+    <nodeIds>142</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1118_21_fu_1260">
+    <nodeIds>192</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln556_7_fu_932">
+    <nodeIds>126</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_sin_or_cos_double_s_fu_290">
+    <nodeIds>77</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_sin_or_cos_double_s_fu_309">
+    <nodeIds>124</nodeIds>
+  </moduleNodes>
+  <memoryPorts dataString="Out_I_V">
+    <nodeIds>211</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Out_I_V" portID="1">
+    <nodeIds>217</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Out_R_V">
+    <nodeIds>206</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Out_R_V" portID="1">
+    <nodeIds>214</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="X_I_V">
+    <nodeIds>191</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="X_I_V" portID="1">
+    <nodeIds>208</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="X_R_V">
+    <nodeIds>188</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="X_R_V" portID="1">
+    <nodeIds>203</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="fourth_order_double_4" portID="100">
+    <nodeIds>77</nodeIds>
+    <nodeIds>124</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="fourth_order_double_5" portID="100">
+    <nodeIds>77</nodeIds>
+    <nodeIds>124</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="fourth_order_double_6" portID="100">
+    <nodeIds>77</nodeIds>
+    <nodeIds>124</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="fourth_order_double_7" portID="100">
+    <nodeIds>77</nodeIds>
+    <nodeIds>124</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="fourth_order_double_s" portID="100">
+    <nodeIds>77</nodeIds>
+    <nodeIds>124</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="ref_4oPi_table_256_V" portID="100">
+    <nodeIds>77</nodeIds>
+    <nodeIds>124</nodeIds>
+  </memoryPorts>
+  <ioPorts name="Out_I_V(p0)">
+    <contents name="store">
+      <nodeIds>211</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="Out_I_V(p1)">
+    <contents name="store">
+      <nodeIds>217</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="Out_R_V(p0)">
+    <contents name="store">
+      <nodeIds>206</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="Out_R_V(p1)">
+    <contents name="store">
+      <nodeIds>214</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="X_I_V(p0)">
+    <contents name="load">
+      <nodeIds>191</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="X_I_V(p1)">
+    <contents name="load">
+      <nodeIds>208</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="X_R_V(p0)">
+    <contents name="load">
+      <nodeIds>188</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="X_R_V(p1)">
+    <contents name="load">
+      <nodeIds>203</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="17" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="171" stage="1" latency="1"/>
+      <operations id="225" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="2" latency="2"/>
+      <operations id="124" stage="2" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="77" stage="1" latency="2"/>
+      <operations id="124" stage="1" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="94" stage="1" latency="1"/>
+      <operations id="95" stage="1" latency="1"/>
+      <operations id="96" stage="1" latency="1"/>
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+      <operations id="99" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="1"/>
+      <operations id="101" stage="1" latency="1"/>
+      <operations id="102" stage="1" latency="1"/>
+      <operations id="103" stage="1" latency="1"/>
+      <operations id="104" stage="1" latency="1"/>
+      <operations id="105" stage="1" latency="1"/>
+      <operations id="106" stage="1" latency="1"/>
+      <operations id="107" stage="1" latency="1"/>
+      <operations id="108" stage="1" latency="1"/>
+      <operations id="109" stage="1" latency="1"/>
+      <operations id="110" stage="1" latency="1"/>
+      <operations id="111" stage="1" latency="1"/>
+      <operations id="112" stage="1" latency="1"/>
+      <operations id="113" stage="1" latency="1"/>
+      <operations id="114" stage="1" latency="1"/>
+      <operations id="115" stage="1" latency="1"/>
+      <operations id="116" stage="1" latency="1"/>
+      <operations id="117" stage="1" latency="1"/>
+      <operations id="118" stage="1" latency="1"/>
+      <operations id="119" stage="1" latency="1"/>
+      <operations id="120" stage="1" latency="1"/>
+      <operations id="121" stage="1" latency="1"/>
+      <operations id="122" stage="1" latency="1"/>
+      <operations id="123" stage="1" latency="1"/>
+      <operations id="125" stage="1" latency="1"/>
+      <operations id="126" stage="1" latency="1"/>
+      <operations id="127" stage="1" latency="1"/>
+      <operations id="128" stage="1" latency="1"/>
+      <operations id="129" stage="1" latency="1"/>
+      <operations id="130" stage="1" latency="1"/>
+      <operations id="131" stage="1" latency="1"/>
+      <operations id="132" stage="1" latency="1"/>
+      <operations id="133" stage="1" latency="1"/>
+      <operations id="134" stage="1" latency="1"/>
+      <operations id="135" stage="1" latency="1"/>
+      <operations id="136" stage="1" latency="1"/>
+      <operations id="137" stage="1" latency="1"/>
+      <operations id="138" stage="1" latency="1"/>
+      <operations id="139" stage="1" latency="1"/>
+      <operations id="140" stage="1" latency="1"/>
+      <operations id="141" stage="1" latency="1"/>
+      <operations id="142" stage="1" latency="1"/>
+      <operations id="143" stage="1" latency="1"/>
+      <operations id="144" stage="1" latency="1"/>
+      <operations id="145" stage="1" latency="1"/>
+      <operations id="146" stage="1" latency="1"/>
+      <operations id="147" stage="1" latency="1"/>
+      <operations id="148" stage="1" latency="1"/>
+      <operations id="149" stage="1" latency="1"/>
+      <operations id="150" stage="1" latency="1"/>
+      <operations id="151" stage="1" latency="1"/>
+      <operations id="152" stage="1" latency="1"/>
+      <operations id="153" stage="1" latency="1"/>
+      <operations id="154" stage="1" latency="1"/>
+      <operations id="155" stage="1" latency="1"/>
+      <operations id="156" stage="1" latency="1"/>
+      <operations id="157" stage="1" latency="1"/>
+      <operations id="158" stage="1" latency="1"/>
+      <operations id="159" stage="1" latency="1"/>
+      <operations id="160" stage="1" latency="1"/>
+      <operations id="161" stage="1" latency="1"/>
+      <operations id="162" stage="1" latency="1"/>
+      <operations id="163" stage="1" latency="1"/>
+      <operations id="164" stage="1" latency="1"/>
+      <operations id="165" stage="1" latency="1"/>
+      <operations id="166" stage="1" latency="1"/>
+      <operations id="167" stage="1" latency="1"/>
+      <operations id="168" stage="1" latency="1"/>
+      <operations id="169" stage="1" latency="1"/>
+      <operations id="170" stage="1" latency="1"/>
+      <operations id="172" stage="1" latency="1"/>
+      <operations id="173" stage="1" latency="1"/>
+      <operations id="174" stage="1" latency="1"/>
+    </states>
+    <states id="6">
+      <operations id="176" stage="1" latency="1"/>
+      <operations id="177" stage="1" latency="1"/>
+      <operations id="178" stage="1" latency="1"/>
+      <operations id="179" stage="1" latency="1"/>
+      <operations id="185" stage="1" latency="1"/>
+      <operations id="186" stage="1" latency="1"/>
+      <operations id="187" stage="1" latency="1"/>
+      <operations id="188" stage="2" latency="2"/>
+      <operations id="190" stage="1" latency="1"/>
+      <operations id="191" stage="2" latency="2"/>
+      <operations id="201" stage="1" latency="1"/>
+      <operations id="202" stage="1" latency="1"/>
+      <operations id="203" stage="2" latency="2"/>
+      <operations id="207" stage="1" latency="1"/>
+      <operations id="208" stage="2" latency="2"/>
+      <operations id="219" stage="1" latency="1"/>
+    </states>
+    <states id="7">
+      <operations id="181" stage="1" latency="1"/>
+      <operations id="182" stage="1" latency="1"/>
+      <operations id="183" stage="1" latency="1"/>
+      <operations id="184" stage="1" latency="1"/>
+      <operations id="188" stage="1" latency="2"/>
+      <operations id="189" stage="1" latency="1"/>
+      <operations id="191" stage="1" latency="2"/>
+      <operations id="192" stage="1" latency="1"/>
+      <operations id="193" stage="1" latency="1"/>
+      <operations id="194" stage="1" latency="1"/>
+      <operations id="195" stage="1" latency="1"/>
+      <operations id="196" stage="1" latency="1"/>
+      <operations id="197" stage="1" latency="1"/>
+      <operations id="198" stage="1" latency="1"/>
+      <operations id="199" stage="1" latency="1"/>
+      <operations id="200" stage="1" latency="1"/>
+      <operations id="203" stage="1" latency="2"/>
+      <operations id="204" stage="1" latency="1"/>
+      <operations id="205" stage="1" latency="1"/>
+      <operations id="206" stage="1" latency="1"/>
+      <operations id="208" stage="1" latency="2"/>
+      <operations id="209" stage="1" latency="1"/>
+      <operations id="210" stage="1" latency="1"/>
+      <operations id="211" stage="1" latency="1"/>
+      <operations id="212" stage="1" latency="1"/>
+      <operations id="213" stage="1" latency="1"/>
+      <operations id="214" stage="1" latency="1"/>
+      <operations id="215" stage="1" latency="1"/>
+      <operations id="216" stage="1" latency="1"/>
+      <operations id="217" stage="1" latency="1"/>
+      <operations id="218" stage="1" latency="1"/>
+      <operations id="220" stage="1" latency="1"/>
+    </states>
+    <states id="8">
+      <operations id="222" stage="1" latency="1"/>
+      <operations id="223" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="fft_stage84" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="4361" mMaxLatency="4425">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>7</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>18</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="butterfly_loop" mII="-1" mDepth="-1" mMinTripCount="8" mMaxTripCount="8" mMinLatency="4360" mMaxLatency="4424" mType="1">
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <subRegions>6</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="38">
+      <basicBlocks>25</basicBlocks>
+      <basicBlocks>175</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="dft_loop" mII="1" mDepth="2" mMinTripCount="512" mMaxTripCount="512" mMinLatency="512" mMaxLatency="512" mType="1">
+      <basicBlocks>180</basicBlocks>
+      <basicBlocks>221</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>224</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="7" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>226</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

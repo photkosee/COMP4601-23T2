@@ -1,0 +1,56 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'fft_streaming'" level="0">
+<item name = "Date">Thu Jul 13 07:37:36 2023
+</item>
+<item name = "Version">2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)</item>
+<item name = "Project">fft_stages.proj</item>
+<item name = "Solution">solution2</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xqzu5ev-ffrb900-1-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 8.635 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">559604, 568812, 5.596 ms, 5.688 ms, 279042, 283138, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_fft_stage90_fu_138">fft_stage90, 279041, 283137, 2.790 ms, 2.831 ms, 279041, 283137, none</column>
+<column name="grp_fft_stage89_fu_160">fft_stage89, 139521, 141569, 1.395 ms, 1.416 ms, 139521, 141569, none</column>
+<column name="grp_fft_stage88_fu_180">fft_stage88, 69761, 70785, 0.698 ms, 0.708 ms, 69761, 70785, none</column>
+<column name="grp_fft_stage87_fu_200">fft_stage87, 34881, 35393, 0.349 ms, 0.354 ms, 34881, 35393, none</column>
+<column name="grp_fft_stage86_fu_220">fft_stage86, 17441, 17697, 0.174 ms, 0.177 ms, 17441, 17697, none</column>
+<column name="grp_fft_stage85_fu_240">fft_stage85, 8721, 8849, 87.210 us, 88.490 us, 8721, 8849, none</column>
+<column name="grp_fft_stage84_fu_260">fft_stage84, 4361, 4425, 43.610 us, 44.250 us, 4361, 4425, none</column>
+<column name="grp_fft_stage83_fu_280">fft_stage83, 2181, 2213, 21.810 us, 22.130 us, 2181, 2213, none</column>
+<column name="grp_fft_stage82_fu_300">fft_stage82, 1091, 1107, 10.910 us, 11.070 us, 1091, 1107, none</column>
+<column name="grp_fft_stage81_fu_320">fft_stage81, 546, 554, 5.460 us, 5.540 us, 546, 554, none</column>
+<column name="grp_bit_reverse_fu_340">bit_reverse, 2049, 3073, 20.490 us, 30.730 us, 2049, 3073, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

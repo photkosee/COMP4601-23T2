@@ -1,0 +1,198 @@
+
+
+================================================================
+== Vivado HLS Report for 'bit_reverse'
+================================================================
+* Date:           Thu Jul 13 07:17:20 2023
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        fft_stages.proj
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xqzu5ev-ffrb900-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 2.704 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    13313|    14337| 0.133 ms | 0.143 ms |  13313|  14337|   none  |
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                      |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |       Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- bit_reverse_loop    |    13312|    14336|  13 ~ 14 |          -|          -|  1024|    no    |
+        | + reverse_bits_loop  |       10|       10|         1|          -|          -|    10|    no    |
+        +----------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 3 4 5 
+4 --> 5 
+5 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.75>
+ST_1 : Operation 6 [1/1] (0.75ns)   --->   "br label %1" [fft_stages.cpp:22]   --->   Operation 6 'br' <Predicate = true> <Delay = 0.75>
+
+State 2 <SV = 1> <Delay = 0.94>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%input_assign = phi i11 [ 0, %0 ], [ %i_13, %._crit_edge ]"   --->   Operation 7 'phi' 'input_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%trunc_ln22 = trunc i11 %input_assign to i10" [fft_stages.cpp:22]   --->   Operation 8 'trunc' 'trunc_ln22' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%zext_ln22 = zext i11 %input_assign to i32" [fft_stages.cpp:22]   --->   Operation 9 'zext' 'zext_ln22' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.85ns)   --->   "%icmp_ln22 = icmp eq i11 %input_assign, -1024" [fft_stages.cpp:22]   --->   Operation 10 'icmp' 'icmp_ln22' <Predicate = true> <Delay = 0.85> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1024, i64 1024, i64 1024)"   --->   Operation 11 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.94ns)   --->   "%i_13 = add i11 1, %input_assign" [fft_stages.cpp:22]   --->   Operation 12 'add' 'i_13' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "br i1 %icmp_ln22, label %6, label %2" [fft_stages.cpp:22]   --->   Operation 13 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str1) nounwind" [fft_stages.cpp:22]   --->   Operation 14 'specloopname' <Predicate = (!icmp_ln22)> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.75ns)   --->   "br label %3" [fft_stages.cpp:8->fft_stages.cpp:23]   --->   Operation 15 'br' <Predicate = (!icmp_ln22)> <Delay = 0.75>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "ret void" [fft_stages.cpp:36]   --->   Operation 16 'ret' <Predicate = (icmp_ln22)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.35>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%reversed = phi i32 [ 0, %2 ], [ %rev, %4 ]"   --->   Operation 17 'phi' 'reversed' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%i_0_i = phi i4 [ 0, %2 ], [ %i, %4 ]"   --->   Operation 18 'phi' 'i_0_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%p_0_i = phi i10 [ %trunc_ln22, %2 ], [ %zext_ln10, %4 ]" [fft_stages.cpp:22]   --->   Operation 19 'phi' 'p_0_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (0.88ns)   --->   "%icmp_ln8 = icmp eq i4 %i_0_i, -6" [fft_stages.cpp:8->fft_stages.cpp:23]   --->   Operation 20 'icmp' 'icmp_ln8' <Predicate = true> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%empty_62 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind"   --->   Operation 21 'speclooptripcount' 'empty_62' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.86ns)   --->   "%i = add i4 %i_0_i, 1" [fft_stages.cpp:8->fft_stages.cpp:23]   --->   Operation 22 'add' 'i' <Predicate = true> <Delay = 0.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "br i1 %icmp_ln8, label %reverse_bits.exit, label %4" [fft_stages.cpp:8->fft_stages.cpp:23]   --->   Operation 23 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([18 x i8]* @p_str) nounwind" [fft_stages.cpp:8->fft_stages.cpp:23]   --->   Operation 24 'specloopname' <Predicate = (!icmp_ln8)> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%trunc_ln9 = trunc i32 %reversed to i31" [fft_stages.cpp:9->fft_stages.cpp:23]   --->   Operation 25 'trunc' 'trunc_ln9' <Predicate = (!icmp_ln8)> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%trunc_ln8 = trunc i10 %p_0_i to i1" [fft_stages.cpp:8->fft_stages.cpp:23]   --->   Operation 26 'trunc' 'trunc_ln8' <Predicate = (!icmp_ln8)> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%rev = call i32 @_ssdm_op_BitConcatenate.i32.i31.i1(i31 %trunc_ln9, i1 %trunc_ln8)" [fft_stages.cpp:9->fft_stages.cpp:23]   --->   Operation 27 'bitconcatenate' 'rev' <Predicate = (!icmp_ln8)> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%input_assign_1 = call i9 @_ssdm_op_PartSelect.i9.i10.i32.i32(i10 %p_0_i, i32 1, i32 9)" [fft_stages.cpp:10->fft_stages.cpp:23]   --->   Operation 28 'partselect' 'input_assign_1' <Predicate = (!icmp_ln8)> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%zext_ln10 = zext i9 %input_assign_1 to i10" [fft_stages.cpp:10->fft_stages.cpp:23]   --->   Operation 29 'zext' 'zext_ln10' <Predicate = (!icmp_ln8)> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "br label %3" [fft_stages.cpp:8->fft_stages.cpp:23]   --->   Operation 30 'br' <Predicate = (!icmp_ln8)> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (1.11ns)   --->   "%icmp_ln24 = icmp ugt i32 %zext_ln22, %reversed" [fft_stages.cpp:24]   --->   Operation 31 'icmp' 'icmp_ln24' <Predicate = (icmp_ln8)> <Delay = 1.11> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "br i1 %icmp_ln24, label %._crit_edge, label %5" [fft_stages.cpp:24]   --->   Operation 32 'br' <Predicate = (icmp_ln8)> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%zext_ln27 = zext i32 %reversed to i64" [fft_stages.cpp:27]   --->   Operation 33 'zext' 'zext_ln27' <Predicate = (icmp_ln8 & !icmp_ln24)> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%X_R_V_addr_11 = getelementptr [1024 x i22]* %X_R_V, i64 0, i64 %zext_ln27" [fft_stages.cpp:27]   --->   Operation 34 'getelementptr' 'X_R_V_addr_11' <Predicate = (icmp_ln8 & !icmp_ln24)> <Delay = 0.00>
+ST_3 : Operation 35 [2/2] (1.35ns)   --->   "%X_R_V_load = load i22* %X_R_V_addr_11, align 4" [fft_stages.cpp:27]   --->   Operation 35 'load' 'X_R_V_load' <Predicate = (icmp_ln8 & !icmp_ln24)> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 22> <Depth = 1024> <RAM>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%X_I_V_addr_11 = getelementptr [1024 x i22]* %X_I_V, i64 0, i64 %zext_ln27" [fft_stages.cpp:32]   --->   Operation 36 'getelementptr' 'X_I_V_addr_11' <Predicate = (icmp_ln8 & !icmp_ln24)> <Delay = 0.00>
+ST_3 : Operation 37 [2/2] (1.35ns)   --->   "%X_I_V_load = load i22* %X_I_V_addr_11, align 4" [fft_stages.cpp:32]   --->   Operation 37 'load' 'X_I_V_load' <Predicate = (icmp_ln8 & !icmp_ln24)> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 22> <Depth = 1024> <RAM>
+
+State 4 <SV = 3> <Delay = 2.70>
+ST_4 : Operation 38 [1/1] (0.00ns)   --->   "%zext_ln26 = zext i11 %input_assign to i64" [fft_stages.cpp:26]   --->   Operation 38 'zext' 'zext_ln26' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%X_R_V_addr = getelementptr [1024 x i22]* %X_R_V, i64 0, i64 %zext_ln26" [fft_stages.cpp:26]   --->   Operation 39 'getelementptr' 'X_R_V_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 40 [2/2] (1.35ns)   --->   "%temp_V = load i22* %X_R_V_addr, align 4" [fft_stages.cpp:26]   --->   Operation 40 'load' 'temp_V' <Predicate = true> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 22> <Depth = 1024> <RAM>
+ST_4 : Operation 41 [1/2] (1.35ns)   --->   "%X_R_V_load = load i22* %X_R_V_addr_11, align 4" [fft_stages.cpp:27]   --->   Operation 41 'load' 'X_R_V_load' <Predicate = true> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 22> <Depth = 1024> <RAM>
+ST_4 : Operation 42 [1/1] (0.00ns)   --->   "%OUT_R_V_addr = getelementptr [1024 x i22]* %OUT_R_V, i64 0, i64 %zext_ln26" [fft_stages.cpp:27]   --->   Operation 42 'getelementptr' 'OUT_R_V_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 43 [1/1] (1.35ns)   --->   "store i22 %X_R_V_load, i22* %OUT_R_V_addr, align 4" [fft_stages.cpp:27]   --->   Operation 43 'store' <Predicate = true> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 22> <Depth = 1024> <RAM>
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%X_I_V_addr = getelementptr [1024 x i22]* %X_I_V, i64 0, i64 %zext_ln26" [fft_stages.cpp:31]   --->   Operation 44 'getelementptr' 'X_I_V_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 45 [2/2] (1.35ns)   --->   "%temp_V_1 = load i22* %X_I_V_addr, align 4" [fft_stages.cpp:31]   --->   Operation 45 'load' 'temp_V_1' <Predicate = true> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 22> <Depth = 1024> <RAM>
+ST_4 : Operation 46 [1/2] (1.35ns)   --->   "%X_I_V_load = load i22* %X_I_V_addr_11, align 4" [fft_stages.cpp:32]   --->   Operation 46 'load' 'X_I_V_load' <Predicate = true> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 22> <Depth = 1024> <RAM>
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%OUT_I_V_addr = getelementptr [1024 x i22]* %OUT_I_V, i64 0, i64 %zext_ln26" [fft_stages.cpp:32]   --->   Operation 47 'getelementptr' 'OUT_I_V_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 48 [1/1] (1.35ns)   --->   "store i22 %X_I_V_load, i22* %OUT_I_V_addr, align 4" [fft_stages.cpp:32]   --->   Operation 48 'store' <Predicate = true> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 22> <Depth = 1024> <RAM>
+
+State 5 <SV = 4> <Delay = 2.70>
+ST_5 : Operation 49 [1/2] (1.35ns)   --->   "%temp_V = load i22* %X_R_V_addr, align 4" [fft_stages.cpp:26]   --->   Operation 49 'load' 'temp_V' <Predicate = (!icmp_ln24)> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 22> <Depth = 1024> <RAM>
+ST_5 : Operation 50 [1/1] (0.00ns)   --->   "%OUT_R_V_addr_1 = getelementptr [1024 x i22]* %OUT_R_V, i64 0, i64 %zext_ln27" [fft_stages.cpp:28]   --->   Operation 50 'getelementptr' 'OUT_R_V_addr_1' <Predicate = (!icmp_ln24)> <Delay = 0.00>
+ST_5 : Operation 51 [1/1] (1.35ns)   --->   "store i22 %temp_V, i22* %OUT_R_V_addr_1, align 4" [fft_stages.cpp:28]   --->   Operation 51 'store' <Predicate = (!icmp_ln24)> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 22> <Depth = 1024> <RAM>
+ST_5 : Operation 52 [1/2] (1.35ns)   --->   "%temp_V_1 = load i22* %X_I_V_addr, align 4" [fft_stages.cpp:31]   --->   Operation 52 'load' 'temp_V_1' <Predicate = (!icmp_ln24)> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 22> <Depth = 1024> <RAM>
+ST_5 : Operation 53 [1/1] (0.00ns)   --->   "%OUT_I_V_addr_1 = getelementptr [1024 x i22]* %OUT_I_V, i64 0, i64 %zext_ln27" [fft_stages.cpp:33]   --->   Operation 53 'getelementptr' 'OUT_I_V_addr_1' <Predicate = (!icmp_ln24)> <Delay = 0.00>
+ST_5 : Operation 54 [1/1] (1.35ns)   --->   "store i22 %temp_V_1, i22* %OUT_I_V_addr_1, align 4" [fft_stages.cpp:33]   --->   Operation 54 'store' <Predicate = (!icmp_ln24)> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 22> <Depth = 1024> <RAM>
+ST_5 : Operation 55 [1/1] (0.00ns)   --->   "br label %._crit_edge" [fft_stages.cpp:34]   --->   Operation 55 'br' <Predicate = (!icmp_ln24)> <Delay = 0.00>
+ST_5 : Operation 56 [1/1] (0.00ns)   --->   "br label %1" [fft_stages.cpp:22]   --->   Operation 56 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0.755ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', fft_stages.cpp:22) [7]  (0.755 ns)
+
+ <State 2>: 0.948ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', fft_stages.cpp:22) [7]  (0 ns)
+	'add' operation ('i', fft_stages.cpp:22) [12]  (0.948 ns)
+
+ <State 3>: 1.35ns
+The critical path consists of the following:
+	'phi' operation ('rev') with incoming values : ('rev', fft_stages.cpp:9->fft_stages.cpp:23) [18]  (0 ns)
+	'getelementptr' operation ('X_R_V_addr_11', fft_stages.cpp:27) [41]  (0 ns)
+	'load' operation ('X_R_V_load', fft_stages.cpp:27) on array 'X_R_V' [42]  (1.35 ns)
+
+ <State 4>: 2.7ns
+The critical path consists of the following:
+	'load' operation ('X_R_V_load', fft_stages.cpp:27) on array 'X_R_V' [42]  (1.35 ns)
+	'store' operation ('store_ln27', fft_stages.cpp:27) of variable 'X_R_V_load', fft_stages.cpp:27 on array 'OUT_R_V' [44]  (1.35 ns)
+
+ <State 5>: 2.7ns
+The critical path consists of the following:
+	'load' operation ('temp.V', fft_stages.cpp:26) on array 'X_R_V' [39]  (1.35 ns)
+	'store' operation ('store_ln28', fft_stages.cpp:28) of variable 'temp.V', fft_stages.cpp:26 on array 'OUT_R_V' [46]  (1.35 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

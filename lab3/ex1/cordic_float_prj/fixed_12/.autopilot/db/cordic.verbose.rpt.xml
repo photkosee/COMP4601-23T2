@@ -1,0 +1,146 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'cordic'" level="0">
+<item name = "Date">Wed Jun 14 06:40:34 2023
+</item>
+<item name = "Version">2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)</item>
+<item name = "Project">cordic_float_prj</item>
+<item name = "Solution">solution2</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xqzu5ev-ffrb900-1-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 5.259 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">65, 65, 0.650 us, 0.650 us, 65, 65, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">64, 64, 2, -, -, 32, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, 2, -, -, -</column>
+<column name="Expression">-, -, 0, 229, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">0, -, 10, 10, -</column>
+<column name="Multiplexer">-, -, -, 66, -</column>
+<column name="Register">-, -, 100, -, -</column>
+<specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
+<specialColumn name="Utilization (%)">0, ~0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+<column name="cordic_mul_mul_13cud_U1">cordic_mul_mul_13cud, i0 * i1</column>
+<column name="cordic_mul_mul_13cud_U2">cordic_mul_mul_13cud, i0 * i1</column>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="cordic_phase_V_U">cordic_cordic_phabkb, 0, 10, 10, 0, 64, 10, 1, 640</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="current_sin_V_fu_239_p2">+, 0, 0, 19, 12, 12</column>
+<column name="j_fu_153_p2">+, 0, 0, 15, 6, 1</column>
+<column name="current_cos_V_fu_233_p2">-, 0, 0, 19, 12, 12</column>
+<column name="sub_ln1118_1_fu_206_p2">-, 0, 0, 20, 1, 13</column>
+<column name="sub_ln1118_fu_171_p2">-, 0, 0, 20, 1, 13</column>
+<column name="sub_ln1148_1_fu_292_p2">-, 0, 0, 19, 1, 12</column>
+<column name="sub_ln1148_fu_262_p2">-, 0, 0, 20, 1, 13</column>
+<column name="sub_ln703_2_fu_310_p2">-, 0, 0, 18, 1, 11</column>
+<column name="sub_ln703_fu_327_p2">-, 0, 0, 19, 12, 12</column>
+<column name="icmp_ln18_fu_147_p2">icmp, 0, 0, 11, 6, 7</column>
+<column name="factor_V_fu_298_p3">select, 0, 0, 12, 1, 12</column>
+<column name="r_V_2_fu_212_p3">select, 0, 0, 13, 1, 13</column>
+<column name="r_V_fu_177_p3">select, 0, 0, 13, 1, 13</column>
+<column name="select_ln703_fu_316_p3">select, 0, 0, 11, 1, 11</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">21, 4, 1, 4</column>
+<column name="j_0_reg_136">9, 2, 6, 12</column>
+<column name="p_Val2_2_reg_124">9, 2, 12, 24</column>
+<column name="p_Val2_4_reg_112">9, 2, 12, 24</column>
+<column name="p_Val2_6_reg_91">9, 2, 12, 24</column>
+<column name="t_V_reg_101">9, 2, 12, 24</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">3, 0, 3, 0</column>
+<column name="current_cos_V_reg_365">12, 0, 12, 0</column>
+<column name="current_sin_V_reg_370">12, 0, 12, 0</column>
+<column name="factor_V_reg_380">12, 0, 12, 0</column>
+<column name="j_0_reg_136">6, 0, 6, 0</column>
+<column name="j_reg_355">6, 0, 6, 0</column>
+<column name="p_Val2_2_reg_124">12, 0, 12, 0</column>
+<column name="p_Val2_4_reg_112">12, 0, 12, 0</column>
+<column name="p_Val2_6_reg_91">12, 0, 12, 0</column>
+<column name="t_V_reg_101">12, 0, 12, 0</column>
+<column name="tmp_reg_360">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, cordic, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, cordic, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, cordic, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, cordic, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, cordic, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, cordic, return value</column>
+<column name="theta_V">in, 12, ap_none, theta_V, scalar</column>
+<column name="s_V">out, 12, ap_vld, s_V, pointer</column>
+<column name="s_V_ap_vld">out, 1, ap_vld, s_V, pointer</column>
+<column name="c_V">out, 12, ap_vld, c_V, pointer</column>
+<column name="c_V_ap_vld">out, 1, ap_vld, c_V, pointer</column>
+</table>
+</item>
+</section>
+</profile>

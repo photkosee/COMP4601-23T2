@@ -1,0 +1,14 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="11" filename="fir11_sec2_6.cpp" linenumber="30" name="mul_ln30" contextFuncName="fir" moduleName="fir" rtlName="mul_ln30_fu_134_p2" latency="0" BRAM="-1" DSP="2" FF="0" LUT="20" fileDirectory="C:\COMP4601\lab02"><\/item>
+<item  id="16" filename="fir11_sec2_6.cpp" linenumber="28" name="sext_ln28" contextFuncName="fir" moduleName="fir" rtlName="sext_ln28_fu_140_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab02"><\/item>
+<item  id="17" filename="fir11_sec2_6.cpp" linenumber="28" name="tmp" contextFuncName="fir" moduleName="fir" rtlName="tmp_fu_144_p3" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab02"><\/item>
+<item  id="22" filename="fir11_sec2_6.cpp" linenumber="29" name="icmp_ln29" contextFuncName="fir" moduleName="fir" rtlName="icmp_ln29_fu_152_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\COMP4601\lab02"><\/item>
+<item  id="25" filename="fir11_sec2_6.cpp" linenumber="33" name="add_ln33" contextFuncName="fir" moduleName="fir" rtlName="grp_fu_127_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\COMP4601\lab02"><\/item>
+<item  id="26" filename="fir11_sec2_6.cpp" linenumber="33" name="zext_ln33" contextFuncName="fir" moduleName="fir" rtlName="zext_ln33_fu_158_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab02"><\/item>
+<item  id="29" filename="fir11_sec2_6.cpp" linenumber="33" name="zext_ln33_1" contextFuncName="fir" moduleName="fir" rtlName="zext_ln33_1_fu_163_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\COMP4601\lab02"><\/item>
+<item  id="35" filename="fir11_sec2_6.cpp" linenumber="34" name="mul_ln34" contextFuncName="fir" moduleName="fir" rtlName="mul_ln34_fu_172_p2" latency="0" BRAM="-1" DSP="2" FF="0" LUT="20" fileDirectory="C:\COMP4601\lab02"><\/item>
+<item  id="42" filename="fir11_sec2_6.cpp" linenumber="30" name="acc" contextFuncName="fir" moduleName="fir" rtlName="acc_fu_179_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\COMP4601\lab02"><\/item>
+<item  id="43" filename="fir11_sec2_6.cpp" linenumber="28" name="i" contextFuncName="fir" moduleName="fir" rtlName="grp_fu_127_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\COMP4601\lab02"><\/item>
+<\/annotationInfo>
+</annotationInfo>

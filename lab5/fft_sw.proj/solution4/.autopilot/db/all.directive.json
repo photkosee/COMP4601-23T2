@@ -1,0 +1,61 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "fft",
+          "label": "dft_loop",
+          "functionLabel": "",
+          "pragma": {
+            "name": "LOOP_TRIPCOUNT",
+            "option": [
+              {
+                "name": "min",
+                "value": "512"
+              },
+              {
+                "name": "max",
+                "value": "512"
+              },
+              {
+                "name": "avg",
+                "value": "512"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "fft",
+          "label": "butterfly_loop",
+          "functionLabel": "",
+          "pragma": {
+            "name": "LOOP_TRIPCOUNT",
+            "option": [
+              {
+                "name": "min",
+                "value": "24"
+              },
+              {
+                "name": "max",
+                "value": "24"
+              },
+              {
+                "name": "avg",
+                "value": "24"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "reverse_bits",
+          "label": "reverse_bits_loop",
+          "functionLabel": "",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "fft",
+          "label": "dft_loop",
+          "functionLabel": "",
+          "pragma": {"name": "PIPELINE"}
+        }
+      ]
+    }]}

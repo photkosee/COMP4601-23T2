@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Jun 21 14:44:34 2023
+# Process ID: 23760
+# Current directory: C:/COMP4601/ch4/matrix_vector_proj/solution7/impl/verilog
+# Command line: vivado.exe -notrace -mode batch -source run_vivadosyn.tcl
+# Log file: C:/COMP4601/ch4/matrix_vector_proj/solution7/impl/verilog/vivado.log
+# Journal file: C:/COMP4601/ch4/matrix_vector_proj/solution7/impl/verilog\vivado.jou
+#-----------------------------------------------------------
+source run_vivadosyn.tcl -notrace

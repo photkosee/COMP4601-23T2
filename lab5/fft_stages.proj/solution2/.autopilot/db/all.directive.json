@@ -1,0 +1,109 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "fft_stage",
+          "label": "dft_loop",
+          "functionLabel": "",
+          "pragma": {
+            "name": "LOOP_TRIPCOUNT",
+            "option": [
+              {
+                "name": "min",
+                "value": "512"
+              },
+              {
+                "name": "max",
+                "value": "512"
+              },
+              {
+                "name": "avg",
+                "value": "512"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "fft_stage",
+          "label": "dft_loop",
+          "functionLabel": "",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "fft_stage",
+          "label": "dft_loop",
+          "functionLabel": "",
+          "pragma": {
+            "name": "DEPENDENCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "X_I"
+              },
+              {
+                "name": "inter",
+                "value": "",
+                "positionalBoolean": "type"
+              },
+              {
+                "name": "false",
+                "value": "",
+                "positionalBoolean": "dependent"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "fft_stage",
+          "label": "dft_loop",
+          "functionLabel": "",
+          "pragma": {
+            "name": "DEPENDENCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "X_R"
+              },
+              {
+                "name": "inter",
+                "value": "",
+                "positionalBoolean": "type"
+              },
+              {
+                "name": "false",
+                "value": "",
+                "positionalBoolean": "dependent"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "fft_stage",
+          "label": "butterfly_loop",
+          "functionLabel": "",
+          "pragma": {
+            "name": "LOOP_TRIPCOUNT",
+            "option": [
+              {
+                "name": "min",
+                "value": "24"
+              },
+              {
+                "name": "max",
+                "value": "24"
+              },
+              {
+                "name": "avg",
+                "value": "24"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "reverse_bits",
+          "label": "reverse_bits_loop",
+          "functionLabel": "",
+          "pragma": {"name": "UNROLL"}
+        }
+      ]
+    }]}

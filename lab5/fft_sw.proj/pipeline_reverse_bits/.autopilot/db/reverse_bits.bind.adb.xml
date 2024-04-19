@@ -1,0 +1,113 @@
+<stg><name>reverse_bits</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="2" bw="11" op_0_bw="11" op_1_bw="11">
+<![CDATA[
+:0  %input_read = call i11 @_ssdm_op_Read.ap_auto.i11(i11 %input_r) nounwind
+
+]]></Node>
+<StgValue><ssdm name="input_read"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
+<![CDATA[
+:1  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+
+]]></Node>
+<StgValue><ssdm name="specpipeline_ln5"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="10" op_0_bw="10" op_1_bw="11" op_2_bw="32" op_3_bw="32">
+<![CDATA[
+:2  %or_ln9_8 = call i10 @_ssdm_op_PartSelect.i10.i11.i32.i32(i11 %input_read, i32 9, i32 0)
+
+]]></Node>
+<StgValue><ssdm name="or_ln9_8"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="0" op_0_bw="10">
+<![CDATA[
+:3  ret i10 %or_ln9_8
+
+]]></Node>
+<StgValue><ssdm name="ret_ln12"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="7" name="input_r" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="input_r"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="9" from="_ssdm_op_Read.ap_auto.i11" to="input_read" fromId="8" toId="2">
+</dataflow>
+<dataflow id="10" from="input_r" to="input_read" fromId="7" toId="2">
+</dataflow>
+<dataflow id="12" from="_ssdm_op_SpecPipeline" to="specpipeline_ln5" fromId="11" toId="3">
+</dataflow>
+<dataflow id="14" from="StgValue_13" to="specpipeline_ln5" fromId="13" toId="3">
+</dataflow>
+<dataflow id="16" from="StgValue_15" to="specpipeline_ln5" fromId="15" toId="3">
+</dataflow>
+<dataflow id="17" from="StgValue_15" to="specpipeline_ln5" fromId="15" toId="3">
+</dataflow>
+<dataflow id="19" from="StgValue_18" to="specpipeline_ln5" fromId="18" toId="3">
+</dataflow>
+<dataflow id="21" from="p_str" to="specpipeline_ln5" fromId="20" toId="3">
+</dataflow>
+<dataflow id="23" from="_ssdm_op_PartSelect.i10.i11.i32.i32" to="or_ln9_8" fromId="22" toId="4">
+</dataflow>
+<dataflow id="24" from="input_read" to="or_ln9_8" fromId="2" toId="4">
+</dataflow>
+<dataflow id="26" from="StgValue_25" to="or_ln9_8" fromId="25" toId="4">
+</dataflow>
+<dataflow id="27" from="StgValue_18" to="or_ln9_8" fromId="18" toId="4">
+</dataflow>
+<dataflow id="28" from="or_ln9_8" to="ret_ln12" fromId="4" toId="5">
+</dataflow>
+</dataflows>
+
+
+</stg>

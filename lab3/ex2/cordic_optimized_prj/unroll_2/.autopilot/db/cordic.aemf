@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1686691294770">
+  <ports id="1" name="theta_V" type="PortType" originalName="ssdm_int&amp;lt;12 + 1024 * 0, true&amp;gt;.V" bitwidth="12">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="s_V" type="PortType" originalName="s.V" bitwidth="12" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="3" name="c_V" type="PortType" originalName="c.V" bitwidth="12" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="67" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="68" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="69" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="70" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="71" source_obj="//@blocks.2/@node_objs.24" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="72" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="75" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="76" source_obj="//@blocks.2/@node_objs.22" sink_obj="//@blocks.1/@node_objs.1" is_back_edge="1"/>
+  <edges id="77" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.1" is_back_edge="1"/>
+  <edges id="80" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="81" source_obj="//@blocks.2/@node_objs.23" sink_obj="//@blocks.1/@node_objs.2" is_back_edge="1"/>
+  <edges id="82" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.2" is_back_edge="1"/>
+  <edges id="85" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="86" source_obj="//@blocks.2/@node_objs.25" sink_obj="//@blocks.1/@node_objs.3" is_back_edge="1"/>
+  <edges id="87" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.3" is_back_edge="1"/>
+  <edges id="89" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="92" source_obj="//@blocks.1/@node_objs.4" sink_obj="//@blocks.1/@node_objs.5"/>
+  <edges id="93" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.5"/>
+  <edges id="94" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.5"/>
+  <edges id="95" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="97" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="104" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="105" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="106" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="107" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="115" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="117" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="118" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="119" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="120" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="121" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.8"/>
+  <edges id="124" source_obj="//@blocks.2/@node_objs.7" sink_obj="//@blocks.2/@node_objs.9"/>
+  <edges id="125" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.9"/>
+  <edges id="127" source_obj="//@blocks.2/@node_objs.6" sink_obj="//@blocks.2/@node_objs.10"/>
+  <edges id="128" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.10"/>
+  <edges id="130" source_obj="//@blocks.2/@node_objs.8" sink_obj="//@blocks.2/@node_objs.11"/>
+  <edges id="131" source_obj="//@blocks.2/@node_objs.5" sink_obj="//@blocks.2/@node_objs.11"/>
+  <edges id="137" source_obj="//@blocks.2/@node_objs.10" sink_obj="//@blocks.2/@node_objs.13"/>
+  <edges id="139" source_obj="//@blocks.2/@node_objs.9" sink_obj="//@blocks.2/@node_objs.14"/>
+  <edges id="144" source_obj="//@blocks.2/@node_objs.10" sink_obj="//@blocks.2/@node_objs.15"/>
+  <edges id="145" source_obj="//@blocks.2/@node_objs.14" sink_obj="//@blocks.2/@node_objs.15"/>
+  <edges id="146" source_obj="//@blocks.2/@node_objs.9" sink_obj="//@blocks.2/@node_objs.16"/>
+  <edges id="147" source_obj="//@blocks.2/@node_objs.13" sink_obj="//@blocks.2/@node_objs.16"/>
+  <edges id="154" source_obj="//@blocks.2/@node_objs.11" sink_obj="//@blocks.2/@node_objs.18"/>
+  <edges id="156" source_obj="//@blocks.2/@node_objs.10" sink_obj="//@blocks.2/@node_objs.19"/>
+  <edges id="157" source_obj="//@blocks.2/@node_objs.14" sink_obj="//@blocks.2/@node_objs.19"/>
+  <edges id="158" source_obj="//@blocks.2/@node_objs.9" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="159" source_obj="//@blocks.2/@node_objs.13" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="160" source_obj="//@blocks.2/@node_objs.11" sink_obj="//@blocks.2/@node_objs.21"/>
+  <edges id="163" source_obj="//@blocks.2/@node_objs.20" sink_obj="//@blocks.2/@node_objs.22"/>
+  <edges id="164" source_obj="//@blocks.2/@node_objs.16" sink_obj="//@blocks.2/@node_objs.22"/>
+  <edges id="166" source_obj="//@blocks.2/@node_objs.19" sink_obj="//@blocks.2/@node_objs.23"/>
+  <edges id="167" source_obj="//@blocks.2/@node_objs.15" sink_obj="//@blocks.2/@node_objs.23"/>
+  <edges id="169" source_obj="//@blocks.2/@node_objs.21" sink_obj="//@blocks.2/@node_objs.24"/>
+  <edges id="170" source_obj="//@blocks.2/@node_objs.18" sink_obj="//@blocks.2/@node_objs.24"/>
+  <edges id="173" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.2/@node_objs.25"/>
+  <edges id="174" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2/@node_objs.26"/>
+  <edges id="177" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@ports.1"/>
+  <edges id="178" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="180" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@ports.2"/>
+  <edges id="181" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="205" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="206" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3"/>
+  <edges id="207" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="208" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.9"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.10"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.11"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.4" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.4" sink_obj="//@blocks.2/@node_objs.8"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.2/@node_objs.12"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.12" sink_obj="//@blocks.2/@node_objs.13"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.12" sink_obj="//@blocks.2/@node_objs.14"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.11" sink_obj="//@blocks.2/@node_objs.22"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.11" sink_obj="//@blocks.2/@node_objs.23"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.11" sink_obj="//@blocks.2/@node_objs.24"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.12" sink_obj="//@blocks.2/@node_objs.17"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.17" sink_obj="//@blocks.2/@node_objs.18"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.17" sink_obj="//@blocks.2/@node_objs.21"/>
+  <blocks id="12" name="ap_fixed_base.exit" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_21</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="theta_V_read" lineNumber="8" originalName="ssdm_int&amp;lt;12 + 1024 * 0, true&amp;gt;.V" fileName="cordic_fixed.cpp" fileDirectory=".." contextFuncName="cordic" bitwidth="12" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="8" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>theta_V</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="_ln17" lineNumber="17" fileName="cordic_fixed.cpp" fileDirectory=".." contextFuncName="cordic" opcode="br" m_display="0" m_delay="0.75" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="17" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <controlInputObjs>block_21</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="cordic_fixed.cpp">
+      <validLinenumbers>8</validLinenumbers>
+      <validLinenumbers>17</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="21" name="block_21" type="BlockType">
+    <controlInputObjs>ap_fixed_base.exit</controlInputObjs>
+    <controlInputObjs>_ZNK13ap_fixed_baseILi12ELi2ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EErsEi.exit.0_ifconv</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_64</controlOutputObjs>
+    <controlOutputObjs>_ZNK13ap_fixed_baseILi12ELi2ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EErsEi.exit.0_ifconv</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="theta_V_buf_0_0" lineNumber="8" fileName="cordic_fixed.cpp" fileDirectory=".." contextFuncName="cordic" bitwidth="12" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="8" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <controlInputObjs>ap_fixed_base.exit</controlInputObjs>
+      <controlInputObjs>_ZNK13ap_fixed_baseILi12ELi2ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EErsEi.exit.0_ifconv</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="p_Val2_2_0" lineNumber="24" fileName="cordic_fixed.cpp" fileDirectory=".." contextFuncName="cordic" bitwidth="12" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="24" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>ashr</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <controlInputObjs>ap_fixed_base.exit</controlInputObjs>
+      <controlInputObjs>_ZNK13ap_fixed_baseILi12ELi2ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EErsEi.exit.0_ifconv</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="p_Val2_0" lineNumber="24" fileName="cordic_fixed.cpp" fileDirectory=".." contextFuncName="cordic" bitwidth="12" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="24" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>ashr</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <controlInputObjs>ap_fixed_base.exit</controlInputObjs>
+      <controlInputObjs>_ZNK13ap_fixed_baseILi12ELi2ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EErsEi.exit.0_ifconv</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="sh_assign_0" lineNumber="17" fileName="cordic_fixed.cpp" fileDirectory=".." contextFuncName="cordic" bitwidth="6" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="17" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>ashr</dataOutputObjs>
+      <dataOutputObjs>ashr</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <controlInputObjs>ap_fixed_base.exit</controlInputObjs>
+      <controlInputObjs>_ZNK13ap_fixed_baseILi12ELi2ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EErsEi.exit.0_ifconv</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="icmp_ln17" lineNumber="17" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="icmp_ln17_fu_138_p2" contextFuncName="cordic" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.87" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="17" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="_ln17" lineNumber="17" fileName="cordic_fixed.cpp" fileDirectory=".." contextFuncName="cordic" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="17" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>_ZNK13ap_fixed_baseILi12ELi2ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EErsEi.exit.0_ifconv</controlInputObjs>
+      <controlInputObjs>block_64</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="cordic_fixed.cpp">
+      <validLinenumbers>8</validLinenumbers>
+      <validLinenumbers>24</validLinenumbers>
+      <validLinenumbers>17</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="60" name="_ZNK13ap_fixed_baseILi12ELi2ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EErsEi.exit.0_ifconv" type="BlockType">
+    <controlInputObjs>block_21</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_21</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="ashr_ln1333" lineNumber="20" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="ashr_ln1333_fu_144_p2" contextFuncName="cordic" bitwidth="12" opcode="ashr" nodeLabel="1.0" m_display="0" m_delay="1.14" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="20" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="ashr_ln1333_1" lineNumber="21" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="ashr_ln1333_1_fu_150_p2" contextFuncName="cordic" bitwidth="12" opcode="ashr" nodeLabel="1.0" m_display="0" m_delay="1.14" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="21" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="sub_ln703" lineNumber="26" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="sub_ln703_fu_164_p2" contextFuncName="cordic" bitwidth="12" opcode="sub" nodeLabel="1.0" m_display="0" m_delay="0.96" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="26" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>ashr</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="add_ln703" lineNumber="27" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="add_ln703_fu_170_p2" contextFuncName="cordic" bitwidth="12" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.96" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="27" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>ashr</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="cordic_phase_V_load" lineNumber="30" fileName="cordic_fixed.cpp" fileDirectory=".." contextFuncName="cordic" bitwidth="10" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="30" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="sub_ln703_2" lineNumber="30" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="sub_ln703_2_fu_234_p2" contextFuncName="cordic" bitwidth="12" opcode="sub" nodeLabel="2.0" m_display="0" m_delay="0.96" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="30" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="add_ln703_2" lineNumber="33" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="add_ln703_2_fu_181_p2" contextFuncName="cordic" bitwidth="12" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.96" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="33" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>ashr</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="sub_ln703_3" lineNumber="34" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="sub_ln703_3_fu_187_p2" contextFuncName="cordic" bitwidth="12" opcode="sub" nodeLabel="1.0" m_display="0" m_delay="0.96" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="34" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>ashr</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="add_ln703_3" lineNumber="37" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="add_ln703_3_fu_240_p2" contextFuncName="cordic" bitwidth="12" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.96" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="37" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="select_ln1496" lineNumber="24" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="select_ln1496_fu_193_p3" contextFuncName="cordic" bitwidth="12" opcode="select" nodeLabel="1.0" m_display="0" m_delay="0.43" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="24" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>ashr</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="select_ln1496_1" lineNumber="24" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="select_ln1496_1_fu_201_p3" contextFuncName="cordic" bitwidth="12" opcode="select" nodeLabel="1.0" m_display="0" m_delay="0.43" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="24" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>ashr</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="select_ln1496_2" lineNumber="24" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="select_ln1496_2_fu_246_p3" contextFuncName="cordic" bitwidth="12" opcode="select" nodeLabel="2.0" m_display="0" m_delay="0.43" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="24" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="or_ln17" lineNumber="17" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="or_ln17_fu_213_p2" contextFuncName="cordic" bitwidth="5" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="17" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>ashr</dataOutputObjs>
+      <dataOutputObjs>ashr</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="ashr_ln1333_2" lineNumber="20" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="ashr_ln1333_2_fu_256_p2" contextFuncName="cordic" bitwidth="12" opcode="ashr" nodeLabel="2.0" m_display="0" m_delay="1.14" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="20" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="ashr_ln1333_3" lineNumber="21" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="ashr_ln1333_3_fu_261_p2" contextFuncName="cordic" bitwidth="12" opcode="ashr" nodeLabel="2.0" m_display="0" m_delay="1.14" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="21" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="sub_ln703_4" lineNumber="26" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="sub_ln703_4_fu_274_p2" contextFuncName="cordic" bitwidth="12" opcode="sub" nodeLabel="2.0" m_display="0" m_delay="0.96" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="26" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>ashr</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="add_ln703_4" lineNumber="27" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="add_ln703_4_fu_279_p2" contextFuncName="cordic" bitwidth="12" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.96" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="27" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>ashr</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="cordic_phase_V_load_1" lineNumber="30" fileName="cordic_fixed.cpp" fileDirectory=".." contextFuncName="cordic" bitwidth="10" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="30" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="sub_ln703_1" lineNumber="30" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="sub_ln703_1_fu_288_p2" contextFuncName="cordic" bitwidth="12" opcode="sub" nodeLabel="2.0" m_display="0" m_delay="0.96" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="30" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="add_ln703_5" lineNumber="33" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="add_ln703_5_fu_294_p2" contextFuncName="cordic" bitwidth="12" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.96" m_topoIndex="43" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="33" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>ashr</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="sub_ln703_5" lineNumber="34" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="sub_ln703_5_fu_299_p2" contextFuncName="cordic" bitwidth="12" opcode="sub" nodeLabel="2.0" m_display="0" m_delay="0.96" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="34" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>ashr</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="add_ln703_1" lineNumber="37" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="add_ln703_1_fu_304_p2" contextFuncName="cordic" bitwidth="12" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.96" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="37" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="select_ln1496_3" lineNumber="24" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="select_ln1496_3_fu_310_p3" contextFuncName="cordic" bitwidth="12" opcode="select" nodeLabel="2.0" m_display="0" m_delay="0.43" m_topoIndex="46" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="24" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="select_ln1496_4" lineNumber="24" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="select_ln1496_4_fu_318_p3" contextFuncName="cordic" bitwidth="12" opcode="select" nodeLabel="2.0" m_display="0" m_delay="0.43" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="24" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="select_ln1496_5" lineNumber="24" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="select_ln1496_5_fu_326_p3" contextFuncName="cordic" bitwidth="12" opcode="select" nodeLabel="2.0" m_display="0" m_delay="0.43" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="24" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="add_ln17" lineNumber="17" fileName="cordic_fixed.cpp" fileDirectory=".." rtlName="add_ln17_fu_224_p2" contextFuncName="cordic" bitwidth="6" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.88" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="17" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="_ln17" lineNumber="17" fileName="cordic_fixed.cpp" fileDirectory=".." contextFuncName="cordic" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="17" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <controlInputObjs>block_21</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="cordic_fixed.cpp">
+      <validLinenumbers>20</validLinenumbers>
+      <validLinenumbers>21</validLinenumbers>
+      <validLinenumbers>26</validLinenumbers>
+      <validLinenumbers>27</validLinenumbers>
+      <validLinenumbers>30</validLinenumbers>
+      <validLinenumbers>33</validLinenumbers>
+      <validLinenumbers>34</validLinenumbers>
+      <validLinenumbers>37</validLinenumbers>
+      <validLinenumbers>24</validLinenumbers>
+      <validLinenumbers>17</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="64" name="block_64" type="BlockType">
+    <controlInputObjs>block_21</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="s_V_write_ln42" lineNumber="42" fileName="cordic_fixed.cpp" fileDirectory=".." contextFuncName="cordic" opcode="write" nodeLabel="1.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="42" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>s_V</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="c_V_write_ln42" lineNumber="42" fileName="cordic_fixed.cpp" fileDirectory=".." contextFuncName="cordic" opcode="write" nodeLabel="1.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="42" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>c_V</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="_ln43" lineNumber="43" fileName="cordic_fixed.cpp" fileDirectory=".." contextFuncName="cordic" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_fixed.cpp" linenumber="43" fileDirectory="C:\COMP4601\lab3\ex2" functionName="cordic"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="cordic_fixed.cpp">
+      <validLinenumbers>42</validLinenumbers>
+      <validLinenumbers>43</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <regnodes realName="tmp_reg_342">
+    <nodeIds>25</nodeIds>
+  </regnodes>
+  <regnodes realName="p_Val2_0_reg_111">
+    <nodeIds>15</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln1496_1_reg_359">
+    <nodeIds>37</nodeIds>
+  </regnodes>
+  <regnodes realName="cordic_phase_V_addr_1_reg_371">
+    <nodeIds>48</nodeIds>
+  </regnodes>
+  <regnodes realName="or_ln17_reg_366">
+    <nodeIds>40</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln1496_4_reg_386">
+    <nodeIds>56</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln1496_5_reg_391">
+    <nodeIds>57</nodeIds>
+  </regnodes>
+  <regnodes realName="p_Val2_2_0_reg_99">
+    <nodeIds>14</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln1496_3_reg_381">
+    <nodeIds>55</nodeIds>
+  </regnodes>
+  <regnodes realName="theta_V_buf_0_0_reg_89">
+    <nodeIds>13</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln17_reg_376">
+    <nodeIds>58</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln1496_reg_352">
+    <nodeIds>36</nodeIds>
+  </regnodes>
+  <regnodes realName="sh_assign_0_reg_123">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <regnodes realName="theta_V_read_reg_334">
+    <nodeIds>10</nodeIds>
+  </regnodes>
+  <regnodes realName="cordic_phase_V_addr_reg_347">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <expressionNodes realName="tmp_fu_156">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln1265_fu_230">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ashr_ln1333_1_fu_150">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln703_4_fu_279">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln703_1_fu_288">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln703_3_fu_187">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln17_fu_253">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ashr_ln1333_2_fu_256">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln1496_2_fu_246">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln1496_1_fu_201">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln1496_5_fu_326">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Val2_0_phi_fu_115">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln703_fu_170">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln703_fu_164">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln703_5_fu_294">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Val2_2_0_phi_fu_103">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln17_fu_138">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="theta_V_buf_0_0_phi_fu_92">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln17_fu_224">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln703_2_fu_181">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln703_2_fu_234">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_1_fu_266">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cordic_phase_V_addr_1_gep_fu_77">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln703_4_fu_274">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ashr_ln1333_3_fu_261">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln703_5_fu_299">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sh_assign_0_phi_fu_127">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ashr_ln1333_fu_144">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln30_1_fu_219">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln17_fu_213">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln1496_4_fu_318">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln1496_3_fu_310">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln1265_1_fu_284">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln703_1_fu_304">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln1496_fu_193">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sh_assign_0_cast2_fu_134">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cordic_phase_V_addr_gep_fu_64">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln30_fu_176">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln703_3_fu_240">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_2_fu_209">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="write_ln42_write_fu_50">
+    <nodeIds>61</nodeIds>
+  </ioNodes>
+  <ioNodes realName="theta_V_read_read_fu_44">
+    <nodeIds>10</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln42_write_fu_57">
+    <nodeIds>62</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="cordic_phase_V">
+    <nodeIds>30</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cordic_phase_V" portID="1">
+    <nodeIds>49</nodeIds>
+  </memoryPorts>
+  <ioPorts name="c_V">
+    <contents name="write">
+      <nodeIds>62</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="s_V">
+    <contents name="write">
+      <nodeIds>61</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="theta_V">
+    <contents name="read">
+      <nodeIds>10</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="2" latency="2"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="2" latency="2"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="2"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="2"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="cordic" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="33" mMaxLatency="33">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>12</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="for_loop" mII="-1" mDepth="-1" mMinTripCount="16" mMaxTripCount="16" mMinLatency="32" mMaxLatency="32" mType="1">
+      <basicBlocks>21</basicBlocks>
+      <basicBlocks>60</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>64</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

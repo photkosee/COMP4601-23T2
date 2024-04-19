@@ -1,0 +1,271 @@
+
+
+================================================================
+== Vivado HLS Report for 'cordic'
+================================================================
+* Date:           Wed Jun 14 06:36:12 2023
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        cordic_float_prj
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xqzu5ev-ffrb900-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 8.286 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      385|      385| 3.850 us | 3.850 us |  385|  385|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |      384|      384|        12|          -|          -|    32|    no    |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 13
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.75>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float %theta) nounwind, !map !7"   --->   Operation 14 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %s) nounwind, !map !13"   --->   Operation 15 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %c) nounwind, !map !19"   --->   Operation 16 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @cordic_str) nounwind"   --->   Operation 17 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%theta_read = call float @_ssdm_op_Read.ap_auto.float(float %theta) nounwind" [cordic.cpp:8]   --->   Operation 18 'read' 'theta_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.75ns)   --->   "br label %1" [cordic.cpp:18]   --->   Operation 19 'br' <Predicate = true> <Delay = 0.75>
+
+State 2 <SV = 1> <Delay = 3.34>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%current_sin_0 = phi float [ 0.000000e+00, %0 ], [ %current_sin, %2 ]"   --->   Operation 20 'phi' 'current_sin_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%current_cos_0 = phi float [ 0x3FE36E9780000000, %0 ], [ %current_cos, %2 ]"   --->   Operation 21 'phi' 'current_cos_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%factor_0 = phi float [ 1.000000e+00, %0 ], [ %factor, %2 ]"   --->   Operation 22 'phi' 'factor_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%j_0 = phi i6 [ 0, %0 ], [ %j, %2 ]"   --->   Operation 23 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%p_0 = phi float [ %theta_read, %0 ], [ %theta_assign, %2 ]" [cordic.cpp:8]   --->   Operation 24 'phi' 'p_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.87ns)   --->   "%icmp_ln18 = icmp eq i6 %j_0, -32" [cordic.cpp:18]   --->   Operation 25 'icmp' 'icmp_ln18' <Predicate = true> <Delay = 0.87> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32) nounwind"   --->   Operation 26 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.88ns)   --->   "%j = add i6 %j_0, 1" [cordic.cpp:18]   --->   Operation 27 'add' 'j' <Predicate = true> <Delay = 0.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "br i1 %icmp_ln18, label %3, label %2" [cordic.cpp:18]   --->   Operation 28 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [2/2] (3.34ns)   --->   "%tmp_3 = fcmp olt float %p_0, 0.000000e+00" [cordic.cpp:20]   --->   Operation 29 'fcmp' 'tmp_3' <Predicate = (!icmp_ln18)> <Delay = 3.34> <Core = "FCmp">   --->   Core 111 'FCmp' <Latency = 1> <II = 1> <Delay = 3.34> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%zext_ln31 = zext i6 %j_0 to i64" [cordic.cpp:31]   --->   Operation 30 'zext' 'zext_ln31' <Predicate = (!icmp_ln18)> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%cordic_phase_addr = getelementptr inbounds [64 x float]* @cordic_phase, i64 0, i64 %zext_ln31" [cordic.cpp:31]   --->   Operation 31 'getelementptr' 'cordic_phase_addr' <Predicate = (!icmp_ln18)> <Delay = 0.00>
+ST_2 : Operation 32 [2/2] (1.35ns)   --->   "%cordic_phase_load = load float* %cordic_phase_addr, align 4" [cordic.cpp:31]   --->   Operation 32 'load' 'cordic_phase_load' <Predicate = (!icmp_ln18)> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 64> <ROM>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.floatP(float* %s, float %current_sin_0) nounwind" [cordic.cpp:37]   --->   Operation 33 'write' <Predicate = (icmp_ln18)> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.floatP(float* %c, float %current_cos_0) nounwind" [cordic.cpp:37]   --->   Operation 34 'write' <Predicate = (icmp_ln18)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "ret void" [cordic.cpp:38]   --->   Operation 35 'ret' <Predicate = (icmp_ln18)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.87>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%bitcast_ln20 = bitcast float %p_0 to i32" [cordic.cpp:20]   --->   Operation 36 'bitcast' 'bitcast_ln20' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%tmp = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %bitcast_ln20, i32 23, i32 30)" [cordic.cpp:20]   --->   Operation 37 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%trunc_ln20 = trunc i32 %bitcast_ln20 to i23" [cordic.cpp:20]   --->   Operation 38 'trunc' 'trunc_ln20' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.85ns)   --->   "%icmp_ln20 = icmp ne i8 %tmp, -1" [cordic.cpp:20]   --->   Operation 39 'icmp' 'icmp_ln20' <Predicate = true> <Delay = 0.85> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 40 [1/1] (0.97ns)   --->   "%icmp_ln20_1 = icmp eq i23 %trunc_ln20, 0" [cordic.cpp:20]   --->   Operation 40 'icmp' 'icmp_ln20_1' <Predicate = true> <Delay = 0.97> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 41 [1/1] (0.00ns) (grouped into LUT with out node select_ln23)   --->   "%or_ln20 = or i1 %icmp_ln20_1, %icmp_ln20" [cordic.cpp:20]   --->   Operation 41 'or' 'or_ln20' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 42 [1/2] (3.34ns)   --->   "%tmp_3 = fcmp olt float %p_0, 0.000000e+00" [cordic.cpp:20]   --->   Operation 42 'fcmp' 'tmp_3' <Predicate = true> <Delay = 3.34> <Core = "FCmp">   --->   Core 111 'FCmp' <Latency = 1> <II = 1> <Delay = 3.34> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 43 [1/1] (0.00ns) (grouped into LUT with out node select_ln23)   --->   "%and_ln20 = and i1 %or_ln20, %tmp_3" [cordic.cpp:20]   --->   Operation 43 'and' 'and_ln20' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 44 [1/1] (0.52ns) (out node of the LUT)   --->   "%select_ln23 = select i1 %and_ln20, float -1.000000e+00, float 1.000000e+00" [cordic.cpp:23]   --->   Operation 44 'select' 'select_ln23' <Predicate = true> <Delay = 0.52> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 45 [1/2] (1.35ns)   --->   "%cordic_phase_load = load float* %cordic_phase_addr, align 4" [cordic.cpp:31]   --->   Operation 45 'load' 'cordic_phase_load' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 64> <ROM>
+
+State 4 <SV = 3> <Delay = 8.28>
+ST_4 : Operation 46 [3/3] (8.28ns)   --->   "%tmp_1 = fmul float %current_cos_0, %select_ln23" [cordic.cpp:23]   --->   Operation 46 'fmul' 'tmp_1' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 47 [3/3] (8.28ns)   --->   "%tmp_2 = fmul float %current_sin_0, %select_ln23" [cordic.cpp:24]   --->   Operation 47 'fmul' 'tmp_2' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 48 [3/3] (8.28ns)   --->   "%tmp_5 = fmul float %select_ln23, %cordic_phase_load" [cordic.cpp:31]   --->   Operation 48 'fmul' 'tmp_5' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 8.28>
+ST_5 : Operation 49 [2/3] (8.28ns)   --->   "%tmp_1 = fmul float %current_cos_0, %select_ln23" [cordic.cpp:23]   --->   Operation 49 'fmul' 'tmp_1' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 50 [2/3] (8.28ns)   --->   "%tmp_2 = fmul float %current_sin_0, %select_ln23" [cordic.cpp:24]   --->   Operation 50 'fmul' 'tmp_2' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 51 [2/3] (8.28ns)   --->   "%tmp_5 = fmul float %select_ln23, %cordic_phase_load" [cordic.cpp:31]   --->   Operation 51 'fmul' 'tmp_5' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 8.28>
+ST_6 : Operation 52 [1/3] (8.28ns)   --->   "%tmp_1 = fmul float %current_cos_0, %select_ln23" [cordic.cpp:23]   --->   Operation 52 'fmul' 'tmp_1' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 53 [1/3] (8.28ns)   --->   "%tmp_2 = fmul float %current_sin_0, %select_ln23" [cordic.cpp:24]   --->   Operation 53 'fmul' 'tmp_2' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 54 [1/3] (8.28ns)   --->   "%tmp_5 = fmul float %select_ln23, %cordic_phase_load" [cordic.cpp:31]   --->   Operation 54 'fmul' 'tmp_5' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 8.28>
+ST_7 : Operation 55 [3/3] (8.28ns)   --->   "%cos_shift = fmul float %tmp_1, %factor_0" [cordic.cpp:23]   --->   Operation 55 'fmul' 'cos_shift' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 56 [3/3] (8.28ns)   --->   "%sin_shift = fmul float %tmp_2, %factor_0" [cordic.cpp:24]   --->   Operation 56 'fmul' 'sin_shift' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 57 [4/4] (7.71ns)   --->   "%theta_assign = fsub float %p_0, %tmp_5" [cordic.cpp:31]   --->   Operation 57 'fsub' 'theta_assign' <Predicate = true> <Delay = 7.71> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 7.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 58 [3/3] (8.28ns)   --->   "%factor = fmul float %factor_0, 5.000000e-01" [cordic.cpp:33]   --->   Operation 58 'fmul' 'factor' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 8.28>
+ST_8 : Operation 59 [2/3] (8.28ns)   --->   "%cos_shift = fmul float %tmp_1, %factor_0" [cordic.cpp:23]   --->   Operation 59 'fmul' 'cos_shift' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 60 [2/3] (8.28ns)   --->   "%sin_shift = fmul float %tmp_2, %factor_0" [cordic.cpp:24]   --->   Operation 60 'fmul' 'sin_shift' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 61 [3/4] (7.71ns)   --->   "%theta_assign = fsub float %p_0, %tmp_5" [cordic.cpp:31]   --->   Operation 61 'fsub' 'theta_assign' <Predicate = true> <Delay = 7.71> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 7.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 62 [2/3] (8.28ns)   --->   "%factor = fmul float %factor_0, 5.000000e-01" [cordic.cpp:33]   --->   Operation 62 'fmul' 'factor' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 8.28>
+ST_9 : Operation 63 [1/3] (8.28ns)   --->   "%cos_shift = fmul float %tmp_1, %factor_0" [cordic.cpp:23]   --->   Operation 63 'fmul' 'cos_shift' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 64 [1/3] (8.28ns)   --->   "%sin_shift = fmul float %tmp_2, %factor_0" [cordic.cpp:24]   --->   Operation 64 'fmul' 'sin_shift' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 65 [2/4] (7.71ns)   --->   "%theta_assign = fsub float %p_0, %tmp_5" [cordic.cpp:31]   --->   Operation 65 'fsub' 'theta_assign' <Predicate = true> <Delay = 7.71> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 7.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 66 [1/3] (8.28ns)   --->   "%factor = fmul float %factor_0, 5.000000e-01" [cordic.cpp:33]   --->   Operation 66 'fmul' 'factor' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 7.71>
+ST_10 : Operation 67 [4/4] (7.71ns)   --->   "%current_cos = fsub float %current_cos_0, %sin_shift" [cordic.cpp:27]   --->   Operation 67 'fsub' 'current_cos' <Predicate = true> <Delay = 7.71> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 7.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 68 [4/4] (7.71ns)   --->   "%current_sin = fadd float %current_sin_0, %cos_shift" [cordic.cpp:28]   --->   Operation 68 'fadd' 'current_sin' <Predicate = true> <Delay = 7.71> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 7.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 69 [1/4] (7.71ns)   --->   "%theta_assign = fsub float %p_0, %tmp_5" [cordic.cpp:31]   --->   Operation 69 'fsub' 'theta_assign' <Predicate = true> <Delay = 7.71> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 7.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 7.71>
+ST_11 : Operation 70 [3/4] (7.71ns)   --->   "%current_cos = fsub float %current_cos_0, %sin_shift" [cordic.cpp:27]   --->   Operation 70 'fsub' 'current_cos' <Predicate = true> <Delay = 7.71> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 7.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 71 [3/4] (7.71ns)   --->   "%current_sin = fadd float %current_sin_0, %cos_shift" [cordic.cpp:28]   --->   Operation 71 'fadd' 'current_sin' <Predicate = true> <Delay = 7.71> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 7.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 7.71>
+ST_12 : Operation 72 [2/4] (7.71ns)   --->   "%current_cos = fsub float %current_cos_0, %sin_shift" [cordic.cpp:27]   --->   Operation 72 'fsub' 'current_cos' <Predicate = true> <Delay = 7.71> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 7.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 73 [2/4] (7.71ns)   --->   "%current_sin = fadd float %current_sin_0, %cos_shift" [cordic.cpp:28]   --->   Operation 73 'fadd' 'current_sin' <Predicate = true> <Delay = 7.71> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 7.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 7.71>
+ST_13 : Operation 74 [1/4] (7.71ns)   --->   "%current_cos = fsub float %current_cos_0, %sin_shift" [cordic.cpp:27]   --->   Operation 74 'fsub' 'current_cos' <Predicate = true> <Delay = 7.71> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 7.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 75 [1/4] (7.71ns)   --->   "%current_sin = fadd float %current_sin_0, %cos_shift" [cordic.cpp:28]   --->   Operation 75 'fadd' 'current_sin' <Predicate = true> <Delay = 7.71> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 7.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 76 [1/1] (0.00ns)   --->   "br label %1" [cordic.cpp:18]   --->   Operation 76 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0.755ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('current_sin') with incoming values : ('current_sin', cordic.cpp:28) [13]  (0.755 ns)
+
+ <State 2>: 3.35ns
+The critical path consists of the following:
+	'phi' operation ('p_0', cordic.cpp:8) with incoming values : ('theta', cordic.cpp:8) ('theta', cordic.cpp:31) [17]  (0 ns)
+	'fcmp' operation ('tmp_3', cordic.cpp:20) [29]  (3.35 ns)
+
+ <State 3>: 3.87ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_3', cordic.cpp:20) [29]  (3.35 ns)
+	'and' operation ('and_ln20', cordic.cpp:20) [30]  (0 ns)
+	'select' operation ('select_ln23', cordic.cpp:23) [31]  (0.525 ns)
+
+ <State 4>: 8.29ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_1', cordic.cpp:23) [32]  (8.29 ns)
+
+ <State 5>: 8.29ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_1', cordic.cpp:23) [32]  (8.29 ns)
+
+ <State 6>: 8.29ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_1', cordic.cpp:23) [32]  (8.29 ns)
+
+ <State 7>: 8.29ns
+The critical path consists of the following:
+	'fmul' operation ('cos_shift', cordic.cpp:23) [33]  (8.29 ns)
+
+ <State 8>: 8.29ns
+The critical path consists of the following:
+	'fmul' operation ('cos_shift', cordic.cpp:23) [33]  (8.29 ns)
+
+ <State 9>: 8.29ns
+The critical path consists of the following:
+	'fmul' operation ('cos_shift', cordic.cpp:23) [33]  (8.29 ns)
+
+ <State 10>: 7.72ns
+The critical path consists of the following:
+	'fsub' operation ('current_cos', cordic.cpp:27) [36]  (7.72 ns)
+
+ <State 11>: 7.72ns
+The critical path consists of the following:
+	'fsub' operation ('current_cos', cordic.cpp:27) [36]  (7.72 ns)
+
+ <State 12>: 7.72ns
+The critical path consists of the following:
+	'fsub' operation ('current_cos', cordic.cpp:27) [36]  (7.72 ns)
+
+ <State 13>: 7.72ns
+The critical path consists of the following:
+	'fsub' operation ('current_cos', cordic.cpp:27) [36]  (7.72 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

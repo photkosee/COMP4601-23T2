@@ -1,0 +1,29 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "cordic",
+          "label": "cordic_label2",
+          "functionLabel": "",
+          "pragma": {
+            "name": "UNROLL",
+            "option": [{
+                "name": "factor",
+                "value": "2"
+              }]
+          }
+        },
+        {
+          "functionName": "cordic",
+          "label": "for_loop",
+          "functionLabel": "",
+          "pragma": {
+            "name": "UNROLL",
+            "option": [{
+                "name": "factor",
+                "value": "2"
+              }]
+          }
+        }
+      ]
+    }]}

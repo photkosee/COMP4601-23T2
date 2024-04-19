@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fft_stages.cpp" path="C:\COMP4601\ch5-files\fft_stages.cpp"/>
+    <originFiles name="fft_stages.h" path="C:\COMP4601\ch5-files\fft_stages.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

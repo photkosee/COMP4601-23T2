@@ -1,0 +1,192 @@
+
+
+================================================================
+== Vivado HLS Report for 'fir'
+================================================================
+* Date:           Mon Jun 12 05:53:22 2023
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        sec2_7
+* Solution:       partition
+* Product family: zynquplus
+* Target device:  xqzu5ev-ffrb900-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 6.435 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       44|       44| 0.440 us | 0.440 us |   44|   44|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- TDL     |       20|       20|         2|          -|          -|    10|    no    |
+        |- MAC     |       22|       22|         2|          -|          -|    11|    no    |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 4 
+3 --> 2 
+4 --> 5 
+5 --> 4 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.75>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %y) nounwind, !map !7"   --->   Operation 6 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %x) nounwind, !map !13"   --->   Operation 7 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @fir_str) nounwind"   --->   Operation 8 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%x_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %x) nounwind" [fir11_sec2_7.cpp:8]   --->   Operation 9 'read' 'x_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.75ns)   --->   "br label %1" [fir11_sec2_7.cpp:17]   --->   Operation 10 'br' <Predicate = true> <Delay = 0.75>
+
+State 2 <SV = 1> <Delay = 1.65>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%i_0 = phi i4 [ -6, %0 ], [ %i, %2 ]"   --->   Operation 11 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.88ns)   --->   "%icmp_ln17 = icmp eq i4 %i_0, 0" [fir11_sec2_7.cpp:17]   --->   Operation 12 'icmp' 'icmp_ln17' <Predicate = true> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind"   --->   Operation 13 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "br i1 %icmp_ln17, label %3, label %2" [fir11_sec2_7.cpp:17]   --->   Operation 14 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.86ns)   --->   "%i = add i4 %i_0, -1" [fir11_sec2_7.cpp:18]   --->   Operation 15 'add' 'i' <Predicate = (!icmp_ln17)> <Delay = 0.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln18 = zext i4 %i to i64" [fir11_sec2_7.cpp:18]   --->   Operation 16 'zext' 'zext_ln18' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%shift_reg_addr = getelementptr inbounds [11 x i32]* @shift_reg, i64 0, i64 %zext_ln18" [fir11_sec2_7.cpp:18]   --->   Operation 17 'getelementptr' 'shift_reg_addr' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 18 [2/2] (0.79ns)   --->   "%shift_reg_load = load i32* %shift_reg_addr, align 4" [fir11_sec2_7.cpp:18]   --->   Operation 18 'load' 'shift_reg_load' <Predicate = (!icmp_ln17)> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 11> <RAM>
+ST_2 : Operation 19 [1/1] (0.79ns)   --->   "store i32 %x_read, i32* getelementptr inbounds ([11 x i32]* @shift_reg, i64 0, i64 0), align 16" [fir11_sec2_7.cpp:20]   --->   Operation 19 'store' <Predicate = (icmp_ln17)> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 11> <RAM>
+ST_2 : Operation 20 [1/1] (0.75ns)   --->   "br label %4" [fir11_sec2_7.cpp:24]   --->   Operation 20 'br' <Predicate = (icmp_ln17)> <Delay = 0.75>
+
+State 3 <SV = 2> <Delay = 1.58>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str) nounwind" [fir11_sec2_7.cpp:17]   --->   Operation 21 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/2] (0.79ns)   --->   "%shift_reg_load = load i32* %shift_reg_addr, align 4" [fir11_sec2_7.cpp:18]   --->   Operation 22 'load' 'shift_reg_load' <Predicate = true> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 11> <RAM>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%zext_ln18_1 = zext i4 %i_0 to i64" [fir11_sec2_7.cpp:18]   --->   Operation 23 'zext' 'zext_ln18_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%shift_reg_addr_1 = getelementptr inbounds [11 x i32]* @shift_reg, i64 0, i64 %zext_ln18_1" [fir11_sec2_7.cpp:18]   --->   Operation 24 'getelementptr' 'shift_reg_addr_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.79ns)   --->   "store i32 %shift_reg_load, i32* %shift_reg_addr_1, align 4" [fir11_sec2_7.cpp:18]   --->   Operation 25 'store' <Predicate = true> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 11> <RAM>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "br label %1" [fir11_sec2_7.cpp:17]   --->   Operation 26 'br' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 2> <Delay = 1.35>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "%acc_0 = phi i32 [ 0, %3 ], [ %acc, %5 ]"   --->   Operation 27 'phi' 'acc_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%i_1 = phi i5 [ 10, %3 ], [ %i_2, %5 ]"   --->   Operation 28 'phi' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 29 [1/1] (0.00ns)   --->   "%sext_ln24 = sext i5 %i_1 to i32" [fir11_sec2_7.cpp:24]   --->   Operation 29 'sext' 'sext_ln24' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%tmp = call i1 @_ssdm_op_BitSelect.i1.i5.i32(i5 %i_1, i32 4)" [fir11_sec2_7.cpp:24]   --->   Operation 30 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%empty_2 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 11, i64 11, i64 11) nounwind"   --->   Operation 31 'speclooptripcount' 'empty_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "br i1 %tmp, label %6, label %5" [fir11_sec2_7.cpp:24]   --->   Operation 32 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%zext_ln25 = zext i32 %sext_ln24 to i64" [fir11_sec2_7.cpp:25]   --->   Operation 33 'zext' 'zext_ln25' <Predicate = (!tmp)> <Delay = 0.00>
+ST_4 : Operation 34 [1/1] (0.00ns)   --->   "%shift_reg_addr_2 = getelementptr inbounds [11 x i32]* @shift_reg, i64 0, i64 %zext_ln25" [fir11_sec2_7.cpp:25]   --->   Operation 34 'getelementptr' 'shift_reg_addr_2' <Predicate = (!tmp)> <Delay = 0.00>
+ST_4 : Operation 35 [2/2] (0.79ns)   --->   "%shift_reg_load_1 = load i32* %shift_reg_addr_2, align 4" [fir11_sec2_7.cpp:25]   --->   Operation 35 'load' 'shift_reg_load_1' <Predicate = (!tmp)> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 11> <RAM>
+ST_4 : Operation 36 [1/1] (0.00ns)   --->   "%c1_addr = getelementptr [11 x i10]* @c1, i64 0, i64 %zext_ln25" [fir11_sec2_7.cpp:25]   --->   Operation 36 'getelementptr' 'c1_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_4 : Operation 37 [2/2] (1.35ns)   --->   "%c1_load = load i10* %c1_addr, align 2" [fir11_sec2_7.cpp:25]   --->   Operation 37 'load' 'c1_load' <Predicate = (!tmp)> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 11> <ROM>
+ST_4 : Operation 38 [1/1] (0.87ns)   --->   "%i_2 = add i5 %i_1, -1" [fir11_sec2_7.cpp:24]   --->   Operation 38 'add' 'i_2' <Predicate = (!tmp)> <Delay = 0.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %y, i32 %acc_0) nounwind" [fir11_sec2_7.cpp:28]   --->   Operation 39 'write' <Predicate = (tmp)> <Delay = 0.00>
+ST_4 : Operation 40 [1/1] (0.00ns)   --->   "ret void" [fir11_sec2_7.cpp:30]   --->   Operation 40 'ret' <Predicate = (tmp)> <Delay = 0.00>
+
+State 5 <SV = 3> <Delay = 6.43>
+ST_5 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str1) nounwind" [fir11_sec2_7.cpp:24]   --->   Operation 41 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 42 [1/2] (0.79ns)   --->   "%shift_reg_load_1 = load i32* %shift_reg_addr_2, align 4" [fir11_sec2_7.cpp:25]   --->   Operation 42 'load' 'shift_reg_load_1' <Predicate = true> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 11> <RAM>
+ST_5 : Operation 43 [1/2] (1.35ns)   --->   "%c1_load = load i10* %c1_addr, align 2" [fir11_sec2_7.cpp:25]   --->   Operation 43 'load' 'c1_load' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 11> <ROM>
+ST_5 : Operation 44 [1/1] (0.00ns)   --->   "%sext_ln25 = sext i10 %c1_load to i32" [fir11_sec2_7.cpp:25]   --->   Operation 44 'sext' 'sext_ln25' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 45 [1/1] (3.88ns)   --->   "%mul_ln25 = mul nsw i32 %shift_reg_load_1, %sext_ln25" [fir11_sec2_7.cpp:25]   --->   Operation 45 'mul' 'mul_ln25' <Predicate = true> <Delay = 3.88> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 3.88> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 46 [1/1] (1.20ns)   --->   "%acc = add nsw i32 %mul_ln25, %acc_0" [fir11_sec2_7.cpp:25]   --->   Operation 46 'add' 'acc' <Predicate = true> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 47 [1/1] (0.00ns)   --->   "br label %4" [fir11_sec2_7.cpp:24]   --->   Operation 47 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0.755ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', fir11_sec2_7.cpp:18) [13]  (0.755 ns)
+
+ <State 2>: 1.66ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', fir11_sec2_7.cpp:18) [13]  (0 ns)
+	'add' operation ('i', fir11_sec2_7.cpp:18) [19]  (0.868 ns)
+	'getelementptr' operation ('shift_reg_addr', fir11_sec2_7.cpp:18) [21]  (0 ns)
+	'load' operation ('shift_reg_load', fir11_sec2_7.cpp:18) on array 'shift_reg' [22]  (0.79 ns)
+
+ <State 3>: 1.58ns
+The critical path consists of the following:
+	'load' operation ('shift_reg_load', fir11_sec2_7.cpp:18) on array 'shift_reg' [22]  (0.79 ns)
+	'store' operation ('store_ln18', fir11_sec2_7.cpp:18) of variable 'shift_reg_load', fir11_sec2_7.cpp:18 on array 'shift_reg' [25]  (0.79 ns)
+
+ <State 4>: 1.35ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', fir11_sec2_7.cpp:24) [32]  (0 ns)
+	'getelementptr' operation ('c1_addr', fir11_sec2_7.cpp:25) [42]  (0 ns)
+	'load' operation ('c1_load', fir11_sec2_7.cpp:25) on array 'c1' [43]  (1.35 ns)
+
+ <State 5>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('c1_load', fir11_sec2_7.cpp:25) on array 'c1' [43]  (1.35 ns)
+	'mul' operation ('mul_ln25', fir11_sec2_7.cpp:25) [45]  (3.88 ns)
+	'add' operation ('acc', fir11_sec2_7.cpp:25) [46]  (1.2 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

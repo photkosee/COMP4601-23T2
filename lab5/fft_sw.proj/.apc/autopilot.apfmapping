@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fft_sw.cpp" path="C:\COMP4601\ch5-files\fft_sw.cpp"/>
+    <originFiles name="fft_sw.h" path="C:\COMP4601\ch5-files\fft_sw.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>
